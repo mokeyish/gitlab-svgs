@@ -5,5 +5,15 @@
   "main": " ",
   "repository": "git@gitlab.com:gitlab-org/gitlab-svgs.git",
   "author": "GitLab",
-  "private": false
+  "private": false,
+  "scripts": {
+    "svg": "node index.js",
+    "sprite_icons": "node svg_sprite_icons.js",
+    "illustrations": "node illustrations.js"
+  },
+  "devDependencies": {
+    "eslint": "^4.6.1",
+    "svg-sprite": "^1.3.7",
+    "svgo": "^0.7.2"
+  }
 }
