@@ -1,4 +1,3 @@
-/* eslint-disable no-commonjs */
 const SVGSpriter = require('svg-sprite');
 const SVGO = require('svgo');
 const path = require('path');
