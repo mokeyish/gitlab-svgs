@@ -89,6 +89,7 @@ export default {
 }
 
 .illustrations-list div {
+  border: solid 1px #fff;
   border-bottom: solid 1px #ccc;
 }
 
