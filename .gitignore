@@ -1,1 +1,13 @@
-/node_modules/
+# dependencies
+node_modules
+
+# logs
+npm-debug.log
+
+# Nuxt build
+.nuxt
+
+# Nuxt generate
+public
+
+svgpreviewer/static/dist

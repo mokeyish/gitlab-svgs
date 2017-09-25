@@ -46,18 +46,25 @@ spriteFiles.forEach((file) => {
 
 // Compile the sprite
 spriter.compile((error, result) => {
-  for (var mode in result) {
-    for (var resource in result[mode]) {
+  for (let mode in result) {
+    for (let resource in result[mode]) {
       mkdirp.sync(path.dirname(result[mode][resource].path));
       fs.writeFileSync(result[mode][resource].path, result[mode][resource].contents);
-    };
+    }
   };
 });
+
+function getFilesizeInBytes(filename) {
+  const stats = fs.statSync(filename);
+  const fileSizeInBytes = stats.size;
+  return fileSizeInBytes;
+}
 
 // Save the Icons in here to a json so we can then display a nice help sprite sheet in GitLab
 const iconsInfo = {
   iconCount: icons.length,
-  icons: icons
+  spriteSize: getFilesizeInBytes(path.join(__dirname, '..', 'dist', 'icons.svg')),
+  icons,
 };
 
-fs.writeFileSync(path.join(__dirname, 'dist', 'icons.json'), JSON.stringify(iconsInfo), 'utf8');
+fs.writeFileSync(path.join(__dirname, '..', 'dist', 'icons.json'), JSON.stringify(iconsInfo), 'utf8');
