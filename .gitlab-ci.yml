@@ -9,6 +9,7 @@ cache:
 
 pages:
   script:
+    - echo "Starting SVG Built"
     - npm run svg
     - npm run generate
   artifacts:
