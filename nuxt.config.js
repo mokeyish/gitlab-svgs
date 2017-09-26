@@ -12,7 +12,7 @@ module.exports = {
     ],
     link: [
       { rel: 'stylesheet', href: 'application/gitlab-application.css' },
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/gitlab-svgs/favicon.ico' },
     ],
     bodyAttrs: {
       class: 'ui_indigo'

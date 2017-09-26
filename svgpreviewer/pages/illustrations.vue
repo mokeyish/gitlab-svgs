@@ -5,14 +5,14 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-6">
-            <h4 class="subtitle">
+            <h5 class="subtitle">
               {{illustrationsData.illustrationCount}} Illustrations
-            </h4>
+            </h5>
           </div>
           <div class="col-sm-3">
             <span class="label label-success" v-if="copyStatus===1">Copied to your clipboard!</span>
             <span class="label label-danger" v-if="copyStatus===-1">Copying didn't work :-(</span>
-            <span class="label muted" v-else-if="copyStatus===0">Click Illustration to copy path</span>
+            <span class="label muted" v-else-if="copyStatus===0">Click Illustration to copy their path</span>
           </div>
           <div class="col-sm-3">
             <input maxlength="255" autofocus="autofocus" class="form-control pad" size="255" type="text" placeholder="Illustration Search" v-model="searchString">
@@ -73,6 +73,7 @@ export default {
 
 .subheader .container {
   margin-top:3px;
+  margin-bottom:3px;
 }
 
 .subheader .container .label {

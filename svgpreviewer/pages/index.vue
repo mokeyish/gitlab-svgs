@@ -5,14 +5,14 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-3">
-            <h4 class="subtitle">
-              {{iconData.iconCount}} Icons (Sprite Size: {{kbSize}}Kb)
-            </h4>
+            <h5 class="subtitle">
+              {{iconData.iconCount}} Icons ({{kbSize}}Kb)
+            </h5>
           </div>
           <div class="col-sm-3">
             <span class="label label-success" v-if="copyStatus===1">Copied to your clipboard!</span>
             <span class="label label-danger" v-if="copyStatus===-1">Copying didn't work :-(</span>
-            <span class="label muted" v-else-if="copyStatus===0">Click Icons to copy name</span>
+            <span class="label muted" v-else-if="copyStatus===0">Click Icons to copy their name</span>
           </div>
           <div class="col-sm-3">
             <input maxlength="255" autofocus="autofocus" class="form-control pad" size="255" type="text" placeholder="Icon Search" v-model="searchString">
@@ -93,6 +93,7 @@ export default {
 
 .subheader .container {
   margin-top:3px;
+  margin-bottom:3px;
 }
 
 .subheader .container .label {

@@ -8,8 +8,6 @@
   "private": false,
   "scripts": {
     "svg": "node index.js",
-    "sprite_icons": "node ./src/svg_sprite_icons.js",
-    "illustrations": "node ./src/illustrations.js",
     "dev": "PORT=3333 nuxt",
     "build": "nuxt build",
     "start": "nuxt start",

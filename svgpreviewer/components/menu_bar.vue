@@ -27,6 +27,9 @@
             <li>
               <nuxt-link to="/illustrations">Illustrations</nuxt-link>
             </li>
+            <li>
+              <a href="https://gitlab.com/gitlab-org/gitlab-svgs">To the repo ></a>
+            </li>
           </ul>
         </div>
       </div>
