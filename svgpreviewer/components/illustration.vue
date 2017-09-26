@@ -21,7 +21,7 @@ export default {
   },
   computed: {
     imgPath: function () {
-      return `/dist/${this.illustration.name}`;
+      return `dist/${this.illustration.name}`;
     },
     kbSize: function () {
       return Math.round(this.illustration.size / 1024);

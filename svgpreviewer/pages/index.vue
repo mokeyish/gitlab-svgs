@@ -27,6 +27,7 @@
                 <option value="icon-md" selected>Medium (32px)</option>
                 <option value="icon-lg">Large (48px)</option>
                 <option value="icon-xl">Very Large (72px)</option>
+                <option value="icon-hu">Huge (256px)</option>
                 <option value="icon-nav">Sidemenu</option>
               </select>
               <i aria-hidden="true" data-hidden="true" class="fa fa-chevron-down"></i>

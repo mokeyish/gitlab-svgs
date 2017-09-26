@@ -5,7 +5,7 @@
     @click="copyIcon">
     <svg v-bind:class="[iconClass]">
       <use 
-        v-bind="{'xlink:href':'/dist/icons.svg#'+icon}">
+        v-bind="{'xlink:href':'dist/icons.svg#'+icon}">
       </use>
     </svg>
     <div class="js-icon-name" v-on:copy="copyEvent(icon)">
@@ -83,6 +83,11 @@ export default {
   svg.icon-xl {
     width: 72px;
     height: 72px;
+  }
+
+  svg.icon-hu {
+    width: 256px;
+    height: 256px;
   }
 
   svg.icon-nav {
