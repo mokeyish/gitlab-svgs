@@ -1,3 +1,4 @@
+/* eslint-disable import/no-commonjs */
 const async = require('async');
 const SVGSpriter = require('svg-sprite');
 const SVGO = require('svgo');
@@ -40,7 +41,7 @@ module.exports = {
               size: utils.getFilesizeInBytes(fpath),
             });
 
-            callback();
+            return callback();
           });
         });
       });

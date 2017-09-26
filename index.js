@@ -1,3 +1,4 @@
+/* eslint-disable import/no-commonjs */
 const async = require('async');
 const path = require('path');
 
