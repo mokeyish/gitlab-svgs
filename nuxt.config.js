@@ -26,6 +26,11 @@ module.exports = {
   generate: {
     dir: 'public'
   },
+
+  router: {
+    base: '/gitlab-svgs/'
+  },
+
   /*
   ** Build configuration
   */
