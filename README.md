@@ -12,7 +12,7 @@ All output is saved to the `dist` folder, from where it is also taken from our m
 
 ## Adding something
 
-If you add something in `master` automatically all the steps will be done for previewiing the icons.
+If you add something in `master` automatically all the steps will be done for previewing the icons.
 
 To add new icons, simply place them in the sprite_icons folder, afterwards run the `yarn run svg` command.
 
