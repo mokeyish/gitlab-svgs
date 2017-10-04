@@ -6,6 +6,8 @@ Repository to manage all SVG Assets for GitLab. Creates SVG Sprites out of Icons
 
 ## Commands
 
+On first time use locally you need to install dependencies through `yarn install`
+
 `yarn run svg` - Runs all tasks that are available, if you want to release a new version just run this task
 
 All output is saved to the `dist` folder, from where it is also taken from our main applications.
@@ -17,6 +19,8 @@ If you add something in `master` automatically all the steps will be done for pr
 To add new icons, simply place them in the sprite_icons folder, afterwards run the `yarn run svg` command.
 
 To add new illustrations, simply copy them in the illustrations folder, afterwards run the `yarn run svg` command.
+
+On a Merge Request also run 'yarn run svg' to check in the updated SVG Sprite and corresponding files until we have an automatic CI/CD solution.
 
 ## Preview Application
 
