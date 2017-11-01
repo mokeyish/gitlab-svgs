@@ -1,1 +1,105 @@
-<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 270"><style>.st0{fill:#ECB32D;} .st1{fill:#63C1A0;} .st2{fill:#E01A59;} .st3{fill:#331433;} .st4{fill:#D62027;} .st5{fill:#89D3DF;} .st6{fill:#258B74;} .st7{fill:#819C3C;}</style><path class="st0" d="M154.3 87.1c-1.9-5.7-8-8.8-13.7-7-5.7 1.9-8.8 8-7 13.7l28.1 86.4c1.9 5.3 7.7 8.3 13.2 6.7 5.8-1.7 9.3-7.8 7.4-13.4 0-.2-28-86.4-28-86.4z"/><path class="st1" d="M110.8 101.2c-1.9-5.7-8-8.8-13.7-7-5.7 1.9-8.8 8-7 13.7l28.1 86.4c1.9 5.3 7.7 8.3 13.2 6.7 5.8-1.7 9.3-7.8 7.4-13.4 0-.2-28-86.4-28-86.4z"/><path class="st2" d="M189.7 158.6c5.7-1.9 8.8-8 7-13.7-1.9-5.7-8-8.8-13.7-7l-86.5 28.2c-5.3 1.9-8.3 7.7-6.7 13.2 1.7 5.8 7.8 9.3 13.4 7.4.2 0 86.5-28.1 86.5-28.1z"/><path class="st3" d="M114.5 183.1c5.6-1.8 12.9-4.2 20.7-6.7-1.8-5.6-4.2-12.9-6.7-20.7l-20.7 6.7 6.7 20.7z"/><path class="st4" d="M158.1 168.9c7.8-2.5 15.1-4.9 20.7-6.7-1.8-5.6-4.2-12.9-6.7-20.7l-20.7 6.7 6.7 20.7z"/><path class="st5" d="M175.5 115.1c5.7-1.9 8.8-8 7-13.7-1.9-5.7-8-8.8-13.7-7l-86.4 28.1c-5.3 1.9-8.3 7.7-6.7 13.2 1.7 5.8 7.8 9.3 13.4 7.4.2 0 86.4-28 86.4-28z"/><path class="st6" d="M100.4 139.5c5.6-1.8 12.9-4.2 20.7-6.7-2.5-7.8-4.9-15.1-6.7-20.7l-20.7 6.7 6.7 20.7z"/><path class="st7" d="M143.9 125.4c7.8-2.5 15.1-4.9 20.7-6.7-2.5-7.8-4.9-15.1-6.7-20.7l-20.7 6.7 6.7 20.7z"/></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="Layer_1"
+   viewBox="0 0 121.94154 121.84154"
+   version="1.1"
+   sodipodi:docname="slack_logo.svg"
+   width="121.94154"
+   height="121.84154"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06">
+  <metadata
+     id="metadata223">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs221" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview219"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.87407407"
+     inkscape:cx="59.730355"
+     inkscape:cy="66.430355"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="Layer_1" />
+  <style
+     id="style200">.st0{fill:#ECB32D;} .st1{fill:#63C1A0;} .st2{fill:#E01A59;} .st3{fill:#331433;} .st4{fill:#D62027;} .st5{fill:#89D3DF;} .st6{fill:#258B74;} .st7{fill:#819C3C;}</style>
+  <path
+     class="st0"
+     d="m 79.030355,7.5111801 c -1.9,-5.7 -8,-8.8 -13.7,-7.00000005 -5.7,1.90000005 -8.8,8.00000005 -7,13.69999995 l 28.1,86.4 c 1.9,5.3 7.7,8.3 13.2,6.7 5.800005,-1.7 9.300005,-7.8 7.400005,-13.4 0,-0.2 -28.000005,-86.3999999 -28.000005,-86.3999999 z"
+     id="path202"
+     inkscape:connector-curvature="0"
+     style="fill:#ecb32d" />
+  <path
+     class="st1"
+     d="m 35.530355,21.61118 c -1.9,-5.7 -8,-8.8 -13.7,-7 -5.7,1.9 -8.8,8 -7,13.7 l 28.1,86.4 c 1.9,5.3 7.7,8.3 13.2,6.7 5.8,-1.7 9.3,-7.8 7.4,-13.4 0,-0.2 -28,-86.4 -28,-86.4 z"
+     id="path204"
+     inkscape:connector-curvature="0"
+     style="fill:#63c1a0" />
+  <path
+     class="st2"
+     d="m 114.43036,79.01118 c 5.7,-1.9 8.8,-8 7,-13.7 -1.9,-5.7 -8,-8.8 -13.7,-7 l -86.500005,28.2 c -5.3,1.9 -8.3,7.7 -6.7,13.2 1.7,5.8 7.8,9.3 13.4,7.4 0.2,0 86.500005,-28.1 86.500005,-28.1 z"
+     id="path206"
+     inkscape:connector-curvature="0"
+     style="fill:#e01a59" />
+  <path
+     class="st3"
+     d="m 39.230355,103.51118 c 5.6,-1.8 12.9,-4.2 20.7,-6.7 -1.8,-5.6 -4.2,-12.9 -6.7,-20.7 l -20.7,6.7 z"
+     id="path208"
+     inkscape:connector-curvature="0"
+     style="fill:#331433" />
+  <path
+     class="st4"
+     d="m 82.830355,89.31118 c 7.8,-2.5 15.1,-4.9 20.700005,-6.7 -1.8,-5.6 -4.200005,-12.9 -6.700005,-20.7 l -20.7,6.7 z"
+     id="path210"
+     inkscape:connector-curvature="0"
+     style="fill:#d62027" />
+  <path
+     class="st5"
+     d="m 100.23036,35.51118 c 5.7,-1.9 8.8,-8 7,-13.7 -1.9,-5.7 -8.000005,-8.8 -13.700005,-7 l -86.3999999,28.1 c -5.3,1.9 -8.3,7.7 -6.70000002,13.2 1.70000002,5.8 7.80000002,9.3 13.39999992,7.4 0.2,0 86.400005,-28 86.400005,-28 z"
+     id="path212"
+     inkscape:connector-curvature="0"
+     style="fill:#89d3df" />
+  <path
+     class="st6"
+     d="m 25.130355,59.91118 c 5.6,-1.8 12.9,-4.2 20.7,-6.7 -2.5,-7.8 -4.9,-15.1 -6.7,-20.7 l -20.7,6.7 z"
+     id="path214"
+     inkscape:connector-curvature="0"
+     style="fill:#258b74" />
+  <path
+     class="st7"
+     d="m 68.630355,45.81118 c 7.8,-2.5 15.1,-4.9 20.7,-6.7 -2.5,-7.8 -4.9,-15.1 -6.7,-20.7 l -20.7,6.7 z"
+     id="path216"
+     inkscape:connector-curvature="0"
+     style="fill:#819c3c" />
+</svg>
