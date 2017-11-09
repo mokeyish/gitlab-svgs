@@ -1,5 +1,5 @@
 {
-  "name": "gitlab-svgs",
+  "name": "@gitlab-org/gitlab-svgs",
   "version": "1.0.4",
   "description": "SVG Assets for GitLab",
   "main": " ",
