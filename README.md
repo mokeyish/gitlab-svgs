@@ -29,3 +29,8 @@ The application for previwing is based on [NUXT](https://nuxtjs.org/) and is loc
 You can run it locally through `yarn run dev` then it will available under `http://localhost:3333/gitlab-svgs/`.
 
 With `yarn run generate` you can generate the static output to the `public` folder.
+
+## Contributing
+
+GitLab is an open source project and we are very happy to accept community contributions. Please refer to [CONTRIBUTING.md](/CONTRIBUTING.md) for details.
+
