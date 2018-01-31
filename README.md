@@ -38,3 +38,4 @@ With `yarn run generate` you can generate the static output to the `public` fold
 ## Contributing
 
 GitLab is an open source project and we are very happy to accept community contributions. Please refer to [CONTRIBUTING.md](/CONTRIBUTING.md) for details.
+
