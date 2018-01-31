@@ -25,4 +25,3 @@ _This notice should stay as the first item in the CONTRIBUTING.md file._
  1. Run `yarn run dev` to preview it locally on `http://localhost:3333/gitlab-svgs/`.
  1. Push your changes and create a merge request on [gitlab-svgs](https://gitlab.com/gitlab-org/gitlab-svgs).
 - Assign the merge request to a maintainer of the `gitlab-svg` project. You can find the maintainers on [GitLab team page](https://about.gitlab.com/team/) or [Readme](https://gitlab.com/gitlab-org/gitlab-svgs/blob/master/README.md).
-<br>
