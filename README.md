@@ -30,6 +30,11 @@ You can run it locally through `yarn run dev` then it will available under `http
 
 With `yarn run generate` you can generate the static output to the `public` folder.
 
+## Maintainers
+
+- [@timzallmann](https://gitlab.com/timzallmann)
+- [@hazelyang](https://gitlab.com/hazelyang)
+
 ## Contributing
 
 GitLab is an open source project and we are very happy to accept community contributions. Please refer to [CONTRIBUTING.md](/CONTRIBUTING.md) for details.
