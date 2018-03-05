@@ -39,7 +39,8 @@ Follow these steps when publishing a new version:
 
     This command will also tag the version for you.
 
-1. Push the new version
+1. Push the new version. 
+  _Note:_ You will need an npm account with the correct permissions. Please contact [Tim Zallman](https://about.gitlab.com/team/#tpmtim)
     ```
     git push
     ```
