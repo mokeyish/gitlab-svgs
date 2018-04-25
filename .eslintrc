@@ -1,5 +1,5 @@
 {
-  "root":true,
+  "root": true,
   "env": {
     "browser": true,
     "node": true
@@ -19,7 +19,10 @@
     "promise/catch-or-return": "off",
     "no-underscore-dangle": ["error", { "allow": ["__"]}],
     "import/no-extraneous-dependencies": "off",
-    "no-debugger": "off"
+    "no-debugger": "off",
+    "arrow-parens": 0,
+    "space-before-function-paren": 0,
+    "function-paren-newline": 0
   },
   "globals": {}
 }

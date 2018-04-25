@@ -34,7 +34,7 @@ const utils = {
     // Copy
     if (fs.lstatSync(source).isDirectory()) {
       files = fs.readdirSync(source);
-      files.forEach((file) => {
+      files.forEach(file => {
         const curSource = path.join(source, file);
         if (fs.lstatSync(curSource).isDirectory()) {
           utils.copyFolderRecursiveSync(curSource, targetFolder);
