@@ -26,33 +26,37 @@ On a Merge Request also run 'yarn run svg' to check in the updated SVG Sprite an
 
 The application for previwing is based on [NUXT](https://nuxtjs.org/) and is located in the folder `svgpreviewer`.
 
-You can run it locally through `yarn run dev` then it will available under `http://localhost:3333/gitlab-svgs/`.
+You can run it locally through `yarn run dev` then it will available under `http://localhost:3333/`.
 
 With `yarn run generate` you can generate the static output to the `public` folder.
 
 ## Publish a new version
+
 Follow these steps when publishing a new version:
-1. Update the version in `package.json` with [`npm version`](https://docs.npmjs.com/cli/version). We usually publish minor versions:
+
+1.  Update the version in `package.json` with [`npm version`](https://docs.npmjs.com/cli/version). We usually publish minor versions:
+
     ```
     npm version minor -m "Explain which SVGs are added/modified"
     ```
 
     This command will also tag the version for you.
 
-1. Push the new version. 
+1.  Push the new version.
     ```
     git push
     ```
-1. Push the new tag
+1.  Push the new tag
     ```
     git push origin <tagname>
     ```
-1. Make sure `package.json` has an updated version and the tag are correctly set
-    * [`package.json`](https://gitlab.com/gitlab-org/gitlab-svgs/blob/master/package.json)
-    * [tags](https://gitlab.com/gitlab-org/gitlab-svgs/tags)
+1.  Make sure `package.json` has an updated version and the tag are correctly set
 
-1. Publish the new version
-   _Note:_ You will need an npm account with the correct permissions. Please contact [Tim Zallman](https://about.gitlab.com/team/#tpmtim)
+    - [`package.json`](https://gitlab.com/gitlab-org/gitlab-svgs/blob/master/package.json)
+    - [tags](https://gitlab.com/gitlab-org/gitlab-svgs/tags)
+
+1.  Publish the new version
+    _Note:_ You will need an npm account with the correct permissions. Please contact [Tim Zallman](https://about.gitlab.com/team/#tpmtim)
     ```
     npm publish
     ```
@@ -66,4 +70,3 @@ Follow these steps when publishing a new version:
 ## Contributing
 
 GitLab is an open source project and we are very happy to accept community contributions. Please refer to [CONTRIBUTING.md](/CONTRIBUTING.md) for details.
-

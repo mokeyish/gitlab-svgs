@@ -17,7 +17,7 @@ module.exports = {
     ],
     link: [
       { rel: 'stylesheet', href: 'application/gitlab-application.css' },
-      { rel: 'icon', type: 'image/x-icon', href: '/gitlab-svgs/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: './favicon.ico' },
     ],
     bodyAttrs: {
       class: 'ui_indigo',
@@ -33,7 +33,7 @@ module.exports = {
   },
 
   router: {
-    base: '/gitlab-svgs/',
+    base: process.env.CI ? '/gitlab-svgs/' : '/',
   },
 
   /*
@@ -44,7 +44,7 @@ module.exports = {
     ** Run ESLint on save
     */
     extend(config, ctx) {
-      if (ctx.dev && ctx.isClient) {
+      if (ctx.isDev && ctx.isClient) {
         /* config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,

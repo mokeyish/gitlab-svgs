@@ -1,19 +1,54 @@
 <template>
-  <li
-    class="icon-base"
-    @click="copyIcon">
-    <svg v-bind:class="[iconClass]">
-      <use
-        v-bind="{'xlink:href': `dist/icons.svg#${icon}`}">
-      </use>
-    </svg>
-    <div class="js-icon-name" v-on:copy="copyEvent" :data-icon="icon">
-      {{icon}}
+  <div class="icon-wrapper">
+    <div
+        class="icon-base"
+        @click="copyIcon">
+      <svg
+          :class="[iconClass]">
+        <use
+            v-bind="{'xlink:href': `dist/icons.svg#${icon}`}">
+        </use>
+      </svg>
+      <div class="icon-name">
+        {{iconName}}
+      </div>
     </div>
-  </li>
+    <div class="icon-actions">
+      <a
+          title="Copy to clipboard"
+          @click="copyIcon">
+        <svg class="icon-sm">
+          <use
+              v-bind="{'xlink:href': `dist/icons.svg#duplicate`}">
+          </use>
+        </svg>
+      </a>
+      <a
+          title="Permalink"
+          @click="permaLink">
+        <svg class="icon-sm">
+          <use
+              v-bind="{'xlink:href': `dist/icons.svg#link`}">
+          </use>
+        </svg>
+      </a>
+      <a
+          title="Open source"
+          target="_blank"
+          :href="sourceLink">
+        <svg class="icon-sm">
+          <use
+              v-bind="{'xlink:href': `dist/icons.svg#external-link`}">
+          </use>
+        </svg>
+      </a>
+    </div>
+  </div>
 </template>
 
-<<script>
+<script>
+import copyToClipboard from '../helpers/copy_to_clipboard';
+
 export default {
   props: {
     icon: {
@@ -25,38 +60,75 @@ export default {
       required: true,
     },
   },
+  computed: {
+    iconName() {
+      return this.icon.replace(/_/g, '_\u200B');
+    },
+    sourceLink() {
+      return `https://gitlab.com/gitlab-org/gitlab-svgs/blob/master/sprite_icons/${this.icon}.svg`;
+    },
+  },
   methods: {
     copyIcon() {
-      const iconNameElement = this.$el.querySelector('.js-icon-name');
-      const range = document.createRange();
-      range.selectNode(iconNameElement);
-      window.getSelection().addRange(range);
-
-      try {
-        const successful = document.execCommand('copy');
-        const msg = successful ? 'successful' : 'unsuccessful';
-        console.log(`Copy icon command was ${msg}`);
-        this.$emit('itemCopied', 1);
-      } catch (err) {
-        console.log('Oops, unable to copy icon');
-        this.$emit('itemCopied', -1);
-      }
-      window.getSelection().removeAllRanges();
+      this.$emit('itemCopied', copyToClipboard(this.icon) ? 1 : -1);
     },
-    copyEvent(event) {
-      event.preventDefault();
-      if (event.clipboardData) {
-        event.clipboardData.setData('text/plain', event.target.dataset.icon);
-      }
+    permaLink() {
+      this.$emit('permaLink', this.icon);
     },
   },
 };
 </script>
 
-<style>
-.icon-base svg {
-  width: 32px;
-  height: 32px;
+<style scoped>
+svg {
+  fill: currentColor;
+}
+
+.icon-wrapper {
+  flex-basis: 120px;
+  max-width: 300px;
+  min-height: 125px;
+  font-size: 12px;
+  flex-grow: 0;
+  line-height: 1.4;
+  text-align: center;
+  background-color: #f9f9f9;
+  list-style: none;
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-base {
+  padding: 20px 20px 0;
+  border: 1px solid #fff;
+  border-bottom: 1px solid #ccc;
+  flex-grow: 1;
+}
+
+.icon-base:hover {
+  cursor: pointer;
+  border: solid 1px #ccc;
+}
+
+.icon-name {
+  margin: 1rem 0;
+}
+
+.icon-actions {
+  height: 2rem;
+  padding: 0.5rem;
+  background-color: #f9f9f9;
+}
+
+.icon-actions a {
+  color: #707070;
+  margin-right: 4px;
+}
+
+.icon-actions a:hover {
+  cursor: pointer;
+  color: black;
 }
 
 svg.icon-xs {
