@@ -10,7 +10,7 @@ const glob = require('glob');
 const utils = require('./utils');
 
 module.exports = {
-  optimizeIllustrations: (finishedCallback) => {
+  optimizeIllustrations: finishedCallback => {
     const illustrationFilesPath = path.join('illustrations');
     const dest = path.normalize(path.join('dist'));
     const illustrationFiles = glob.glob.sync(`${illustrationFilesPath}/**/*.svg`, {});
@@ -18,47 +18,55 @@ module.exports = {
 
     const illustrations = [];
 
-    async.forEachOf(illustrationFiles, (file, key, callback) => {
-      fs.readFile(path.resolve(file), 'utf8', (err, data) => {
-        if (err) {
-          console.log('ERR ', err);
-          callback(err);
-          throw err;
-        }
+    async.forEachOf(
+      illustrationFiles,
+      (file, key, callback) => {
+        fs.readFile(path.resolve(file), 'utf8', (err, data) => {
+          if (err) {
+            console.log('ERR ', err);
+            callback(err);
+            throw err;
+          }
 
-        svgo.optimize(data, (result) => {
-          const fpath = path.join(dest, file);
-          mkdirp.sync(path.dirname(fpath));
-          fs.writeFile(fpath, result.data, (writeError) => {
-            if (writeError) {
-              callback(writeError);
-              return console.log(writeError);
-            }
-            console.log(`Optimized : ${file}`);
+          svgo.optimize(data, result => {
+            const fpath = path.join(dest, file);
+            mkdirp.sync(path.dirname(fpath));
+            fs.writeFile(fpath, result.data, writeError => {
+              if (writeError) {
+                callback(writeError);
+                return console.log(writeError);
+              }
+              console.log(`Optimized : ${file}`);
 
-            illustrations.push({
-              name: file,
-              size: utils.getFilesizeInBytes(fpath),
+              illustrations.push({
+                name: file,
+                size: utils.getFilesizeInBytes(fpath),
+              });
+
+              return callback();
             });
-
-            return callback();
           });
         });
-      });
-    }, (err) => {
-      if (err) console.error(err.message);
-      // configs is now a map of JSON data
-      console.log('Found Illustrations : ', illustrations);
+      },
+      err => {
+        if (err) console.error(err.message);
+        // configs is now a map of JSON data
+        console.log('Found Illustrations : ', illustrations);
 
-      // Save the Illustrations Info to a JSON
-      const illustrationsInfo = {
-        illustrationCount: illustrations.length,
-        illustrations,
-      };
+        // Save the Illustrations Info to a JSON
+        const illustrationsInfo = {
+          illustrationCount: illustrations.length,
+          illustrations,
+        };
 
-      fs.writeFileSync(path.join(__dirname, '..', 'dist', 'illustrations.json'), JSON.stringify(illustrationsInfo), 'utf8');
+        fs.writeFileSync(
+          path.join(__dirname, '..', 'dist', 'illustrations.json'),
+          JSON.stringify(illustrationsInfo),
+          'utf8',
+        );
 
-      if (finishedCallback) finishedCallback();
-    });
+        if (finishedCallback) finishedCallback();
+      },
+    );
   },
 };

@@ -34,7 +34,7 @@
             </div>
           </div>
         </div>
-      </div>      
+      </div>
     </header>
     <section class="container">
       <ul class="icons-list">
@@ -53,31 +53,29 @@ export default {
     Icon,
   },
   data() {
-    return { 
+    return {
       iconData: icons,
       searchString: '',
       selectedClass: 'icon-md',
-      copyStatus: 0
+      copyStatus: 0,
     };
   },
   computed: {
-    filteredIcons () {
-      return this.iconData.icons.filter(icon => {
-        return this.searchString==='' || icon.indexOf(this.searchString)>-1;
-      });
+    filteredIcons() {
+      return this.iconData.icons.filter(icon => icon.includes(this.searchString));
     },
-    kbSize () {
+    kbSize() {
       return Math.round(this.iconData.spriteSize / 1024);
     },
   },
   methods: {
-    setCopyStatus (newStatus) {
+    setCopyStatus(newStatus) {
       this.copyStatus = newStatus;
       setTimeout(() => {
         this.copyStatus = 0;
       }, 5000);
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -92,8 +90,8 @@ export default {
 }
 
 .subheader .container {
-  margin-top:3px;
-  margin-bottom:3px;
+  margin-top: 3px;
+  margin-bottom: 3px;
 }
 
 .subheader .container .label {
@@ -137,5 +135,4 @@ export default {
   color: #999;
   font-size: smaller;
 }
-
 </style>

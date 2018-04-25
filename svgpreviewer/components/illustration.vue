@@ -1,12 +1,13 @@
-/* eslint object-shorthand: "off" */
 <template>
-  <div 
+  <div
     class="svg-content"
     @click="copyIcon">
-    <img 
+    <img
       :src="imgPath"/>
     <h4>
-      <span class="js-illustration-name" v-on:copy="copyEvent(icon)">{{illustration.name}}</span> ({{kbSize}}Kb)
+      <span class="js-illustration-name" v-on:copy="copyEvent" :data-illustration="illustration.name">
+        {{illustration.name}}
+      </span> ({{kbSize}}Kb)
     </h4>
   </div>
 </template>
@@ -20,15 +21,15 @@ export default {
     },
   },
   computed: {
-    imgPath: function () {
+    imgPath() {
       return `dist/${this.illustration.name}`;
     },
-    kbSize: function () {
+    kbSize() {
       return Math.round(this.illustration.size / 1024);
     },
   },
   methods: {
-    copyIcon: function () {
+    copyIcon() {
       const iconNameElement = this.$el.querySelector('.js-illustration-name');
       const range = document.createRange();
       range.selectNode(iconNameElement);
@@ -37,7 +38,7 @@ export default {
       try {
         const successful = document.execCommand('copy');
         const msg = successful ? 'successful' : 'unsuccessful';
-        console.log(`Copy email command was ${msg}`);
+        console.log(`Copy illustration command was ${msg}`);
         this.$emit('itemCopied', 1);
       } catch (err) {
         console.log('Oops, unable to copy');
@@ -45,13 +46,12 @@ export default {
       }
       window.getSelection().removeAllRanges();
     },
-    copyEvent: function(icon) {
+    copyEvent(event) {
       event.preventDefault();
       if (event.clipboardData) {
-        event.clipboardData.setData("text/plain", icon);
+        event.clipboardData.setData('text/plain', event.target.dataset.illustration);
       }
     },
   },
 };
 </script>
-

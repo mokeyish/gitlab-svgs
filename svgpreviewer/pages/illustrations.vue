@@ -18,7 +18,7 @@
             <input maxlength="255" autofocus="autofocus" class="form-control pad" size="255" type="text" placeholder="Illustration Search" v-model="searchString">
           </div>
         </div>
-      </div>      
+      </div>
     </header>
     <section class="container">
       <div class="illustrations-list">
@@ -37,27 +37,33 @@ export default {
     Illustration,
   },
   data() {
-    return { 
+    return {
       illustrationsData: illustrations,
       searchString: '',
-      copyStatus: 0
+      copyStatus: 0,
     };
   },
   computed: {
-    filteredIllustrations () {
-      return this.illustrationsData.illustrations.filter(illustration => {
-        return this.searchString==='' || illustration.name.indexOf(this.searchString)>-1;
-      });
+    filteredIllustrations() {
+      const unfiltered = this.illustrationsData.illustrations;
+
+      if (this.searchString === '') {
+        return unfiltered;
+      }
+
+      return this.illustrationsData.illustrations.filter(({ name }) =>
+        name.includes(this.searchString),
+      );
     },
   },
   methods: {
-    setCopyStatus (newStatus) {
+    setCopyStatus(newStatus) {
       this.copyStatus = newStatus;
       setTimeout(() => {
         this.copyStatus = 0;
       }, 5000);
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -72,8 +78,8 @@ export default {
 }
 
 .subheader .container {
-  margin-top:3px;
-  margin-bottom:3px;
+  margin-top: 3px;
+  margin-bottom: 3px;
 }
 
 .subheader .container .label {
@@ -103,5 +109,4 @@ export default {
   color: #999;
   font-size: smaller;
 }
-
 </style>

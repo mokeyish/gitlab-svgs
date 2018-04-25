@@ -9,7 +9,7 @@ const glob = require('glob');
 const spriteFilesPath = path.join('sprite_icons');
 
 module.exports = {
-  createIconSprite: (finishedCallback) => {
+  createIconSprite: finishedCallback => {
     const dest = path.normalize(path.join('dist'));
     const spriteFiles = glob.glob.sync(`${spriteFilesPath}**/*.svg`, {
       spriteFilesPath,
@@ -36,23 +36,27 @@ module.exports = {
     });
     const icons = [];
 
-    spriteFiles.forEach((file) => {
+    spriteFiles.forEach(file => {
       console.log(`Adding Icon : ${path.resolve(spriteFilesPath, file)}`);
       const filePath = path.resolve(file);
-      spriter.add(filePath, null, fs.readFileSync(filePath, {
-        encoding: 'utf-8',
-      }));
+      spriter.add(
+        filePath,
+        null,
+        fs.readFileSync(filePath, {
+          encoding: 'utf-8',
+        }),
+      );
       icons.push(file.split('/')[1].split('.')[0]);
     });
 
     // Compile the sprite
     spriter.compile((error, result) => {
-      for (const mode in result) {
-        for (const resource in result[mode]) {
-          mkdirp.sync(path.dirname(result[mode][resource].path));
-          fs.writeFileSync(result[mode][resource].path, result[mode][resource].contents);
-        }
-      }
+      Object.values(result).forEach(mode => {
+        Object.values(mode).forEach(resource => {
+          mkdirp.sync(path.dirname(resource.path));
+          fs.writeFileSync(resource.path, resource.contents);
+        });
+      });
     });
 
     function getFilesizeInBytes(filename) {
@@ -68,9 +72,12 @@ module.exports = {
       icons,
     };
 
-    fs.writeFileSync(path.join(__dirname, '..', 'dist', 'icons.json'), JSON.stringify(iconsInfo), 'utf8');
+    fs.writeFileSync(
+      path.join(__dirname, '..', 'dist', 'icons.json'),
+      JSON.stringify(iconsInfo),
+      'utf8',
+    );
 
     if (finishedCallback) finishedCallback();
   },
 };
-
