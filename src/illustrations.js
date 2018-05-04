@@ -18,6 +18,8 @@ module.exports = {
 
     const illustrations = [];
 
+    console.log(`Optimize ${illustrationFiles.length} Illustrations`);
+
     async.forEachOf(
       illustrationFiles,
       (file, key, callback) => {
@@ -28,7 +30,7 @@ module.exports = {
             throw err;
           }
 
-          svgo.optimize(data, result => {
+          svgo.optimize(data, { path: path.resolve(file) }).then(result => {
             const fpath = path.join(dest, file);
             mkdirp.sync(path.dirname(fpath));
             fs.writeFile(fpath, result.data, writeError => {
@@ -36,8 +38,6 @@ module.exports = {
                 callback(writeError);
                 return console.log(writeError);
               }
-              console.log(`Optimized : ${file}`);
-
               illustrations.push({
                 name: file,
                 size: utils.getFilesizeInBytes(fpath),
@@ -50,9 +50,6 @@ module.exports = {
       },
       err => {
         if (err) console.error(err.message);
-        // configs is now a map of JSON data
-        console.log('Found Illustrations : ', illustrations);
-
         // Save the Illustrations Info to a JSON
         const illustrationsInfo = {
           illustrationCount: illustrations.length,

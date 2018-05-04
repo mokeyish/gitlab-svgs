@@ -37,7 +37,7 @@ module.exports = {
     const icons = [];
 
     spriteFiles.forEach(file => {
-      console.log(`Adding Icon : ${path.resolve(spriteFilesPath, file)}`);
+      // console.log(`Adding Icon : ${path.resolve(spriteFilesPath, file)}`);
       const filePath = path.resolve(file);
       spriter.add(
         filePath,
