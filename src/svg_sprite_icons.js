@@ -35,9 +35,7 @@ module.exports = {
       },
     });
     const icons = [];
-
     spriteFiles.forEach(file => {
-      // console.log(`Adding Icon : ${path.resolve(spriteFilesPath, file)}`);
       const filePath = path.resolve(file);
       spriter.add(
         filePath,
@@ -49,35 +47,38 @@ module.exports = {
       icons.push(file.split('/')[1].split('.')[0]);
     });
 
+    const getFilesizeInBytes = filename => {
+      const stats = fs.statSync(filename);
+      const fileSizeInBytes = stats.size;
+      return fileSizeInBytes;
+    };
+
     // Compile the sprite
     spriter.compile((error, result) => {
+      console.log('Compile done : ', error, result);
       Object.values(result).forEach(mode => {
         Object.values(mode).forEach(resource => {
           mkdirp.sync(path.dirname(resource.path));
           fs.writeFileSync(resource.path, resource.contents);
+
+          console.log(`Compiled - Saving to ${resource.path}`);
         });
       });
+
+      // Save the Icons in here to a json so we can then display a nice help sprite sheet in GitLab
+      const iconsInfo = {
+        iconCount: icons.length,
+        spriteSize: getFilesizeInBytes(path.join(__dirname, '..', 'dist', 'icons.svg')),
+        icons,
+      };
+
+      fs.writeFileSync(
+        path.join(__dirname, '..', 'dist', 'icons.json'),
+        JSON.stringify(iconsInfo),
+        'utf8',
+      );
+
+      if (finishedCallback) finishedCallback();
     });
-
-    function getFilesizeInBytes(filename) {
-      const stats = fs.statSync(filename);
-      const fileSizeInBytes = stats.size;
-      return fileSizeInBytes;
-    }
-
-    // Save the Icons in here to a json so we can then display a nice help sprite sheet in GitLab
-    const iconsInfo = {
-      iconCount: icons.length,
-      spriteSize: getFilesizeInBytes(path.join(__dirname, '..', 'dist', 'icons.svg')),
-      icons,
-    };
-
-    fs.writeFileSync(
-      path.join(__dirname, '..', 'dist', 'icons.json'),
-      JSON.stringify(iconsInfo),
-      'utf8',
-    );
-
-    if (finishedCallback) finishedCallback();
   },
 };
