@@ -14,7 +14,13 @@ module.exports = {
     const spriteFiles = glob.glob.sync(`${spriteFilesPath}**/*.svg`, {
       spriteFilesPath,
     });
-    const svgo = new SVGO();
+    const svgo = new SVGO({
+      plugins: [
+        {
+          removeViewBox: false,
+        },
+      ],
+    });
     const spriter = new SVGSpriter({
       dest,
       shape: {

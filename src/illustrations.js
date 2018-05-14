@@ -14,7 +14,13 @@ module.exports = {
     const illustrationFilesPath = path.join('illustrations');
     const dest = path.normalize(path.join('dist'));
     const illustrationFiles = glob.glob.sync(`${illustrationFilesPath}/**/*.svg`, {});
-    const svgo = new SVGO();
+    const svgo = new SVGO({
+      plugins: [
+        {
+          removeViewBox: false,
+        },
+      ],
+    });
 
     const illustrations = [];
 
