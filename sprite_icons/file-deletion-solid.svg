@@ -1,6 +1,1 @@
-<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-  <title>
-    file-deletion-solid
-  </title>
-  <path d="M4.25 2h7.5C12.9926407 2 14 3.00735931 14 4.25v7.5c0 1.2426407-1.0073593 2.25-2.25 2.25h-7.5C3.00735931 14 2 12.9926407 2 11.75v-7.5C2 3.00735931 3.00735931 2 4.25 2zM5 7c-.55228475 0-1 .44771525-1 1s.44771525 1 1 1h6c.5522847 0 1-.44771525 1-1s-.4477153-1-1-1H5z"/>
-</svg>
+<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>icn/file-deletion-solid</title><defs><path d="M4.25 2h7.5A2.25 2.25 0 0 1 14 4.25v7.5A2.25 2.25 0 0 1 11.75 14h-7.5A2.25 2.25 0 0 1 2 11.75v-7.5A2.25 2.25 0 0 1 4.25 2zM5 7a1 1 0 1 0 0 2h6a1 1 0 0 0 0-2H5z" id="a"/></defs><use fill="#000" fill-rule="nonzero" xlink:href="#a"/></svg>

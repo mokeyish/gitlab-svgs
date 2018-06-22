@@ -1,12 +1,1 @@
-<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-  <title>
-    upload
-  </title>
-  <g fill="none" fill-rule="evenodd">
-    <path d="M8.745 3.01l-.428.036-.321-.286a3 3 0 0 0-4.985 2.494l.035.43-.286.32a3 3 0 0 0 4.49 3.98l.75-.85.75.85a3 3 0 1 0 3.485-4.72l-.344-.155-.156-.343a3 3 0 0 0-2.99-1.755z" stroke="#000" stroke-width="2"/>
-    <path fill="#FFF" d="M5 8h6v6H5z"/>
-    <circle fill="#000" cx="5" cy="11" r="1"/>
-    <circle fill="#000" cx="11" cy="11" r="1"/>
-    <path d="M9 9h1.7a.3.3 0 0 0 .2-.525l-2.701-2.4a.3.3 0 0 0-.399 0l-2.7 2.4A.3.3 0 0 0 5.3 9H7v5a1 1 0 1 0 2 0V9z" fill="#000"/>
-  </g>
-</svg>
+<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><title>icn/upload</title><g fill="none" fill-rule="evenodd"><path d="M8.745 3.01l-.428.036-.321-.286a3 3 0 0 0-4.985 2.494l.035.43-.286.32a3 3 0 0 0 4.49 3.98l.75-.85.75.85a3 3 0 1 0 3.485-4.72l-.344-.155-.156-.343a3 3 0 0 0-2.99-1.755z" stroke="#000" stroke-width="2"/><path fill="#FFF" d="M5 8h6v6H5z"/><circle fill="#000" cx="5" cy="11" r="1"/><circle fill="#000" cx="11" cy="11" r="1"/><path d="M9 9h1.7a.3.3 0 0 0 .2-.525l-2.701-2.4a.3.3 0 0 0-.399 0l-2.7 2.4A.3.3 0 0 0 5.3 9H7v5a1 1 0 1 0 2 0V9z" fill="#000"/></g></svg>

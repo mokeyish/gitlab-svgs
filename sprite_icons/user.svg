@@ -1,9 +1,1 @@
-<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <title>
-    icn/user
-  </title>
-  <defs>
-    <path d="M7.5 7C6.11928813 7 5 5.88071187 5 4.5S6.11928813 2 7.5 2 10 3.11928813 10 4.5 8.88071187 7 7.5 7zm.5 7c-5.92409711 0-6-.6690151-6-2.16C2 10.3490151 2.96376157 8 8 8c5.0362384 0 6 2.3073717 6 3.84 0 1.5326283-.0759029 2.16-6 2.16z" id="a"/>
-  </defs>
-  <use fill="#000" xlink:href="#a" fill-rule="evenodd"/>
-</svg>
+<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>icn/user</title><defs><path d="M7.5 7a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zm.5 7c-5.924 0-6-.669-6-2.16S2.964 8 8 8s6 2.307 6 3.84S13.924 14 8 14z" id="a"/></defs><use fill="#000" xlink:href="#a" fill-rule="evenodd"/></svg>
