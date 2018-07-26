@@ -59,7 +59,12 @@ module.exports = {
         // Save the Illustrations Info to a JSON
         const illustrationsInfo = {
           illustrationCount: illustrations.length,
-          illustrations,
+          illustrations: illustrations.sort((a, b) => {
+            if (a.name === b.name) {
+              return 0;
+            }
+            return a.name < b.name ? -1 : 1;
+          }),
         };
 
         fs.writeFileSync(
