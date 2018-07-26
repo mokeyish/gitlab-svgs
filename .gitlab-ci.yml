@@ -5,7 +5,7 @@ stages:
   - previewbuilt
 
 before_script:
-  - npm install
+  - yarn install
 
 cache:
   paths:
@@ -20,8 +20,8 @@ pages:
   stage: previewbuilt
   script:
     - echo "Starting SVG Built"
-    - npm run svg
-    - npm run generate
+    - yarn run svg
+    - yarn run generate
   artifacts:
     paths:
       - public
