@@ -1,21 +1,27 @@
 image: node:latest
 
 stages:
+  - check
   - previewbuilt
 
 before_script:
-  - npm install
+  - yarn install
 
 cache:
   paths:
     - node_modules/
 
+svg_check:
+  stage: check
+  script:
+    - bash ./svg-lint.sh
+
 pages:
   stage: previewbuilt
   script:
     - echo "Starting SVG Built"
-    - npm run svg
-    - npm run generate
+    - yarn run svg
+    - yarn run generate
   artifacts:
     paths:
       - public
