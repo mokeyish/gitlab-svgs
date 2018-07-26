@@ -1,6 +1,7 @@
 image: node:latest
 
 stages:
+  - check
   - previewbuilt
 
 before_script:
@@ -9,6 +10,11 @@ before_script:
 cache:
   paths:
     - node_modules/
+
+svg_check:
+  stage: check
+  script:
+    - bash ./svg-lint.sh
 
 pages:
   stage: previewbuilt
