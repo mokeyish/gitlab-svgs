@@ -6,6 +6,7 @@
   "repository": "git@gitlab.com:gitlab-org/gitlab-svgs.git",
   "author": "GitLab",
   "private": false,
+  "license": "MIT",
   "scripts": {
     "svg": "node index.js",
     "dev": "PORT=3333 nuxt",
