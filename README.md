@@ -60,7 +60,8 @@ Follow these steps when publishing a new version:
 ## Maintainers
 
 - [@timzallmann](https://gitlab.com/timzallmann)
-- [@hazelyang](https://gitlab.com/hazelyang)
+- [@sarrahvesselov](https://gitlab.com/sarrahvesselov)
+- [@dimitrieh](https://gitlab.com/dimitrieh)
 
 ## Contributing
 
