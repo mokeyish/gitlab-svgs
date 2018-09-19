@@ -80,7 +80,7 @@ module.exports = {
 
       fs.writeFileSync(
         path.join(__dirname, '..', 'dist', 'icons.json'),
-        JSON.stringify(iconsInfo),
+        JSON.stringify(iconsInfo, null, 2),
         'utf8',
       );
 
