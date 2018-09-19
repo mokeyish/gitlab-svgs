@@ -69,7 +69,7 @@ module.exports = {
 
         fs.writeFileSync(
           path.join(__dirname, '..', 'dist', 'illustrations.json'),
-          JSON.stringify(illustrationsInfo),
+          JSON.stringify(illustrationsInfo, null, 2),
           'utf8',
         );
 
