@@ -13,6 +13,8 @@
 </template>
 
 <script>
+import copyToClipboard from '../helpers/copy_to_clipboard';
+
 export default {
   props: {
     illustration: {
@@ -30,21 +32,7 @@ export default {
   },
   methods: {
     copyIcon() {
-      const iconNameElement = this.$el.querySelector('.js-illustration-name');
-      const range = document.createRange();
-      range.selectNode(iconNameElement);
-      window.getSelection().addRange(range);
-
-      try {
-        const successful = document.execCommand('copy');
-        const msg = successful ? 'successful' : 'unsuccessful';
-        console.log(`Copy illustration command was ${msg}`);
-        this.$emit('itemCopied', 1);
-      } catch (err) {
-        console.log('Oops, unable to copy');
-        this.$emit('itemCopied', -1);
-      }
-      window.getSelection().removeAllRanges();
+      this.$emit('itemCopied', copyToClipboard(this.illustration.name) ? 1 : -1);
     },
     copyEvent(event) {
       event.preventDefault();

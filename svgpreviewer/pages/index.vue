@@ -10,36 +10,80 @@
             </h5>
           </div>
           <div class="col-sm-3">
-            <span class="label label-success" v-if="copyStatus===1">Copied to your clipboard!</span>
-            <span class="label label-danger" v-if="copyStatus===-1">Copying didn't work :-(</span>
-            <span class="label muted" v-else-if="copyStatus===0">Click Icons to copy their name</span>
+            <div
+                class="label label-success"
+                v-if="copyStatus===1">
+              Copied to your clipboard!
+            </div>
+            <div
+                class="label label-danger"
+                v-if="copyStatus===-1">
+              Copying didn't work :-(
+            </div>
+            <div
+                class="label muted"
+                v-else-if="copyStatus===0">
+              Click Icons to copy their name
+            </div>
           </div>
           <div class="col-sm-3">
-            <input maxlength="255" autofocus="autofocus" class="form-control pad" size="255" type="text" placeholder="Icon Search" v-model="searchString">
+            <input
+                maxlength="255"
+                autofocus="autofocus"
+                class="form-control pad"
+                size="255"
+                type="text"
+                placeholder="Icon Search"
+                v-model="searchString">
+            <svg
+                class="icon-reset"
+                @click="resetSearch">
+              <use
+                  v-bind="{'xlink:href': `dist/icons.svg#close`}">
+              </use>
+            </svg>
           </div>
           <div class="col-sm-3">
             <div class="select-wrapper">
               <select
-                v-model="selectedClass"
-                class="form-control select-control">
+                  v-model="selectedClass"
+                  class="form-control select-control">
                 <option value="icon-xs">Very Small (8px)</option>
                 <option value="icon-sm">Small (16px)</option>
-                <option value="icon-md" selected>Medium (32px)</option>
+                <option
+                    value="icon-md"
+                    selected>
+                  Medium (32px)
+                </option>
                 <option value="icon-lg">Large (48px)</option>
                 <option value="icon-xl">Very Large (72px)</option>
                 <option value="icon-hu">Huge (256px)</option>
                 <option value="icon-nav">Sidemenu</option>
               </select>
-              <i aria-hidden="true" data-hidden="true" class="fa fa-chevron-down"></i>
+              <i
+                  aria-hidden="true"
+                  data-hidden="true"
+                  class="fa fa-chevron-down"></i>
             </div>
           </div>
         </div>
       </div>
     </header>
     <section class="container">
-      <ul class="icons-list">
-        <icon v-for="(icon, index) in filteredIcons" :key="index" :icon="icon" :iconClass="selectedClass" @itemCopied="setCopyStatus"></icon>
-      </ul>
+      <div class="icons-list">
+        <icon
+            v-for="(icon, index) in filteredIcons"
+            :key="index"
+            :icon="icon"
+            :iconClass="selectedClass"
+            @itemCopied="setCopyStatus"
+            @permaLink="setSearchString"/>
+        <a
+            v-show="filteredIcons.length === 0"
+            @click="resetSearch">
+          No icons found. Click here to reset your search!
+        </a>
+      </div>
     </section>
   </div>
 </template>
@@ -55,13 +99,16 @@ export default {
   data() {
     return {
       iconData: icons,
-      searchString: '',
-      selectedClass: 'icon-md',
+      searchString: this.$route.query.q || '',
+      selectedClass: this.$route.query.size || 'icon-md',
       copyStatus: 0,
     };
   },
   computed: {
     filteredIcons() {
+      if (this.searchString && this.searchString.startsWith('~')) {
+        return this.iconData.icons.filter(icon => `~${icon}` === this.searchString);
+      }
       return this.iconData.icons.filter(icon => icon.includes(this.searchString));
     },
     kbSize() {
@@ -69,11 +116,35 @@ export default {
     },
   },
   methods: {
+    setSearchString(value) {
+      this.searchString = `~${value}`;
+    },
+    resetSearch() {
+      this.searchString = '';
+    },
     setCopyStatus(newStatus) {
       this.copyStatus = newStatus;
       setTimeout(() => {
         this.copyStatus = 0;
       }, 5000);
+    },
+    updateQueryParams() {
+      const location = {
+        query: {
+          q: this.searchString ? this.searchString : undefined,
+          size: this.selectedClass !== 'icon-md' ? this.selectedClass : undefined,
+        },
+      };
+
+      this.$router.replace(location);
+    },
+  },
+  watch: {
+    searchString() {
+      this.updateQueryParams();
+    },
+    selectedClass() {
+      this.updateQueryParams();
     },
   },
 };
@@ -105,34 +176,32 @@ export default {
 .icons-list {
   margin-top: 90px;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.icons-list li {
-  min-width: 12.5%;
-  min-height: 125px;
-  font-size: 12px;
-  float: left;
-  line-height: 1.4;
-  text-align: center;
-  background-color: #f9f9f9;
-  border: 1px solid #fff;
-  padding: 20px;
-  display: list-item;
-  list-style: none;
-  margin: 3px;
-}
-
-.icons-list li:hover {
-  cursor: pointer;
-  border: solid 1px #ccc;
-}
-
-.icons-list li svg {
-  margin-bottom: 15px;
+@media (max-width: 768px) {
+  .icons-list {
+    margin-top: 180px;
+  }
 }
 
 .muted {
   color: #999;
   font-size: smaller;
+}
+
+.icon-reset {
+  position: absolute;
+  right: 24px;
+  top: 9px;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  fill: #707070;
+}
+
+.icon-reset:hover {
+  fill: black;
 }
 </style>
