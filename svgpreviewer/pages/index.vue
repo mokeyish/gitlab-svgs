@@ -152,7 +152,7 @@ export default {
     selectedClass() {
       this.updateQueryParams();
     },
-    $route (to) {
+    $route(to) {
       this.searchString = to.query.q || '';
       this.selectedClass = to.query.size || DEFAULT_ICON_SIZE;
     },
