@@ -96,6 +96,8 @@ import SvgImage from '../components/svg_image.vue';
 
 const DEFAULT_ICON_SIZE = 'image-md';
 
+const DEFAULT_ICON_SIZE = 'icon-md';
+
 export default {
   components: {
     SvgImage,
@@ -149,6 +151,10 @@ export default {
     },
     selectedClass() {
       this.updateQueryParams();
+    },
+    $route (to) {
+      this.searchString = to.query.q || '';
+      this.selectedClass = to.query.size || DEFAULT_ICON_SIZE;
     },
   },
 };
