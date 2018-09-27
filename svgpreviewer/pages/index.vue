@@ -92,6 +92,8 @@
 import icons from '../static/dist/icons.json';
 import Icon from '../components/icon.vue';
 
+const DEFAULT_ICON_SIZE = 'icon-md';
+
 export default {
   components: {
     Icon,
@@ -100,7 +102,7 @@ export default {
     return {
       iconData: icons,
       searchString: this.$route.query.q || '',
-      selectedClass: this.$route.query.size || 'icon-md',
+      selectedClass: this.$route.query.size || DEFAULT_ICON_SIZE,
       copyStatus: 0,
     };
   },
@@ -132,7 +134,7 @@ export default {
       const location = {
         query: {
           q: this.searchString ? this.searchString : undefined,
-          size: this.selectedClass !== 'icon-md' ? this.selectedClass : undefined,
+          size: this.selectedClass !== DEFAULT_ICON_SIZE ? this.selectedClass : undefined,
         },
       };
 
@@ -145,6 +147,10 @@ export default {
     },
     selectedClass() {
       this.updateQueryParams();
+    },
+    $route (to) {
+      this.searchString = to.query.q || '';
+      this.selectedClass = to.query.size || DEFAULT_ICON_SIZE;
     },
   },
 };
