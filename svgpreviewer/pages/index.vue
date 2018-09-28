@@ -11,59 +11,59 @@
           </div>
           <div class="col-sm-3">
             <div
-                class="label label-success"
-                v-if="copyStatus===1">
+              class="label label-success"
+              v-if="copyStatus===1">
               Copied to your clipboard!
             </div>
             <div
-                class="label label-danger"
-                v-if="copyStatus===-1">
+              class="label label-danger"
+              v-if="copyStatus===-1">
               Copying didn't work :-(
             </div>
             <div
-                class="label muted"
-                v-else-if="copyStatus===0">
+              class="label muted"
+              v-else-if="copyStatus===0">
               Click Icons to copy their name
             </div>
           </div>
           <div class="col-sm-3">
             <input
-                maxlength="255"
-                autofocus="autofocus"
-                class="form-control pad"
-                size="255"
-                type="text"
-                placeholder="Icon Search"
-                v-model="searchString">
+              maxlength="255"
+              autofocus="autofocus"
+              class="form-control pad"
+              size="255"
+              type="text"
+              placeholder="Icon Search"
+              v-model="searchString">
             <svg
-                class="icon-reset"
-                @click="resetSearch">
+              class="icon-reset"
+              @click="resetSearch">
               <use
-                  v-bind="{'xlink:href': `dist/icons.svg#close`}">
+                v-bind="{'xlink:href': `dist/icons.svg#close`}">
               </use>
             </svg>
           </div>
           <div class="col-sm-3">
             <div class="select-wrapper">
               <select
-                  v-model="selectedClass"
-                  class="form-control select-control">
-                <option value="icon-xs">Very Small (8px)</option>
-                <option value="icon-sm">Small (16px)</option>
+                v-model="selectedClass"
+                class="form-control select-control">
+                <option value="image-xs">Very Small (8px)</option>
+                <option value="image-sm">Small (16px)</option>
                 <option
-                    value="icon-md"
-                    selected>
+                  value="image-md"
+                  selected>
                   Medium (32px)
                 </option>
-                <option value="icon-lg">Large (48px)</option>
-                <option value="icon-xl">Very Large (72px)</option>
-                <option value="icon-hu">Huge (256px)</option>
-                <option value="icon-nav">Sidemenu</option>
+                <option value="image-lg">Large (48px)</option>
+                <option value="image-xl">Very Large (72px)</option>
+                <option value="image-hu">Huge (256px)</option>
+                <option value="image-nav">Sidemenu</option>
               </select>
               <i
-                  aria-hidden="true"
-                  data-hidden="true"
-                  class="fa fa-chevron-down"></i>
+                aria-hidden="true"
+                data-hidden="true"
+                class="fa fa-chevron-down"></i>
             </div>
           </div>
         </div>
@@ -71,16 +71,18 @@
     </header>
     <section class="container">
       <div class="icons-list">
-        <icon
-            v-for="(icon, index) in filteredIcons"
-            :key="index"
-            :icon="icon"
-            :iconClass="selectedClass"
-            @itemCopied="setCopyStatus"
-            @permaLink="setSearchString"/>
+        <svg-image
+          v-for="(icon, index) in filteredIcons"
+          :key="index"
+          :image="icon"
+          :imageClass="selectedClass"
+          imageSprite="dist/icons.svg"
+          sourcePath="https://gitlab.com/gitlab-org/gitlab-svgs/blob/master/sprite_icons/"
+          @imageCopied="setCopyStatus"
+          @permalinkSelected="setSearchString"/>
         <a
-            v-show="filteredIcons.length === 0"
-            @click="resetSearch">
+          v-show="filteredIcons.length === 0"
+          @click="resetSearch">
           No icons found. Click here to reset your search!
         </a>
       </div>
@@ -90,17 +92,19 @@
 
 <script>
 import icons from '../static/dist/icons.json';
-import Icon from '../components/icon.vue';
+import SvgImage from '../components/svg_image.vue';
+
+const DEFAULT_ICON_SIZE = 'image-md';
 
 export default {
   components: {
-    Icon,
+    SvgImage,
   },
   data() {
     return {
       iconData: icons,
       searchString: this.$route.query.q || '',
-      selectedClass: this.$route.query.size || 'icon-md',
+      selectedClass: this.$route.query.size || DEFAULT_ICON_SIZE,
       copyStatus: 0,
     };
   },
@@ -132,7 +136,7 @@ export default {
       const location = {
         query: {
           q: this.searchString ? this.searchString : undefined,
-          size: this.selectedClass !== 'icon-md' ? this.selectedClass : undefined,
+          size: this.selectedClass !== DEFAULT_ICON_SIZE ? this.selectedClass : undefined,
         },
       };
 
