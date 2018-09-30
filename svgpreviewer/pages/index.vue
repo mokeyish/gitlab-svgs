@@ -96,8 +96,6 @@ import SvgImage from '../components/svg_image.vue';
 
 const DEFAULT_ICON_SIZE = 'image-md';
 
-const DEFAULT_ICON_SIZE = 'icon-md';
-
 export default {
   components: {
     SvgImage,
