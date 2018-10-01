@@ -115,6 +115,10 @@ export default {
     searchString() {
       this.updateQueryParams();
     },
+    $route(to) {
+      const query = to.query || {};
+      this.searchString = query.q || '';
+    },
   },
 };
 </script>
