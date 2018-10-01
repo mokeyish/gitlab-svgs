@@ -151,8 +151,9 @@ export default {
       this.updateQueryParams();
     },
     $route(to) {
-      this.searchString = to.query.q || '';
-      this.selectedClass = to.query.size || DEFAULT_ICON_SIZE;
+      const query = to.query || {};
+      this.searchString = query.q || '';
+      this.selectedClass = query.size || DEFAULT_ICON_SIZE;
     },
   },
 };
