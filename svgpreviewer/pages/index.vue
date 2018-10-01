@@ -150,6 +150,11 @@ export default {
     selectedClass() {
       this.updateQueryParams();
     },
+    $route(to) {
+      const query = to.query || {};
+      this.searchString = query.q || '';
+      this.selectedClass = query.size || DEFAULT_ICON_SIZE;
+    },
   },
 };
 </script>
