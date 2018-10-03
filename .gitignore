@@ -1,15 +1,14 @@
-# dependencies
-node_modules
-
-# logs
+# npm / yarn
+node_modules/
 npm-debug.log
+package-lock.json
+yarn-error.log
 
-# Nuxt build
-.nuxt
+# Nuxt build & generate
+.nuxt/
+public/
 
-# Nuxt generate
-public
-
+# Preview App
 svgpreviewer/static/dist
 
 .DS_Store
