@@ -1,4 +1,3 @@
-/* eslint-disable import/no-commonjs */
 const SVGSpriter = require('svg-sprite');
 const SVGO = require('svgo');
 const path = require('path');
@@ -6,11 +5,11 @@ const mkdirp = require('mkdirp');
 const fs = require('fs');
 const glob = require('glob');
 
-const spriteFilesPath = path.join('sprite_icons');
-
 module.exports = {
-  createIconSprite: finishedCallback => {
-    const dest = path.normalize(path.join('dist'));
+  createIconSprite: (BASE_PATH, finishedCallback) => {
+    const spriteFilesPath = path.join(BASE_PATH, 'sprite_icons');
+
+    const dest = path.normalize(path.join(BASE_PATH, 'dist'));
     const spriteFiles = glob.glob.sync(`${spriteFilesPath}**/*.svg`, {
       spriteFilesPath,
     });
@@ -50,7 +49,7 @@ module.exports = {
           encoding: 'utf-8',
         }),
       );
-      icons.push(file.split('/')[1].split('.')[0]);
+      icons.push(path.basename(file, '.svg'));
     });
 
     const getFilesizeInBytes = filename => {
@@ -74,12 +73,12 @@ module.exports = {
       // Save the Icons in here to a json so we can then display a nice help sprite sheet in GitLab
       const iconsInfo = {
         iconCount: icons.length,
-        spriteSize: getFilesizeInBytes(path.join(__dirname, '..', 'dist', 'icons.svg')),
+        spriteSize: getFilesizeInBytes(path.join(dest, 'icons.svg')),
         icons,
       };
 
       fs.writeFileSync(
-        path.join(__dirname, '..', 'dist', 'icons.json'),
+        path.join(dest, 'icons.json'),
         JSON.stringify(iconsInfo, null, 2),
         'utf8',
       );

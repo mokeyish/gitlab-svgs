@@ -8,7 +8,7 @@
   "private": false,
   "license": "MIT",
   "scripts": {
-    "svg": "node index.js",
+    "svg": "node build_scripts/index.js",
     "dev": "PORT=3333 nuxt",
     "build": "nuxt build",
     "start": "nuxt start",

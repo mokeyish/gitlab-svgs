@@ -5,16 +5,17 @@ stages:
   - previewbuilt
 
 before_script:
-  - yarn install
+  - yarn install --frozen-lockfile
 
 cache:
   paths:
     - node_modules/
 
-svg_check:
+check:
   stage: check
   script:
-    - bash ./svg-lint.sh
+    - bash ./build_scripts/svg-lint.sh
+    - bash ./build_scripts/dist-check.sh
 
 pages:
   stage: previewbuilt

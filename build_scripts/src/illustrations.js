@@ -1,4 +1,3 @@
-/* eslint-disable import/no-commonjs */
 const async = require('async');
 const SVGSpriter = require('svg-sprite');
 const SVGO = require('svgo');
@@ -10,9 +9,9 @@ const glob = require('glob');
 const utils = require('./utils');
 
 module.exports = {
-  optimizeIllustrations: finishedCallback => {
-    const illustrationFilesPath = path.join('illustrations');
-    const dest = path.normalize(path.join('dist'));
+  optimizeIllustrations: (BASE_PATH, finishedCallback) => {
+    const illustrationFilesPath = path.join(BASE_PATH, 'illustrations');
+    const dest = path.normalize(path.join(BASE_PATH, 'dist'));
     const illustrationFiles = glob.glob.sync(`${illustrationFilesPath}/**/*.svg`, {});
     const svgo = new SVGO({
       plugins: [
@@ -37,7 +36,8 @@ module.exports = {
           }
 
           svgo.optimize(data, { path: path.resolve(file) }).then(result => {
-            const fpath = path.join(dest, file);
+            const relName = path.relative(BASE_PATH, file);
+            const fpath = path.join(dest, relName);
             mkdirp.sync(path.dirname(fpath));
             fs.writeFile(fpath, result.data, writeError => {
               if (writeError) {
@@ -45,7 +45,7 @@ module.exports = {
                 return console.log(writeError);
               }
               illustrations.push({
-                name: file,
+                name: relName,
                 size: utils.getFilesizeInBytes(fpath),
               });
 
@@ -68,7 +68,7 @@ module.exports = {
         };
 
         fs.writeFileSync(
-          path.join(__dirname, '..', 'dist', 'illustrations.json'),
+          path.join(dest, 'illustrations.json'),
           JSON.stringify(illustrationsInfo, null, 2),
           'utf8',
         );
