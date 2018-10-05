@@ -16,9 +16,7 @@ nuxt.config.js
 svgpreviewer/
 
 # Build scripts
-src/
-index.js
-svg-lint.sh
+build_scripts/
 
 # Dot files
 .gitlab/

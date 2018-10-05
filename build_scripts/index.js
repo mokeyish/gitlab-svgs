@@ -1,4 +1,3 @@
-/* eslint-disable import/no-commonjs */
 const async = require('async');
 const path = require('path');
 
@@ -6,17 +5,19 @@ const svgSpriteIcons = require('./src/svg_sprite_icons');
 const illustrations = require('./src/illustrations');
 const utils = require('./src/utils');
 
+const BASE_PATH = path.join(__dirname, '..');
+
 async.parallel(
   {
     iconSprite: callback => {
-      svgSpriteIcons.createIconSprite(() => {
+      svgSpriteIcons.createIconSprite(BASE_PATH, () => {
         console.log('Created Icon Sprite');
         callback(null, true);
       });
     },
     two: callback => {
       console.log('Starting illustrations ...');
-      illustrations.optimizeIllustrations(() => {
+      illustrations.optimizeIllustrations(BASE_PATH, () => {
         console.log('Created Illustrations');
         callback(null, true);
       });
@@ -24,8 +25,8 @@ async.parallel(
   },
   (err, results) => {
     console.log('Reached copying !');
-    const sourcePath = path.join('dist');
-    const destPath = path.normalize(path.join('svgpreviewer', 'static'));
+    const sourcePath = path.join(BASE_PATH, 'dist');
+    const destPath = path.normalize(path.join(BASE_PATH, 'svgpreviewer', 'static'));
 
     console.log('Copying files to dist ...');
 
