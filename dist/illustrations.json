@@ -1,5 +1,5 @@
 {
-  "illustrationCount": 87,
+  "illustrationCount": 88,
   "illustrations": [
     {
       "name": "illustrations/canceled-job_empty.svg",
@@ -184,6 +184,10 @@
     {
       "name": "illustrations/monitoring/no_data.svg",
       "size": 3913
+    },
+    {
+      "name": "illustrations/monitoring/tracing.svg",
+      "size": 4942
     },
     {
       "name": "illustrations/monitoring/unable_to_connect.svg",
