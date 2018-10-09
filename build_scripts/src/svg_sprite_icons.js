@@ -38,6 +38,9 @@ module.exports = {
           sprite: 'icons.svg',
         },
       },
+      svg: {
+        namespaceClassnames: false,
+      },
     });
     const icons = [];
     spriteFiles.forEach(file => {
