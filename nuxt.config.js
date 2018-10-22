@@ -16,7 +16,7 @@ module.exports = {
       },
     ],
     link: [
-      { rel: 'stylesheet', href: 'application/gitlab-application.css' },
+      { rel: 'stylesheet', href: '/application/gitlab-application.css' },
       { rel: 'icon', type: 'image/x-icon', href: './favicon.ico' },
     ],
     bodyAttrs: {
