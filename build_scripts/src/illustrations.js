@@ -1,5 +1,4 @@
 const async = require('async');
-const SVGSpriter = require('svg-sprite');
 const SVGO = require('svgo');
 const path = require('path');
 const mkdirp = require('mkdirp');
@@ -12,7 +11,7 @@ module.exports = {
   optimizeIllustrations: (BASE_PATH, finishedCallback) => {
     const illustrationFilesPath = path.join(BASE_PATH, 'illustrations');
     const dest = path.normalize(path.join(BASE_PATH, 'dist'));
-    const illustrationFiles = glob.glob.sync(`${illustrationFilesPath}/**/*.svg`, {});
+    const illustrationFiles = glob.sync(`${illustrationFilesPath}/**/*.svg`, {});
     const svgo = new SVGO({
       plugins: [
         {
