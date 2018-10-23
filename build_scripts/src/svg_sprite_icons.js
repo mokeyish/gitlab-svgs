@@ -1,25 +1,20 @@
 const SVGSpriter = require('svg-sprite');
-const SVGO = require('svgo');
 const path = require('path');
 const mkdirp = require('mkdirp');
 const fs = require('fs');
 const glob = require('glob');
+
+const utils = require('./utils');
 
 module.exports = {
   createIconSprite: (BASE_PATH, finishedCallback) => {
     const spriteFilesPath = path.join(BASE_PATH, 'sprite_icons');
 
     const dest = path.normalize(path.join(BASE_PATH, 'dist'));
-    const spriteFiles = glob.glob.sync(`${spriteFilesPath}**/*.svg`, {
+    const spriteFiles = glob.sync(`${spriteFilesPath}**/*.svg`, {
       spriteFilesPath,
     });
-    const svgo = new SVGO({
-      plugins: [
-        {
-          removeViewBox: false,
-        },
-      ],
-    });
+
     const spriter = new SVGSpriter({
       dest,
       shape: {
@@ -55,12 +50,6 @@ module.exports = {
       icons.push(path.basename(file, '.svg'));
     });
 
-    const getFilesizeInBytes = filename => {
-      const stats = fs.statSync(filename);
-      const fileSizeInBytes = stats.size;
-      return fileSizeInBytes;
-    };
-
     // Compile the sprite
     spriter.compile((error, result) => {
       console.log('Compile done : ', error, result);
@@ -76,15 +65,11 @@ module.exports = {
       // Save the Icons in here to a json so we can then display a nice help sprite sheet in GitLab
       const iconsInfo = {
         iconCount: icons.length,
-        spriteSize: getFilesizeInBytes(path.join(dest, 'icons.svg')),
+        spriteSize: utils.getFilesizeInBytes(path.join(dest, 'icons.svg')),
         icons,
       };
 
-      fs.writeFileSync(
-        path.join(dest, 'icons.json'),
-        JSON.stringify(iconsInfo, null, 2),
-        'utf8',
-      );
+      fs.writeFileSync(path.join(dest, 'icons.json'), JSON.stringify(iconsInfo, null, 2), 'utf8');
 
       if (finishedCallback) finishedCallback();
     });

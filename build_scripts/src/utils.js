@@ -4,8 +4,7 @@ const path = require('path');
 const utils = {
   getFilesizeInBytes(filename) {
     const stats = fs.statSync(filename);
-    const fileSizeInBytes = stats.size;
-    return fileSizeInBytes;
+    return stats.size;
   },
 
   // Helper Functions
