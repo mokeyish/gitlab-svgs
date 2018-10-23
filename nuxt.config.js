@@ -1,4 +1,7 @@
 /* eslint-disable import/no-commonjs, filenames/match-regex */
+
+const baseDir = process.env.CI ? '/gitlab-svgs/' : '/';
+
 module.exports = {
   srcDir: 'svgpreviewer/',
   /*
@@ -8,7 +11,10 @@ module.exports = {
     title: 'GitLab SVG Previewer',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1',
+      },
       {
         hid: 'description',
         name: 'description',
@@ -16,8 +22,15 @@ module.exports = {
       },
     ],
     link: [
-      { rel: 'stylesheet', href: '/application/gitlab-application.css' },
-      { rel: 'icon', type: 'image/x-icon', href: './favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href: `${baseDir}application/gitlab-application.css`,
+      },
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: `${baseDir}favicon.ico`,
+      },
     ],
     bodyAttrs: {
       class: 'ui_indigo',
@@ -33,7 +46,7 @@ module.exports = {
   },
 
   router: {
-    base: process.env.CI ? '/gitlab-svgs/' : '/',
+    base: baseDir,
   },
 
   /*
