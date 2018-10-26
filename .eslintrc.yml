@@ -1,31 +1,5 @@
----
-root: true
-env:
-  browser: true
-  node: true
-extends: airbnb-base
-parser: babel-eslint
-plugins:
-- filenames
-- import
-- html
+extends: '@gitlab'
 rules:
-  no-unused-vars: 'off'
-  filenames/match-regex:
-  - 2
-  - "^[a-z0-9_]+$"
-  import/no-commonjs: error
-  no-multiple-empty-lines:
-  - error
-  - max: 1
-  promise/catch-or-return: 'off'
-  no-underscore-dangle:
-  - error
-  - allow:
-    - __
+  # We need to disable the following rule, because all dependencies in this project are dev dependencies
+  # However, the resulting npm package needs none of those dependencies in production
   import/no-extraneous-dependencies: 'off'
-  no-debugger: 'off'
-  arrow-parens: 0
-  space-before-function-paren: 0
-  function-paren-newline: 0
-globals: {}

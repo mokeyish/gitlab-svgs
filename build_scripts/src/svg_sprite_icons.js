@@ -37,7 +37,9 @@ module.exports = {
         namespaceClassnames: false,
       },
     });
+
     const icons = [];
+
     spriteFiles.forEach(file => {
       const filePath = path.resolve(file);
       spriter.add(
@@ -52,26 +54,33 @@ module.exports = {
 
     // Compile the sprite
     spriter.compile((error, result) => {
-      console.log('Compile done : ', error, result);
-      Object.values(result).forEach(mode => {
-        Object.values(mode).forEach(resource => {
-          mkdirp.sync(path.dirname(resource.path));
-          fs.writeFileSync(resource.path, resource.contents);
+      if (error) {
+        return finishedCallback(error);
+      }
 
-          console.log(`Compiled - Saving to ${resource.path}`);
+      try {
+        Object.values(result).forEach(mode => {
+          Object.values(mode).forEach(resource => {
+            mkdirp.sync(path.dirname(resource.path));
+            fs.writeFileSync(resource.path, resource.contents);
+
+            console.log(`Compiled - Saving to ${resource.path}`);
+          });
         });
-      });
 
-      // Save the Icons in here to a json so we can then display a nice help sprite sheet in GitLab
-      const iconsInfo = {
-        iconCount: icons.length,
-        spriteSize: utils.getFilesizeInBytes(path.join(dest, 'icons.svg')),
-        icons,
-      };
+        // Save the Icons in here to a json so we can then display a nice help sprite sheet in GitLab
+        const iconsInfo = {
+          iconCount: icons.length,
+          spriteSize: utils.getFilesizeInBytes(path.join(dest, 'icons.svg')),
+          icons,
+        };
 
-      fs.writeFileSync(path.join(dest, 'icons.json'), JSON.stringify(iconsInfo, null, 2), 'utf8');
+        fs.writeFileSync(path.join(dest, 'icons.json'), JSON.stringify(iconsInfo, null, 2), 'utf8');
+      } catch (e) {
+        return finishedCallback(e);
+      }
 
-      if (finishedCallback) finishedCallback();
+      return finishedCallback();
     });
   },
 };

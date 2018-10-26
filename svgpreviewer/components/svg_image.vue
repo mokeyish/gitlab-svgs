@@ -2,53 +2,60 @@
   <div class="image-wrapper">
     <div
       class="image-base"
-      @click="copyImage">
+      @click="copyImage"
+    >
       <svg
         v-if="imageSprite"
-        :class="[imageClass]">
+        :class="[imageClass]"
+      >
         <use
-          v-bind="{'xlink:href': spritePath}">
-        </use>
+          v-bind="{'xlink:href': spritePath}"
+        />
       </svg>
       <img
         v-else
         :class="[imageClass]"
-        :src="imagePath"/>
+        :src="imagePath"
+      />
       <div class="image-name">
-        {{imageName}}
+        {{ imageName }}
         <span
-          v-if="imageSize">
-          ({{kbSize}}Kb)
+          v-if="imageSize"
+        >
+          ({{ kbSize }}Kb)
         </span>
       </div>
     </div>
     <div class="image-actions">
       <a
         title="Copy to clipboard"
-        @click="copyImage">
+        @click="copyImage"
+      >
         <svg class="image-sm">
           <use
-            v-bind="{'xlink:href': `dist/icons.svg#duplicate`}">
-          </use>
+            v-bind="{'xlink:href': `dist/icons.svg#duplicate`}"
+          />
         </svg>
       </a>
       <a
         title="Permalink"
-        @click="selectPermalink">
+        @click="selectPermalink"
+      >
         <svg class="image-sm">
           <use
-            v-bind="{'xlink:href': `dist/icons.svg#link`}">
-          </use>
+            v-bind="{'xlink:href': `dist/icons.svg#link`}"
+          />
         </svg>
       </a>
       <a
         title="Open source"
         target="_blank"
-        :href="sourceLink">
+        :href="sourceLink"
+      >
         <svg class="image-sm">
           <use
-            v-bind="{'xlink:href': `dist/icons.svg#external-link`}">
-          </use>
+            v-bind="{'xlink:href': `dist/icons.svg#external-link`}"
+          />
         </svg>
       </a>
     </div>
@@ -67,14 +74,17 @@ export default {
     imageClass: {
       type: String,
       required: false,
+      default: '',
     },
     imageSprite: {
       type: String,
       required: false,
+      default: '',
     },
     imageSize: {
-      type: String,
+      type: Number,
       required: false,
+      default: 0,
     },
     sourcePath: {
       type: String,
