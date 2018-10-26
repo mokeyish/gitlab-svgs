@@ -6,41 +6,46 @@
         <div class="row">
           <div class="col-sm-4">
             <h5 class="subtitle">
-              {{illustrationsData.illustrationCount}} Illustrations
+              {{ illustrationsData.illustrationCount }} Illustrations
             </h5>
           </div>
           <div class="col-sm-3">
             <span
+              v-if="copyStatus===1"
               class="label label-success"
-              v-if="copyStatus===1">
+            >
               Copied to your clipboard!
             </span>
             <span
+              v-if="copyStatus===-1"
               class="label label-danger"
-              v-if="copyStatus===-1">
+            >
               Copying didn't work :-(
             </span>
             <span
+              v-else-if="copyStatus===0"
               class="label muted"
-              v-else-if="copyStatus===0">
+            >
               Click Illustration to copy their path
             </span>
           </div>
           <div class="col-sm-5">
             <input
+              v-model="searchString"
               maxlength="255"
               autofocus="autofocus"
               class="form-control pad"
               size="255"
               type="text"
               placeholder="Illustration Search"
-              v-model="searchString">
+            />
             <svg
               class="icon-reset"
-              @click="resetSearch">
+              @click="resetSearch"
+            >
               <use
-                v-bind="{'xlink:href': `dist/icons.svg#close`}">
-              </use>
+                v-bind="{'xlink:href': `dist/icons.svg#close`}"
+              />
             </svg>
           </div>
         </div>
@@ -52,9 +57,10 @@
           v-for="(illustration, index) in filteredIllustrations"
           :key="index"
           :image="illustration.name"
-          sourcePath="https://gitlab.com/gitlab-org/gitlab-svgs/blob/master/"
+          source-path="https://gitlab.com/gitlab-org/gitlab-svgs/blob/master/"
           @imageCopied="setCopyStatus"
-          @permalinkSelected="setSearchString"/>
+          @permalinkSelected="setSearchString"
+        />
       </div>
     </section>
   </div>
@@ -88,6 +94,15 @@ export default {
       );
     },
   },
+  watch: {
+    searchString() {
+      this.updateQueryParams();
+    },
+    $route(to) {
+      const query = to.query || {};
+      this.searchString = query.q || '';
+    },
+  },
   methods: {
     setSearchString(value) {
       this.searchString = value;
@@ -109,15 +124,6 @@ export default {
       };
 
       this.$router.replace(location);
-    },
-  },
-  watch: {
-    searchString() {
-      this.updateQueryParams();
-    },
-    $route(to) {
-      const query = to.query || {};
-      this.searchString = query.q || '';
     },
   },
 };

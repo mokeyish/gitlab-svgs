@@ -6,53 +6,60 @@
         <div class="row">
           <div class="col-sm-3">
             <h5 class="subtitle">
-              {{iconData.iconCount}} Icons ({{kbSize}}Kb)
+              {{ iconData.iconCount }} Icons ({{ kbSize }}Kb)
             </h5>
           </div>
           <div class="col-sm-3">
             <div
+              v-if="copyStatus===1"
               class="label label-success"
-              v-if="copyStatus===1">
+            >
               Copied to your clipboard!
             </div>
             <div
+              v-if="copyStatus===-1"
               class="label label-danger"
-              v-if="copyStatus===-1">
+            >
               Copying didn't work :-(
             </div>
             <div
+              v-else-if="copyStatus===0"
               class="label muted"
-              v-else-if="copyStatus===0">
+            >
               Click Icons to copy their name
             </div>
           </div>
           <div class="col-sm-3">
             <input
+              v-model="searchString"
               maxlength="255"
               autofocus="autofocus"
               class="form-control pad"
               size="255"
               type="text"
               placeholder="Icon Search"
-              v-model="searchString">
+            />
             <svg
               class="icon-reset"
-              @click="resetSearch">
+              @click="resetSearch"
+            >
               <use
-                v-bind="{'xlink:href': `dist/icons.svg#close`}">
-              </use>
+                v-bind="{'xlink:href': `dist/icons.svg#close`}"
+              />
             </svg>
           </div>
           <div class="col-sm-3">
             <div class="select-wrapper">
               <select
                 v-model="selectedClass"
-                class="form-control select-control">
+                class="form-control select-control"
+              >
                 <option value="image-xs">Very Small (8px)</option>
                 <option value="image-sm">Small (16px)</option>
                 <option
                   value="image-md"
-                  selected>
+                  selected
+                >
                   Medium (32px)
                 </option>
                 <option value="image-lg">Large (48px)</option>
@@ -63,7 +70,8 @@
               <i
                 aria-hidden="true"
                 data-hidden="true"
-                class="fa fa-chevron-down"></i>
+                class="fa fa-chevron-down"
+              ></i>
             </div>
           </div>
         </div>
@@ -75,14 +83,16 @@
           v-for="(icon, index) in filteredIcons"
           :key="index"
           :image="icon"
-          :imageClass="selectedClass"
-          imageSprite="dist/icons.svg"
-          sourcePath="https://gitlab.com/gitlab-org/gitlab-svgs/blob/master/sprite_icons/"
+          :image-class="selectedClass"
+          image-sprite="dist/icons.svg"
+          source-path="https://gitlab.com/gitlab-org/gitlab-svgs/blob/master/sprite_icons/"
           @imageCopied="setCopyStatus"
-          @permalinkSelected="setSearchString"/>
+          @permalinkSelected="setSearchString"
+        />
         <a
           v-show="filteredIcons.length === 0"
-          @click="resetSearch">
+          @click="resetSearch"
+        >
           No icons found. Click here to reset your search!
         </a>
       </div>
@@ -119,6 +129,19 @@ export default {
       return Math.round(this.iconData.spriteSize / 1024);
     },
   },
+  watch: {
+    searchString() {
+      this.updateQueryParams();
+    },
+    selectedClass() {
+      this.updateQueryParams();
+    },
+    $route(to) {
+      const query = to.query || {};
+      this.searchString = query.q || '';
+      this.selectedClass = query.size || DEFAULT_ICON_SIZE;
+    },
+  },
   methods: {
     setSearchString(value) {
       this.searchString = `~${value}`;
@@ -141,19 +164,6 @@ export default {
       };
 
       this.$router.replace(location);
-    },
-  },
-  watch: {
-    searchString() {
-      this.updateQueryParams();
-    },
-    selectedClass() {
-      this.updateQueryParams();
-    },
-    $route(to) {
-      const query = to.query || {};
-      this.searchString = query.q || '';
-      this.selectedClass = query.size || DEFAULT_ICON_SIZE;
     },
   },
 };

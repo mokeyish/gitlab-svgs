@@ -15,20 +15,26 @@ rimraf(`${DIST_PATH}/**/*`, () => {
   async.parallel(
     [
       callback => {
-        svgSpriteIcons.createIconSprite(BASE_PATH, () => {
+        svgSpriteIcons.createIconSprite(BASE_PATH, err => {
           console.log('Created Icon Sprite');
-          callback(null, true);
+          callback(err, true);
         });
       },
       callback => {
         console.log('Starting illustrations ...');
-        illustrations.optimizeIllustrations(BASE_PATH, () => {
+        illustrations.optimizeIllustrations(BASE_PATH, err => {
           console.log('Created Illustrations');
-          callback(null, true);
+          callback(err, true);
         });
       },
     ],
-    (err, results) => {
+    err => {
+      if (err) {
+        console.error('Something went wrong');
+        console.error(err);
+        process.exit(1);
+      }
+
       console.log('Reached copying !');
 
       const staticPath = path.normalize(path.join(BASE_PATH, 'svgpreviewer', 'static'));

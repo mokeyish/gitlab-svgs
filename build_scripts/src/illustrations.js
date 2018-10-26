@@ -2,7 +2,6 @@ const async = require('async');
 const SVGO = require('svgo');
 const path = require('path');
 const mkdirp = require('mkdirp');
-const fs = require('fs');
 const glob = require('glob');
 
 const utils = require('./utils');
@@ -27,34 +26,31 @@ module.exports = {
     async.forEachOf(
       illustrationFiles,
       (file, key, callback) => {
-        fs.readFile(path.resolve(file), 'utf8', (err, data) => {
-          if (err) {
-            console.log('ERR ', err);
-            callback(err);
-            throw err;
-          }
+        const relName = path.relative(BASE_PATH, file);
+        const fpath = path.join(dest, relName);
 
-          svgo.optimize(data, { path: path.resolve(file) }).then(result => {
-            const relName = path.relative(BASE_PATH, file);
-            const fpath = path.join(dest, relName);
+        utils
+          .readFilePromise(path.resolve(file), 'utf8')
+          .then(data => svgo.optimize(data, { path: path.resolve(file) }))
+          .then(result => {
             mkdirp.sync(path.dirname(fpath));
-            fs.writeFile(fpath, result.data, writeError => {
-              if (writeError) {
-                callback(writeError);
-                return console.log(writeError);
-              }
-              illustrations.push({
-                name: relName,
-                size: utils.getFilesizeInBytes(fpath),
-              });
 
-              return callback();
+            return utils.writeFilePromise(fpath, result.data);
+          })
+          .then(() => {
+            illustrations.push({
+              name: relName,
+              size: utils.getFilesizeInBytes(fpath),
             });
-          });
-        });
+            callback();
+          })
+          .catch(e => callback(e));
       },
       err => {
-        if (err) console.error(err.message);
+        if (err) {
+          return finishedCallback(err);
+        }
+
         // Save the Illustrations Info to a JSON
         const illustrationsInfo = {
           illustrationCount: illustrations.length,
@@ -66,13 +62,14 @@ module.exports = {
           }),
         };
 
-        fs.writeFileSync(
-          path.join(dest, 'illustrations.json'),
-          JSON.stringify(illustrationsInfo, null, 2),
-          'utf8',
-        );
-
-        if (finishedCallback) finishedCallback();
+        return utils
+          .writeFilePromise(
+            path.join(dest, 'illustrations.json'),
+            JSON.stringify(illustrationsInfo, null, 2),
+            'utf8',
+          )
+          .then(() => finishedCallback())
+          .catch(e => finishedCallback(e));
       },
     );
   },
