@@ -1,6 +1,6 @@
 {
-  "iconCount": 250,
-  "spriteSize": 122128,
+  "iconCount": 251,
+  "spriteSize": 122613,
   "icons": [
     "abuse",
     "account",
@@ -104,6 +104,7 @@
     "issue-block",
     "issue-child",
     "issue-close",
+    "issue-created",
     "issue-duplicate",
     "issue-external",
     "issue-new",
