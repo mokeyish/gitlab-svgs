@@ -1,5 +1,8 @@
 extends: '@gitlab'
 rules:
-  # We need to disable the following rule, because all dependencies in this project are dev dependencies
-  # However, the resulting npm package needs none of those dependencies in production
-  import/no-extraneous-dependencies: 'off'
+  # The contents of svgpreviewer/** are exempt from requiring production dependencies
+  # because the previewer is a development tool and not an end product
+  import/no-extraneous-dependencies:
+    - 'error'
+    - devDependencies: ['svgpreviewer/**']
+      optionalDependencies: false
