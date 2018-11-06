@@ -1,6 +1,6 @@
 {
-  "iconCount": 251,
-  "spriteSize": 122613,
+  "iconCount": 252,
+  "spriteSize": 122912,
   "icons": [
     "abuse",
     "account",
@@ -35,6 +35,7 @@
     "chevron-left",
     "chevron-right",
     "chevron-up",
+    "clear",
     "clock",
     "close",
     "cloud-gear",
