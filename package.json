@@ -1,6 +1,6 @@
 {
   "name": "@gitlab/svgs",
-  "version": "1.36.0",
+  "version": "1.37.0",
   "description": "SVG Assets for GitLab",
   "main": "",
   "repository": "git@gitlab.com:gitlab-org/gitlab-svgs.git",
