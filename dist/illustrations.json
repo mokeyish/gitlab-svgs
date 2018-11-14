@@ -1,5 +1,5 @@
 {
-  "illustrationCount": 88,
+  "illustrationCount": 89,
   "illustrations": [
     {
       "name": "illustrations/canceled-job_empty.svg",
@@ -208,6 +208,10 @@
     {
       "name": "illustrations/multi_file_editor_empty.svg",
       "size": 4757
+    },
+    {
+      "name": "illustrations/no-packages.svg",
+      "size": 7237
     },
     {
       "name": "illustrations/no_commits.svg",
