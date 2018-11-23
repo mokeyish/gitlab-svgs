@@ -1,5 +1,5 @@
 {
-  "illustrationCount": 89,
+  "illustrationCount": 90,
   "illustrations": [
     {
       "name": "illustrations/canceled-job_empty.svg",
@@ -104,6 +104,10 @@
     {
       "name": "illustrations/golden_tanuki.svg",
       "size": 1262
+    },
+    {
+      "name": "illustrations/illustrations_running-job_no-log.svg",
+      "size": 4388
     },
     {
       "name": "illustrations/illustrations_scheduled-job_countdown.svg",
