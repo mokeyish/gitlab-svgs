@@ -1,6 +1,6 @@
 {
-  "iconCount": 251,
-  "spriteSize": 122307,
+  "iconCount": 252,
+  "spriteSize": 122704,
   "icons": [
     "abuse",
     "account",
@@ -101,6 +101,7 @@
     "image-comment-dark",
     "image-comment-light",
     "import",
+    "information-o",
     "information",
     "issue-block",
     "issue-child",
