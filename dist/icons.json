@@ -1,6 +1,6 @@
 {
-  "iconCount": 252,
-  "spriteSize": 122704,
+  "iconCount": 253,
+  "spriteSize": 124036,
   "icons": [
     "abuse",
     "account",
@@ -57,6 +57,7 @@
     "doc-image",
     "doc-new",
     "doc-text",
+    "dotted-circle",
     "double-headed-arrow",
     "download",
     "dumbbell",
