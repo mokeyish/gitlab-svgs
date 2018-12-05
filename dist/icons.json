@@ -1,6 +1,6 @@
 {
-  "iconCount": 253,
-  "spriteSize": 124036,
+  "iconCount": 254,
+  "spriteSize": 124519,
   "icons": [
     "abuse",
     "account",
@@ -185,6 +185,7 @@
     "shield",
     "slight-frown",
     "slight-smile",
+    "smart-card",
     "smile",
     "smiley",
     "snippet",
