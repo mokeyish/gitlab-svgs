@@ -30,6 +30,7 @@
     "pretty-quick": "^1.8.0",
     "rimraf": "^2.6.2",
     "svg-sprite": "^1.5.0",
+    "svg4everybody": "^2.1.9",
     "svgo": "^1.1.1"
   },
   "husky": {
