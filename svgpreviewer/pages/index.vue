@@ -101,8 +101,17 @@
 </template>
 
 <script>
+import svg4everybody from 'svg4everybody';
 import icons from '../static/dist/icons.json';
 import SvgImage from '../components/svg_image.vue';
+
+/*
+ In order to make the review/preview apps work properly in IE11,
+ because it doesn't know how to deal with sprites properly
+ */
+if (process.browser) {
+  svg4everybody();
+}
 
 const DEFAULT_ICON_SIZE = 'image-md';
 
