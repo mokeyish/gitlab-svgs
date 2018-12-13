@@ -1,5 +1,5 @@
 {
-  "illustrationCount": 90,
+  "illustrationCount": 91,
   "illustrations": [
     {
       "name": "illustrations/canceled-job_empty.svg",
@@ -84,6 +84,10 @@
     {
       "name": "illustrations/error-404.svg",
       "size": 9176
+    },
+    {
+      "name": "illustrations/export-import.svg",
+      "size": 4098
     },
     {
       "name": "illustrations/feature_flag.svg",
