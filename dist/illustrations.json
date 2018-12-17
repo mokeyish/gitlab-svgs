@@ -1,5 +1,5 @@
 {
-  "illustrationCount": 90,
+  "illustrationCount": 91,
   "illustrations": [
     {
       "name": "illustrations/canceled-job_empty.svg",
@@ -280,6 +280,10 @@
     {
       "name": "illustrations/profile_private_mode.svg",
       "size": 4288
+    },
+    {
+      "name": "illustrations/releases.svg",
+      "size": 8021
     },
     {
       "name": "illustrations/security-dashboard-api-error-empty-state.svg",
