@@ -20,7 +20,7 @@ build_scripts/
 
 # Dot files
 .gitlab/
-.eslintrc
+.eslintrc.yml
 .gitlab-ci.yml
 .prettierrc
 .prettierignore
