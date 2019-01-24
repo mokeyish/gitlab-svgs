@@ -4,7 +4,7 @@ build-and-check:
   stage: build
   cache:
     paths:
-    - node_modules/
+      - node_modules/
   script:
     - yarn install --frozen-lockfile
     - echo "Starting SVG Build"
@@ -17,6 +17,16 @@ build-and-check:
   artifacts:
     paths:
       - public
+
+publish:
+  stage: deploy
+  script:
+    - |
+      yarn global add 'semantic-release@15' '@semantic-release/exec@3' \
+      '@semantic-release/git@7' '@semantic-release/gitlab@3' '@semantic-release/npm@5'
+    - $(yarn global bin)/semantic-release
+  only:
+    - master
 
 review:
   stage: deploy
