@@ -37,5 +37,21 @@
     "hooks": {
       "pre-commit": "pretty-quick && npm run lint"
     }
+  },
+  "release": {
+    "plugins": [
+      [
+        "@semantic-release/exec",
+        {
+          "analyzeCommitsCmd": "./build_scripts/analyze-commits.sh ${lastRelease.gitTag}",
+          "generateNotesCmd": "./build_scripts/generate-notes.sh ${lastRelease.gitTag} ${nextRelease.version}"
+        }
+      ],
+      "@semantic-release/npm",
+      "@semantic-release/git",
+      "@semantic-release/gitlab"
+    ],
+    "success": false,
+    "fail": false
   }
 }

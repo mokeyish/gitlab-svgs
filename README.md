@@ -69,36 +69,8 @@ With `yarn run generate` you can generate the static output to the `public` fold
 
 ## Publishing a new version
 
-_Note:_ The following steps need to be done by a maintainer. After your MR is merged, and they forgot to release a new version, please nudge them.
-
-Follow these steps when publishing a new version:
-
-1.  Update the version in `package.json` with [`npm version`](https://docs.npmjs.com/cli/version). We usually publish minor versions:
-
-    ```
-    npm version minor -m "Explain which SVGs are added/modified"
-    ```
-
-    This command will also tag the version for you.
-
-1.  Push the new version.
-    ```
-    git push
-    ```
-1.  Push the new tag
-    ```
-    git push origin <tagname>
-    ```
-1.  Make sure `package.json` has an updated version and the tag are correctly set
-
-    - [`package.json`](https://gitlab.com/gitlab-org/gitlab-svgs/blob/master/package.json)
-    - [tags](https://gitlab.com/gitlab-org/gitlab-svgs/tags)
-
-1.  Publish the new version
-    _Note:_ You will need an npm account with the correct permissions. Please contact [Tim Zallmann](https://about.gitlab.com/company/team/#tpmtim)
-    ```
-    npm publish
-    ```
+Every time a file is added, deleted, modified or renamed within the `sprite_icons` / `illustrations` folders
+and the change is merged into master, we automatically publish a new minor version of the package.
 
 ## Contributing
 
