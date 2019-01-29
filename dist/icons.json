@@ -1,6 +1,6 @@
 {
-  "iconCount": 256,
-  "spriteSize": 116129,
+  "iconCount": 259,
+  "spriteSize": 117556,
   "icons": [
     "abuse",
     "account",
@@ -35,6 +35,7 @@
     "chevron-left",
     "chevron-right",
     "chevron-up",
+    "clear-all",
     "clear",
     "clock",
     "close",
@@ -136,6 +137,7 @@
     "log",
     "long-arrow",
     "mail",
+    "marquee-selection",
     "media",
     "merge-request-close-m",
     "merge-request-close",
@@ -182,6 +184,7 @@
     "screen-normal",
     "scroll_down",
     "scroll_up",
+    "scroll-handle",
     "search",
     "settings",
     "shield",
