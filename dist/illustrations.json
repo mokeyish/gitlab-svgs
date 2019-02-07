@@ -1,5 +1,5 @@
 {
-  "illustrationCount": 93,
+  "illustrationCount": 96,
   "illustrations": [
     {
       "name": "illustrations/canceled-job_empty.svg",
@@ -150,6 +150,10 @@
       "size": 780
     },
     {
+      "name": "illustrations/logos/express.svg",
+      "size": 1112
+    },
+    {
       "name": "illustrations/logos/gitter.svg",
       "size": 150
     },
@@ -164,6 +168,14 @@
     {
       "name": "illustrations/logos/mattermost_logo.svg",
       "size": 1036
+    },
+    {
+      "name": "illustrations/logos/rails.svg",
+      "size": 1265
+    },
+    {
+      "name": "illustrations/logos/spring.svg",
+      "size": 862
     },
     {
       "name": "illustrations/manual_action.svg",
