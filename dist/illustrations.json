@@ -1,5 +1,5 @@
 {
-  "illustrationCount": 97,
+  "illustrationCount": 100,
   "illustrations": [
     {
       "name": "illustrations/canceled-job_empty.svg",
@@ -150,6 +150,14 @@
       "size": 780
     },
     {
+      "name": "illustrations/logos/android.svg",
+      "size": 2718
+    },
+    {
+      "name": "illustrations/logos/apple.svg",
+      "size": 774
+    },
+    {
       "name": "illustrations/logos/express.svg",
       "size": 1112
     },
@@ -168,6 +176,10 @@
     {
       "name": "illustrations/logos/mattermost_logo.svg",
       "size": 1036
+    },
+    {
+      "name": "illustrations/logos/netlify.svg",
+      "size": 4034
     },
     {
       "name": "illustrations/logos/rails.svg",
