@@ -1,5 +1,5 @@
 {
-  "illustrationCount": 100,
+  "illustrationCount": 101,
   "illustrations": [
     {
       "name": "illustrations/canceled-job_empty.svg",
@@ -156,6 +156,10 @@
     {
       "name": "illustrations/logos/apple.svg",
       "size": 774
+    },
+    {
+      "name": "illustrations/logos/dotnet.svg",
+      "size": 746
     },
     {
       "name": "illustrations/logos/express.svg",
@@ -319,7 +323,7 @@
     },
     {
       "name": "illustrations/security-dashboard-api-error-empty-state.svg",
-      "size": 4319
+      "size": 4112
     },
     {
       "name": "illustrations/security-dashboard-empty-state.svg",
