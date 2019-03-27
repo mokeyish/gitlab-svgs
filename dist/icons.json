@@ -1,6 +1,6 @@
 {
-  "iconCount": 259,
-  "spriteSize": 117556,
+  "iconCount": 260,
+  "spriteSize": 117997,
   "icons": [
     "abuse",
     "account",
@@ -154,6 +154,7 @@
     "notifications",
     "overview",
     "package",
+    "pause",
     "pencil-square",
     "pencil",
     "pipeline",
