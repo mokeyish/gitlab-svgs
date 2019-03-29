@@ -1,6 +1,6 @@
 {
-  "iconCount": 261,
-  "spriteSize": 118420,
+  "iconCount": 262,
+  "spriteSize": 118877,
   "icons": [
     "abuse",
     "account",
@@ -56,6 +56,7 @@
     "disk",
     "doc-changes",
     "doc-code",
+    "doc-expand",
     "doc-image",
     "doc-new",
     "doc-text",
