@@ -1,5 +1,5 @@
 {
-  "illustrationCount": 101,
+  "illustrationCount": 100,
   "illustrations": [
     {
       "name": "illustrations/canceled-job_empty.svg",
@@ -152,10 +152,6 @@
     {
       "name": "illustrations/logos/android.svg",
       "size": 2718
-    },
-    {
-      "name": "illustrations/logos/apple.svg",
-      "size": 774
     },
     {
       "name": "illustrations/logos/dotnet.svg",
