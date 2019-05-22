@@ -1,9 +1,13 @@
 {
-  "illustrationCount": 100,
+  "illustrationCount": 101,
   "illustrations": [
     {
       "name": "illustrations/canceled-job_empty.svg",
       "size": 5677
+    },
+    {
+      "name": "illustrations/chart-empty-state.svg",
+      "size": 586
     },
     {
       "name": "illustrations/cluster_popover.svg",
