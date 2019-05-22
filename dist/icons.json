@@ -1,6 +1,6 @@
 {
-  "iconCount": 262,
-  "spriteSize": 118402,
+  "iconCount": 263,
+  "spriteSize": 118695,
   "icons": [
     "abuse",
     "account",
@@ -30,6 +30,7 @@
     "canceled-circle",
     "car",
     "chart",
+    "check-circle-filled",
     "check-circle",
     "chevron-down",
     "chevron-left",
