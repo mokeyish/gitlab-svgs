@@ -1,6 +1,6 @@
 {
-  "iconCount": 263,
-  "spriteSize": 118695,
+  "iconCount": 264,
+  "spriteSize": 119158,
   "icons": [
     "abuse",
     "account",
@@ -23,6 +23,7 @@
     "book",
     "bookmark",
     "branch",
+    "brand-zoom",
     "bulb",
     "bullhorn",
     "calendar",
