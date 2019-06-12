@@ -15,5 +15,5 @@ if [ -n "$RESULT" ]; then
   exit 1
 fi
 
-echo "No uncommited changes"
+echo "No uncommitted changes"
 exit 0
