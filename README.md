@@ -57,7 +57,7 @@ All output is saved to the `dist` folder, from where it is also taken from our m
 
    ![icon-guidelines-no-background](./docs/icon-guidelines-no-background.png)
 
-1. Once exported, view the .svg file and make sure you don't see `</mask>` or any other fill except for `<path fill="#000">` in the file. Otherwise, we cannot change the color of the icon.
+1. Once exported, view the .svg file and make sure you don't see `</mask>` or any other fill except for `<path fill="#000">` in the file. Otherwise, we cannot change the color of the icon. An exception for this is brand icons for companies or products, which may have specific color requirements. These icons should be named starting with `brand-`, e.g `brand-slack.svg`.
 
 ## Preview Application
 
