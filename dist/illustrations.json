@@ -1,5 +1,5 @@
 {
-  "illustrationCount": 102,
+  "illustrationCount": 104,
   "illustrations": [
     {
       "name": "illustrations/Dependency-list-empty-state.svg",
@@ -72,6 +72,14 @@
     {
       "name": "illustrations/convdev/i2p_step_9.svg",
       "size": 1928
+    },
+    {
+      "name": "illustrations/docker-empty-state.svg",
+      "size": 3411
+    },
+    {
+      "name": "illustrations/docker-error-state.svg",
+      "size": 3566
     },
     {
       "name": "illustrations/epics/list.svg",
