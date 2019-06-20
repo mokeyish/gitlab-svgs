@@ -49,30 +49,23 @@
             </svg>
           </div>
           <div class="col-sm-3">
-            <div class="select-wrapper">
-              <select
-                v-model="selectedClass"
-                class="form-control select-control"
+            <select
+              v-model="selectedClass"
+              class="form-control select-control chevron-down"
+            >
+              <option value="image-xs">Very Small (8px)</option>
+              <option value="image-sm">Small (16px)</option>
+              <option
+                value="image-md"
+                selected
               >
-                <option value="image-xs">Very Small (8px)</option>
-                <option value="image-sm">Small (16px)</option>
-                <option
-                  value="image-md"
-                  selected
-                >
-                  Medium (32px)
-                </option>
-                <option value="image-lg">Large (48px)</option>
-                <option value="image-xl">Very Large (72px)</option>
-                <option value="image-hu">Huge (256px)</option>
-                <option value="image-nav">Sidemenu</option>
-              </select>
-              <i
-                aria-hidden="true"
-                data-hidden="true"
-                class="fa fa-chevron-down"
-              ></i>
-            </div>
+                Medium (32px)
+              </option>
+              <option value="image-lg">Large (48px)</option>
+              <option value="image-xl">Very Large (72px)</option>
+              <option value="image-hu">Huge (256px)</option>
+              <option value="image-nav">Sidemenu</option>
+            </select>
           </div>
         </div>
       </div>
@@ -231,5 +224,9 @@ export default {
 
 .icon-reset:hover {
   fill: black;
+}
+
+select.chevron-down {
+  background: white url('~assets/chevron-down.svg') no-repeat right 8px center;
 }
 </style>
