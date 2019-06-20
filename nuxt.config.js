@@ -23,10 +23,6 @@ module.exports = {
     ],
     link: [
       {
-        rel: 'stylesheet',
-        href: `${baseDir}application/gitlab-application.css`,
-      },
-      {
         rel: 'icon',
         type: 'image/x-icon',
         href: `${baseDir}favicon.ico`,
@@ -36,6 +32,8 @@ module.exports = {
       class: 'ui_indigo',
     },
   },
+
+  css: ['bootstrap/dist/css/bootstrap.css', '@/assets/gitlab-application.css'],
 
   /*
   ** Customize the progress bar color
