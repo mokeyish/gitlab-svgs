@@ -26,7 +26,7 @@ publish:
       '@semantic-release/git@7' '@semantic-release/gitlab@3' '@semantic-release/npm@5'
     - $(yarn global bin)/semantic-release
   only:
-    - master
+    - master@gitlab-org/gitlab-svgs
 
 review:
   stage: deploy
@@ -81,4 +81,4 @@ pages:
     paths:
       - public
   only:
-    - master
+    - master@gitlab-org/gitlab-svgs
