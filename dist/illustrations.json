@@ -1,9 +1,21 @@
 {
-  "illustrationCount": 104,
+  "illustrationCount": 107,
   "illustrations": [
     {
       "name": "illustrations/Dependency-list-empty-state.svg",
       "size": 4096
+    },
+    {
+      "name": "illustrations/analytics/cycle-analytics-empty-chart.svg",
+      "size": 4558
+    },
+    {
+      "name": "illustrations/analytics/cycle-analytics-empty.svg",
+      "size": 2128
+    },
+    {
+      "name": "illustrations/analytics/no-access.svg",
+      "size": 1080
     },
     {
       "name": "illustrations/canceled-job_empty.svg",
