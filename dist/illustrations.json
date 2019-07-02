@@ -1,5 +1,5 @@
 {
-  "illustrationCount": 107,
+  "illustrationCount": 108,
   "illustrations": [
     {
       "name": "illustrations/Dependency-list-empty-state.svg",
@@ -312,6 +312,10 @@
     {
       "name": "illustrations/priority_labels.svg",
       "size": 1442
+    },
+    {
+      "name": "illustrations/productivity-analytics-empty-state.svg",
+      "size": 2616
     },
     {
       "name": "illustrations/profile-page/activity.svg",
