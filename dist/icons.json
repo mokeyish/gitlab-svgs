@@ -1,6 +1,6 @@
 {
-  "iconCount": 264,
-  "spriteSize": 119158,
+  "iconCount": 266,
+  "spriteSize": 119942,
   "icons": [
     "abuse",
     "account",
@@ -75,8 +75,10 @@
     "emoji_smiley",
     "epic",
     "error",
+    "expand-down",
     "expand-left",
     "expand-right",
+    "expand-up",
     "expand",
     "external-link",
     "eye-slash",
