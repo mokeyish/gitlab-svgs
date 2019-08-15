@@ -3,7 +3,7 @@
   "illustrations": [
     {
       "name": "illustrations/Dependency-list-empty-state.svg",
-      "size": 4096
+      "size": 3964
     },
     {
       "name": "illustrations/analytics/cycle-analytics-empty-chart.svg",
@@ -15,11 +15,11 @@
     },
     {
       "name": "illustrations/analytics/no-access.svg",
-      "size": 1080
+      "size": 1068
     },
     {
       "name": "illustrations/canceled-job_empty.svg",
-      "size": 5677
+      "size": 5581
     },
     {
       "name": "illustrations/chart-empty-state.svg",
@@ -27,71 +27,71 @@
     },
     {
       "name": "illustrations/cluster_popover.svg",
-      "size": 2921
+      "size": 2830
     },
     {
       "name": "illustrations/clusters_empty.svg",
-      "size": 1947
+      "size": 1869
     },
     {
       "name": "illustrations/convdev/convdev_no_data.svg",
-      "size": 8513
+      "size": 8240
     },
     {
       "name": "illustrations/convdev/convdev_no_index.svg",
-      "size": 10595
+      "size": 10263
     },
     {
       "name": "illustrations/convdev/convdev_overview.svg",
-      "size": 14397
+      "size": 14349
     },
     {
       "name": "illustrations/convdev/i2p_step_1.svg",
-      "size": 1538
+      "size": 1482
     },
     {
       "name": "illustrations/convdev/i2p_step_10.svg",
-      "size": 1461
+      "size": 1407
     },
     {
       "name": "illustrations/convdev/i2p_step_2.svg",
-      "size": 1073
+      "size": 1054
     },
     {
       "name": "illustrations/convdev/i2p_step_3.svg",
-      "size": 1039
+      "size": 1007
     },
     {
       "name": "illustrations/convdev/i2p_step_4.svg",
-      "size": 724
+      "size": 711
     },
     {
       "name": "illustrations/convdev/i2p_step_5.svg",
-      "size": 966
+      "size": 950
     },
     {
       "name": "illustrations/convdev/i2p_step_6.svg",
-      "size": 1427
+      "size": 1391
     },
     {
       "name": "illustrations/convdev/i2p_step_7.svg",
-      "size": 1119
+      "size": 1091
     },
     {
       "name": "illustrations/convdev/i2p_step_8.svg",
-      "size": 1537
+      "size": 1522
     },
     {
       "name": "illustrations/convdev/i2p_step_9.svg",
-      "size": 1928
+      "size": 1892
     },
     {
       "name": "illustrations/docker-empty-state.svg",
-      "size": 3411
+      "size": 3393
     },
     {
       "name": "illustrations/docker-error-state.svg",
-      "size": 3566
+      "size": 3548
     },
     {
       "name": "illustrations/epics/list.svg",
@@ -99,75 +99,75 @@
     },
     {
       "name": "illustrations/epics/roadmap.svg",
-      "size": 11597
+      "size": 11289
     },
     {
       "name": "illustrations/erased-log_empty.svg",
-      "size": 3279
+      "size": 3259
     },
     {
       "name": "illustrations/error-403.svg",
-      "size": 6531
+      "size": 6425
     },
     {
       "name": "illustrations/error-404.svg",
-      "size": 9176
+      "size": 8974
     },
     {
       "name": "illustrations/export-import.svg",
-      "size": 4098
+      "size": 4033
     },
     {
       "name": "illustrations/feature_flag.svg",
-      "size": 4139
+      "size": 4083
     },
     {
       "name": "illustrations/feature_moved.svg",
-      "size": 10693
+      "size": 10421
     },
     {
       "name": "illustrations/finished-job_empty.svg",
-      "size": 5409
+      "size": 5177
     },
     {
       "name": "illustrations/gitlab_logo.svg",
-      "size": 1034
+      "size": 1027
     },
     {
       "name": "illustrations/golden_tanuki.svg",
-      "size": 1262
+      "size": 1259
     },
     {
       "name": "illustrations/illustrations_running-job_no-log.svg",
-      "size": 4388
+      "size": 4263
     },
     {
       "name": "illustrations/illustrations_scheduled-job_countdown.svg",
-      "size": 5714
+      "size": 5620
     },
     {
       "name": "illustrations/image_comment_light_cursor.svg",
-      "size": 570
+      "size": 559
     },
     {
       "name": "illustrations/image_comment_light_cursor@2x.svg",
-      "size": 570
+      "size": 559
     },
     {
       "name": "illustrations/issue-dashboard_results-without-filter.svg",
-      "size": 1193
+      "size": 1144
     },
     {
       "name": "illustrations/issues.svg",
-      "size": 11980
+      "size": 11850
     },
     {
       "name": "illustrations/job_not_triggered.svg",
-      "size": 5246
+      "size": 5153
     },
     {
       "name": "illustrations/kubernetes-installation.svg",
-      "size": 570
+      "size": 559
     },
     {
       "name": "illustrations/labels.svg",
@@ -175,19 +175,19 @@
     },
     {
       "name": "illustrations/lock_promotion.svg",
-      "size": 780
+      "size": 761
     },
     {
       "name": "illustrations/logos/android.svg",
-      "size": 2718
+      "size": 2709
     },
     {
       "name": "illustrations/logos/dotnet.svg",
-      "size": 746
+      "size": 728
     },
     {
       "name": "illustrations/logos/express.svg",
-      "size": 1112
+      "size": 1109
     },
     {
       "name": "illustrations/logos/gitter.svg",
@@ -195,11 +195,11 @@
     },
     {
       "name": "illustrations/logos/go_logo.svg",
-      "size": 1704
+      "size": 1685
     },
     {
       "name": "illustrations/logos/google-cloud-platform_logo.svg",
-      "size": 2541
+      "size": 2498
     },
     {
       "name": "illustrations/logos/mattermost_logo.svg",
@@ -207,23 +207,23 @@
     },
     {
       "name": "illustrations/logos/netlify.svg",
-      "size": 4034
+      "size": 3974
     },
     {
       "name": "illustrations/logos/rails.svg",
-      "size": 1265
+      "size": 1261
     },
     {
       "name": "illustrations/logos/spring.svg",
-      "size": 862
+      "size": 858
     },
     {
       "name": "illustrations/manual_action.svg",
-      "size": 6458
+      "size": 6417
     },
     {
       "name": "illustrations/merge_request_changes_empty.svg",
-      "size": 5577
+      "size": 5547
     },
     {
       "name": "illustrations/merge_requests.svg",
@@ -231,83 +231,83 @@
     },
     {
       "name": "illustrations/milestone_burndown_chart.svg",
-      "size": 3085
+      "size": 3063
     },
     {
       "name": "illustrations/milestone_removing-page.svg",
-      "size": 851
+      "size": 841
     },
     {
       "name": "illustrations/monitoring/getting_started.svg",
-      "size": 3790
+      "size": 3773
     },
     {
       "name": "illustrations/monitoring/loading.svg",
-      "size": 5936
+      "size": 5892
     },
     {
       "name": "illustrations/monitoring/no_data.svg",
-      "size": 3913
+      "size": 3771
     },
     {
       "name": "illustrations/monitoring/tracing.svg",
-      "size": 4942
+      "size": 4877
     },
     {
       "name": "illustrations/monitoring/unable_to_connect.svg",
-      "size": 4706
+      "size": 4614
     },
     {
       "name": "illustrations/multi-editor_all_changes_committed_empty.svg",
-      "size": 1590
+      "size": 1550
     },
     {
       "name": "illustrations/multi-editor_no_changes_empty.svg",
-      "size": 1829
+      "size": 1784
     },
     {
       "name": "illustrations/multi-editor_no_staged_files_empty.svg",
-      "size": 1558
+      "size": 1516
     },
     {
       "name": "illustrations/multi_file_editor_empty.svg",
-      "size": 4757
+      "size": 4540
     },
     {
       "name": "illustrations/no-packages.svg",
-      "size": 7237
+      "size": 7209
     },
     {
       "name": "illustrations/no_commits.svg",
-      "size": 2656
+      "size": 2501
     },
     {
       "name": "illustrations/operations-dashboard_empty.svg",
-      "size": 26891
+      "size": 24858
     },
     {
       "name": "illustrations/operations_log_pods_empty.svg",
-      "size": 6788
+      "size": 6361
     },
     {
       "name": "illustrations/operations_metrics_empty.svg",
-      "size": 10064
+      "size": 9746
     },
     {
       "name": "illustrations/pending_job_empty.svg",
-      "size": 4884
+      "size": 4794
     },
     {
       "name": "illustrations/pipelines_empty.svg",
-      "size": 3400
+      "size": 3371
     },
     {
       "name": "illustrations/pipelines_failed.svg",
-      "size": 6640
+      "size": 6485
     },
     {
       "name": "illustrations/pipelines_pending.svg",
-      "size": 3557
+      "size": 3448
     },
     {
       "name": "illustrations/priority_labels.svg",
@@ -315,63 +315,63 @@
     },
     {
       "name": "illustrations/productivity-analytics-empty-state.svg",
-      "size": 2616
+      "size": 2576
     },
     {
       "name": "illustrations/profile-page/activity.svg",
-      "size": 776
+      "size": 752
     },
     {
       "name": "illustrations/profile-page/contributed-projects.svg",
-      "size": 1266
+      "size": 1234
     },
     {
       "name": "illustrations/profile-page/groups.svg",
-      "size": 558
+      "size": 537
     },
     {
       "name": "illustrations/profile-page/personal-project.svg",
-      "size": 1273
+      "size": 1217
     },
     {
       "name": "illustrations/profile-page/personal-projects.svg",
-      "size": 1266
+      "size": 1234
     },
     {
       "name": "illustrations/profile-page/snippets.svg",
-      "size": 2150
+      "size": 2081
     },
     {
       "name": "illustrations/profile_private_mode.svg",
-      "size": 4288
+      "size": 4057
     },
     {
       "name": "illustrations/releases.svg",
-      "size": 8021
+      "size": 7863
     },
     {
       "name": "illustrations/security-dashboard-api-error-empty-state.svg",
-      "size": 4112
+      "size": 4057
     },
     {
       "name": "illustrations/security-dashboard-empty-state.svg",
-      "size": 6028
+      "size": 5959
     },
     {
       "name": "illustrations/security-dashboard_empty.svg",
-      "size": 5707
+      "size": 5507
     },
     {
       "name": "illustrations/service_desk_callout.svg",
-      "size": 1798
+      "size": 1755
     },
     {
       "name": "illustrations/service_desk_empty.svg",
-      "size": 5232
+      "size": 5076
     },
     {
       "name": "illustrations/skipped-job_empty.svg",
-      "size": 5667
+      "size": 5561
     },
     {
       "name": "illustrations/slack_logo.svg",
@@ -379,11 +379,11 @@
     },
     {
       "name": "illustrations/snippets_empty.svg",
-      "size": 7613
+      "size": 7354
     },
     {
       "name": "illustrations/starred_empty.svg",
-      "size": 7002
+      "size": 6953
     },
     {
       "name": "illustrations/todos_all_done.svg",
@@ -395,15 +395,15 @@
     },
     {
       "name": "illustrations/web-ide_promotion.svg",
-      "size": 1390
+      "size": 1334
     },
     {
       "name": "illustrations/welcome/add_new_group.svg",
-      "size": 1599
+      "size": 1598
     },
     {
       "name": "illustrations/welcome/add_new_project.svg",
-      "size": 843
+      "size": 825
     },
     {
       "name": "illustrations/welcome/add_new_user.svg",
@@ -411,27 +411,27 @@
     },
     {
       "name": "illustrations/welcome/configure_server.svg",
-      "size": 1933
+      "size": 1931
     },
     {
       "name": "illustrations/welcome/ee_trial.svg",
-      "size": 3967
+      "size": 3961
     },
     {
       "name": "illustrations/welcome/globe.svg",
-      "size": 1173
+      "size": 1168
     },
     {
       "name": "illustrations/welcome/lightbulb.svg",
-      "size": 1236
+      "size": 1214
     },
     {
       "name": "illustrations/wiki_login_empty.svg",
-      "size": 6000
+      "size": 5951
     },
     {
       "name": "illustrations/wiki_logout_empty.svg",
-      "size": 6162
+      "size": 6035
     }
   ]
 }
