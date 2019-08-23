@@ -23,7 +23,22 @@ module.exports = {
           maxHeight: 200,
           attributes: false,
         },
-        transform: ['svgo'],
+        transform: [
+          {
+            svgo: {
+              /*
+              The following optimizations have been turned off because they apparently break our:
+              echarts icon rendering:
+              - https://github.com/apache/incubator-echarts/issues/11087
+              - https://gitlab.com/gitlab-org/gitlab-svgs/issues/73
+               */
+              plugins: [
+                { convertPathData: { noSpaceAfterFlags: false } },
+                { mergePaths: { noSpaceAfterFlags: false } },
+              ],
+            },
+          },
+        ],
       },
       mode: {
         inline: true, // Prepare for inline embedding
