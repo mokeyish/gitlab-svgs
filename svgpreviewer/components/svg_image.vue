@@ -126,33 +126,30 @@ svg {
 }
 
 .image-wrapper {
-  flex-basis: 120px;
   min-height: 125px;
   font-size: 12px;
-  flex-grow: 0;
   line-height: 1.4;
   text-align: center;
   background-color: #f9f9f9;
   list-style: none;
-  margin: 0.5rem;
   display: flex;
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
   flex-direction: column;
 }
 
 .image-base {
   padding: 20px 20px 0;
-  border: 1px solid #fff;
-  border-bottom: 1px solid #ccc;
   flex-grow: 1;
-}
-
-.image-base img {
-  height: 200px;
 }
 
 .image-base:hover {
   cursor: pointer;
-  border: solid 1px #ccc;
+  box-shadow: inset 0 0 0 2px #ccc;
+}
+
+.image-base img {
+  height: 200px;
 }
 
 .image-name {
@@ -160,14 +157,15 @@ svg {
 }
 
 .image-actions {
-  height: 2rem;
-  padding: 0.5rem;
+  border-top: 1px solid #ccc;
   background-color: #f9f9f9;
+  text-align: center;
 }
 
 .image-actions a {
   color: #707070;
-  margin-right: 4px;
+  display: inline-block;
+  margin: 1rem 0.25rem;
 }
 
 .image-actions a:hover {

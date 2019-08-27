@@ -157,6 +157,10 @@ export default {
   padding: 0;
 }
 
+.illustrations-list .image-wrapper {
+  margin-bottom: 1rem;
+}
+
 .muted {
   color: #999;
   font-size: smaller;
