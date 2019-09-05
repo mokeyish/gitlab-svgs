@@ -1,6 +1,6 @@
 {
-  "iconCount": 266,
-  "spriteSize": 116004,
+  "iconCount": 270,
+  "spriteSize": 113541,
   "icons": [
     "abuse",
     "account",
@@ -83,6 +83,8 @@
     "external-link",
     "eye-slash",
     "eye",
+    "feature-flag-disabled",
+    "feature-flag",
     "file-addition-solid",
     "file-addition",
     "file-deletion-solid",
@@ -127,6 +129,7 @@
     "italic",
     "key-modern",
     "key",
+    "label-o",
     "label",
     "labels",
     "leave",
@@ -265,6 +268,7 @@
     "user",
     "users",
     "volume-up",
+    "warning-solid",
     "warning",
     "weight",
     "work"
