@@ -1,9 +1,13 @@
 {
-  "illustrationCount": 108,
+  "illustrationCount": 110,
   "illustrations": [
     {
       "name": "illustrations/Dependency-list-empty-state.svg",
       "size": 3964
+    },
+    {
+      "name": "illustrations/amazon_eks.svg",
+      "size": 2446
     },
     {
       "name": "illustrations/analytics/cycle-analytics-empty-chart.svg",
@@ -136,6 +140,10 @@
     {
       "name": "illustrations/golden_tanuki.svg",
       "size": 1259
+    },
+    {
+      "name": "illustrations/google_gke.svg",
+      "size": 1519
     },
     {
       "name": "illustrations/illustrations_running-job_no-log.svg",
