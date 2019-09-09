@@ -6,10 +6,6 @@
       "size": 3964
     },
     {
-      "name": "illustrations/amazon_eks.svg",
-      "size": 2446
-    },
-    {
       "name": "illustrations/analytics/cycle-analytics-empty-chart.svg",
       "size": 4558
     },
@@ -142,10 +138,6 @@
       "size": 1259
     },
     {
-      "name": "illustrations/google_gke.svg",
-      "size": 1519
-    },
-    {
       "name": "illustrations/illustrations_running-job_no-log.svg",
       "size": 4263
     },
@@ -186,6 +178,10 @@
       "size": 761
     },
     {
+      "name": "illustrations/logos/amazon_eks.svg",
+      "size": 2446
+    },
+    {
       "name": "illustrations/logos/android.svg",
       "size": 2709
     },
@@ -208,6 +204,10 @@
     {
       "name": "illustrations/logos/google-cloud-platform_logo.svg",
       "size": 2498
+    },
+    {
+      "name": "illustrations/logos/google_gke.svg",
+      "size": 1519
     },
     {
       "name": "illustrations/logos/mattermost_logo.svg",
