@@ -1,5 +1,5 @@
 {
-  "illustrationCount": 108,
+  "illustrationCount": 110,
   "illustrations": [
     {
       "name": "illustrations/Dependency-list-empty-state.svg",
@@ -178,6 +178,10 @@
       "size": 761
     },
     {
+      "name": "illustrations/logos/amazon_eks.svg",
+      "size": 2446
+    },
+    {
       "name": "illustrations/logos/android.svg",
       "size": 2709
     },
@@ -200,6 +204,10 @@
     {
       "name": "illustrations/logos/google-cloud-platform_logo.svg",
       "size": 2498
+    },
+    {
+      "name": "illustrations/logos/google_gke.svg",
+      "size": 1519
     },
     {
       "name": "illustrations/logos/mattermost_logo.svg",
