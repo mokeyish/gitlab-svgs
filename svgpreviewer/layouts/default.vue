@@ -29,6 +29,19 @@ html {
   box-sizing: border-box;
 }
 
+html {
+  --default-fg: #000000;
+  --default-bg: #ffffff;
+  --inverse-fg: #ffffff;
+  --inverse-bg: #000000;
+  --indigo-fg: #d1d1f0;
+  --indigo-bg: #292961;
+  --gray-fg: #707070;
+  --gray-bg: #f2f2f2;
+  --red-fg: #b03927;
+  --red-bg: #fae2de;
+}
+
 *,
 *:before,
 *:after {
