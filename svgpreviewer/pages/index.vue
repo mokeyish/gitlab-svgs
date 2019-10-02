@@ -228,7 +228,7 @@ export default {
   padding: 0;
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fill, 10rem);
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
 }
 
 .icons-list.image-xl-list {
