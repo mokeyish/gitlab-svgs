@@ -1,6 +1,6 @@
 {
-  "iconCount": 276,
-  "spriteSize": 111518,
+  "iconCount": 277,
+  "spriteSize": 111854,
   "icons": [
     "abuse",
     "account",
@@ -231,6 +231,7 @@
     "status_open",
     "status_pending_borderless",
     "status_pending",
+    "status_preparing_borderless",
     "status_preparing",
     "status_running_borderless",
     "status_running",
