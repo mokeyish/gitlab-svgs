@@ -133,8 +133,7 @@ svg {
   background-color: #f9f9f9;
   list-style: none;
   display: flex;
-  border: 1px solid #ccc;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  border: 1px solid #dfdfdf;
   flex-direction: column;
 }
 
@@ -165,7 +164,7 @@ svg {
 .image-actions a {
   color: #707070;
   display: inline-block;
-  margin: 1rem 0.25rem;
+  margin: 0.5rem 0.25rem;
 }
 
 .image-actions a:hover {
