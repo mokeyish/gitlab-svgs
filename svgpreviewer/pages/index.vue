@@ -62,16 +62,11 @@
             v-model="selectedClass"
             class="form-control select-control chevron-down"
           >
-            <option value="image-xs">Very Small (8px)</option>
-            <option value="image-sm">Small (16px)</option>
-            <option
-              value="image-md"
-              selected
-            >
-              Medium (32px)
-            </option>
+            <option value="image-xs">Extra Small (8px)</option>
+            <option value="image-sm" selected>Small (Default 16px)</option>
+            <option value="image-md">Medium (32px)</option>
             <option value="image-lg">Large (48px)</option>
-            <option value="image-xl">Very Large (72px)</option>
+            <option value="image-xl">Extra Large (72px)</option>
             <option value="image-hu">Huge (256px)</option>
             <option value="image-nav">Sidemenu</option>
           </select>
@@ -123,7 +118,7 @@ if (process.browser) {
   svg4everybody();
 }
 
-const DEFAULT_ICON_SIZE = 'image-md';
+const DEFAULT_ICON_SIZE = 'image-sm';
 const DEFAULT_COLORING = 'default';
 
 export default {
