@@ -1,5 +1,5 @@
 {
-  "illustrationCount": 110,
+  "illustrationCount": 111,
   "illustrations": [
     {
       "name": "illustrations/Dependency-list-empty-state.svg",
@@ -92,6 +92,10 @@
     {
       "name": "illustrations/docker-error-state.svg",
       "size": 3548
+    },
+    {
+      "name": "illustrations/empty-state/security-dashboard-config-permission.svg",
+      "size": 4761
     },
     {
       "name": "illustrations/epics/list.svg",
