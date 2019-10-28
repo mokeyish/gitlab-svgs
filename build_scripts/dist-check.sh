@@ -12,6 +12,7 @@ if [ -n "$RESULT" ]; then
   echo "There are uncommitted changes to the dist/ folder.";
   echo -e "Please execute \`yarn run svg\` and push updates to the files below\n"
   echo "$RESULT"
+  git diff
   exit 1
 fi
 

@@ -1,5 +1,5 @@
 {
-  "illustrationCount": 113,
+  "illustrationCount": 112,
   "illustrations": [
     {
       "name": "illustrations/Dependency-list-empty-state.svg",
@@ -364,10 +364,6 @@
     {
       "name": "illustrations/releases.svg",
       "size": 7863
-    },
-    {
-      "name": "illustrations/security-dashboard-api-error-empty-state.svg",
-      "size": 4057
     },
     {
       "name": "illustrations/security-dashboard-empty-state.svg",
