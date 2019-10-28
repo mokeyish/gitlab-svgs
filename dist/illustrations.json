@@ -1,5 +1,5 @@
 {
-  "illustrationCount": 112,
+  "illustrationCount": 113,
   "illustrations": [
     {
       "name": "illustrations/Dependency-list-empty-state.svg",
@@ -376,6 +376,10 @@
     {
       "name": "illustrations/security-dashboard_empty.svg",
       "size": 5507
+    },
+    {
+      "name": "illustrations/service-desk-setup.svg",
+      "size": 4682
     },
     {
       "name": "illustrations/service_desk_callout.svg",
