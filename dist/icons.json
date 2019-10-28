@@ -1,6 +1,6 @@
 {
-  "iconCount": 277,
-  "spriteSize": 105671,
+  "iconCount": 279,
+  "spriteSize": 106109,
   "icons": [
     "abuse",
     "account",
@@ -21,6 +21,7 @@
     "bold",
     "book",
     "bookmark",
+    "branch-deleted",
     "branch",
     "brand-zoom",
     "bulb",
@@ -153,6 +154,7 @@
     "media",
     "merge-request-close-m",
     "merge-request-close",
+    "merge-request-open",
     "merge-request",
     "merge",
     "messages",
