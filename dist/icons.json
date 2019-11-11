@@ -1,6 +1,6 @@
 {
-  "iconCount": 279,
-  "spriteSize": 106109,
+  "iconCount": 285,
+  "spriteSize": 107752,
   "icons": [
     "abuse",
     "account",
@@ -33,8 +33,14 @@
     "chart",
     "check-circle-filled",
     "check-circle",
+    "chevron-double-lg-left",
+    "chevron-double-lg-right",
     "chevron-down",
     "chevron-left",
+    "chevron-lg-down",
+    "chevron-lg-left",
+    "chevron-lg-right",
+    "chevron-lg-up",
     "chevron-right",
     "chevron-up",
     "clear-all",
