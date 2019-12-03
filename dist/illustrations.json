@@ -1,5 +1,5 @@
 {
-  "illustrationCount": 118,
+  "illustrationCount": 119,
   "illustrations": [
     {
       "name": "illustrations/Dependency-list-empty-state.svg",
@@ -20,6 +20,10 @@
     {
       "name": "illustrations/canceled-job_empty.svg",
       "size": 5581
+    },
+    {
+      "name": "illustrations/chart-empty-state-small.svg",
+      "size": 574
     },
     {
       "name": "illustrations/chart-empty-state.svg",
