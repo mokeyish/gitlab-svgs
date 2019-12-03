@@ -1,5 +1,5 @@
 {
-  "illustrationCount": 114,
+  "illustrationCount": 118,
   "illustrations": [
     {
       "name": "illustrations/Dependency-list-empty-state.svg",
@@ -408,6 +408,22 @@
     {
       "name": "illustrations/starred_empty.svg",
       "size": 6953
+    },
+    {
+      "name": "illustrations/subscription-cancelled.svg",
+      "size": 1567
+    },
+    {
+      "name": "illustrations/subscription-downgraded.svg",
+      "size": 1478
+    },
+    {
+      "name": "illustrations/subscription-success.svg",
+      "size": 1379
+    },
+    {
+      "name": "illustrations/subscription-warning.svg",
+      "size": 1537
     },
     {
       "name": "illustrations/todos_all_done.svg",
