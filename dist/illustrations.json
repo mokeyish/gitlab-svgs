@@ -1,9 +1,9 @@
 {
-  "illustrationCount": 114,
+  "illustrationCount": 118,
   "illustrations": [
     {
       "name": "illustrations/Dependency-list-empty-state.svg",
-      "size": 3964
+      "size": 4096
     },
     {
       "name": "illustrations/analytics/cycle-analytics-empty-chart.svg",
@@ -15,11 +15,11 @@
     },
     {
       "name": "illustrations/analytics/no-access.svg",
-      "size": 1068
+      "size": 1080
     },
     {
       "name": "illustrations/canceled-job_empty.svg",
-      "size": 5581
+      "size": 5677
     },
     {
       "name": "illustrations/chart-empty-state.svg",
@@ -27,79 +27,79 @@
     },
     {
       "name": "illustrations/cluster_popover.svg",
-      "size": 2830
+      "size": 2921
     },
     {
       "name": "illustrations/clusters_empty.svg",
-      "size": 1869
+      "size": 1947
     },
     {
       "name": "illustrations/convdev/convdev_no_data.svg",
-      "size": 8240
+      "size": 8513
     },
     {
       "name": "illustrations/convdev/convdev_no_index.svg",
-      "size": 10263
+      "size": 10595
     },
     {
       "name": "illustrations/convdev/convdev_overview.svg",
-      "size": 14349
+      "size": 14397
     },
     {
       "name": "illustrations/convdev/i2p_step_1.svg",
-      "size": 1482
+      "size": 1538
     },
     {
       "name": "illustrations/convdev/i2p_step_10.svg",
-      "size": 1407
+      "size": 1461
     },
     {
       "name": "illustrations/convdev/i2p_step_2.svg",
-      "size": 1054
+      "size": 1073
     },
     {
       "name": "illustrations/convdev/i2p_step_3.svg",
-      "size": 1007
+      "size": 1039
     },
     {
       "name": "illustrations/convdev/i2p_step_4.svg",
-      "size": 711
+      "size": 724
     },
     {
       "name": "illustrations/convdev/i2p_step_5.svg",
-      "size": 950
+      "size": 966
     },
     {
       "name": "illustrations/convdev/i2p_step_6.svg",
-      "size": 1391
+      "size": 1427
     },
     {
       "name": "illustrations/convdev/i2p_step_7.svg",
-      "size": 1091
+      "size": 1119
     },
     {
       "name": "illustrations/convdev/i2p_step_8.svg",
-      "size": 1522
+      "size": 1537
     },
     {
       "name": "illustrations/convdev/i2p_step_9.svg",
-      "size": 1892
+      "size": 1928
     },
     {
       "name": "illustrations/docker-empty-state.svg",
-      "size": 3393
+      "size": 3411
     },
     {
       "name": "illustrations/docker-error-state.svg",
-      "size": 3548
+      "size": 3566
     },
     {
       "name": "illustrations/elasticsearch-lg.svg",
-      "size": 4568
+      "size": 4579
     },
     {
       "name": "illustrations/empty-state/security-dashboard-config-permission.svg",
-      "size": 4761
+      "size": 4811
     },
     {
       "name": "illustrations/epics/list.svg",
@@ -107,39 +107,39 @@
     },
     {
       "name": "illustrations/epics/roadmap.svg",
-      "size": 11289
+      "size": 11597
     },
     {
       "name": "illustrations/erased-log_empty.svg",
-      "size": 3259
+      "size": 3279
     },
     {
       "name": "illustrations/error-403.svg",
-      "size": 6425
+      "size": 6531
     },
     {
       "name": "illustrations/error-404.svg",
-      "size": 8974
+      "size": 9176
     },
     {
       "name": "illustrations/export-import.svg",
-      "size": 4033
+      "size": 4098
     },
     {
       "name": "illustrations/feature_flag.svg",
-      "size": 4083
+      "size": 4139
     },
     {
       "name": "illustrations/feature_moved.svg",
-      "size": 10421
+      "size": 10693
     },
     {
       "name": "illustrations/finished-job_empty.svg",
-      "size": 5177
+      "size": 5409
     },
     {
       "name": "illustrations/gitlab_logo.svg",
-      "size": 1027
+      "size": 1034
     },
     {
       "name": "illustrations/gitlab_title.svg",
@@ -147,39 +147,39 @@
     },
     {
       "name": "illustrations/golden_tanuki.svg",
-      "size": 1259
+      "size": 1262
     },
     {
       "name": "illustrations/illustrations_running-job_no-log.svg",
-      "size": 4263
+      "size": 4388
     },
     {
       "name": "illustrations/illustrations_scheduled-job_countdown.svg",
-      "size": 5620
+      "size": 5714
     },
     {
       "name": "illustrations/image_comment_light_cursor.svg",
-      "size": 559
+      "size": 570
     },
     {
       "name": "illustrations/image_comment_light_cursor@2x.svg",
-      "size": 559
+      "size": 570
     },
     {
       "name": "illustrations/issue-dashboard_results-without-filter.svg",
-      "size": 1144
+      "size": 1193
     },
     {
       "name": "illustrations/issues.svg",
-      "size": 11850
+      "size": 11980
     },
     {
       "name": "illustrations/job_not_triggered.svg",
-      "size": 5153
+      "size": 5246
     },
     {
       "name": "illustrations/kubernetes-installation.svg",
-      "size": 559
+      "size": 570
     },
     {
       "name": "illustrations/labels.svg",
@@ -187,23 +187,23 @@
     },
     {
       "name": "illustrations/lock_promotion.svg",
-      "size": 761
+      "size": 780
     },
     {
       "name": "illustrations/logos/amazon_eks.svg",
-      "size": 2446
+      "size": 2452
     },
     {
       "name": "illustrations/logos/android.svg",
-      "size": 2709
+      "size": 2718
     },
     {
       "name": "illustrations/logos/dotnet.svg",
-      "size": 728
+      "size": 746
     },
     {
       "name": "illustrations/logos/express.svg",
-      "size": 1109
+      "size": 1112
     },
     {
       "name": "illustrations/logos/gitter.svg",
@@ -211,15 +211,15 @@
     },
     {
       "name": "illustrations/logos/go_logo.svg",
-      "size": 1685
+      "size": 1704
     },
     {
       "name": "illustrations/logos/google-cloud-platform_logo.svg",
-      "size": 2498
+      "size": 2541
     },
     {
       "name": "illustrations/logos/google_gke.svg",
-      "size": 1519
+      "size": 1541
     },
     {
       "name": "illustrations/logos/mattermost_logo.svg",
@@ -227,11 +227,11 @@
     },
     {
       "name": "illustrations/logos/netlify.svg",
-      "size": 3974
+      "size": 4034
     },
     {
       "name": "illustrations/logos/rails.svg",
-      "size": 1261
+      "size": 1265
     },
     {
       "name": "illustrations/logos/serverless_framework.svg",
@@ -239,15 +239,15 @@
     },
     {
       "name": "illustrations/logos/spring.svg",
-      "size": 858
+      "size": 862
     },
     {
       "name": "illustrations/manual_action.svg",
-      "size": 6417
+      "size": 6458
     },
     {
       "name": "illustrations/merge_request_changes_empty.svg",
-      "size": 5547
+      "size": 5577
     },
     {
       "name": "illustrations/merge_requests.svg",
@@ -255,83 +255,83 @@
     },
     {
       "name": "illustrations/milestone_burndown_chart.svg",
-      "size": 3063
+      "size": 3085
     },
     {
       "name": "illustrations/milestone_removing-page.svg",
-      "size": 841
+      "size": 851
     },
     {
       "name": "illustrations/monitoring/getting_started.svg",
-      "size": 3773
+      "size": 3790
     },
     {
       "name": "illustrations/monitoring/loading.svg",
-      "size": 5892
+      "size": 5936
     },
     {
       "name": "illustrations/monitoring/no_data.svg",
-      "size": 3771
+      "size": 3913
     },
     {
       "name": "illustrations/monitoring/tracing.svg",
-      "size": 4877
+      "size": 4942
     },
     {
       "name": "illustrations/monitoring/unable_to_connect.svg",
-      "size": 4614
+      "size": 4706
     },
     {
       "name": "illustrations/multi-editor_all_changes_committed_empty.svg",
-      "size": 1550
+      "size": 1590
     },
     {
       "name": "illustrations/multi-editor_no_changes_empty.svg",
-      "size": 1784
+      "size": 1829
     },
     {
       "name": "illustrations/multi-editor_no_staged_files_empty.svg",
-      "size": 1516
+      "size": 1558
     },
     {
       "name": "illustrations/multi_file_editor_empty.svg",
-      "size": 4540
+      "size": 4757
     },
     {
       "name": "illustrations/no-packages.svg",
-      "size": 7209
+      "size": 7237
     },
     {
       "name": "illustrations/no_commits.svg",
-      "size": 2501
+      "size": 2656
     },
     {
       "name": "illustrations/operations-dashboard_empty.svg",
-      "size": 24858
+      "size": 26891
     },
     {
       "name": "illustrations/operations_log_pods_empty.svg",
-      "size": 6361
+      "size": 6788
     },
     {
       "name": "illustrations/operations_metrics_empty.svg",
-      "size": 9746
+      "size": 10064
     },
     {
       "name": "illustrations/pending_job_empty.svg",
-      "size": 4794
+      "size": 4884
     },
     {
       "name": "illustrations/pipelines_empty.svg",
-      "size": 3371
+      "size": 3400
     },
     {
       "name": "illustrations/pipelines_failed.svg",
-      "size": 6485
+      "size": 6640
     },
     {
       "name": "illustrations/pipelines_pending.svg",
-      "size": 3448
+      "size": 3557
     },
     {
       "name": "illustrations/priority_labels.svg",
@@ -339,63 +339,63 @@
     },
     {
       "name": "illustrations/productivity-analytics-empty-state.svg",
-      "size": 2576
+      "size": 2616
     },
     {
       "name": "illustrations/profile-page/activity.svg",
-      "size": 752
+      "size": 776
     },
     {
       "name": "illustrations/profile-page/contributed-projects.svg",
-      "size": 1234
+      "size": 1266
     },
     {
       "name": "illustrations/profile-page/groups.svg",
-      "size": 537
+      "size": 558
     },
     {
       "name": "illustrations/profile-page/personal-project.svg",
-      "size": 1217
+      "size": 1273
     },
     {
       "name": "illustrations/profile-page/personal-projects.svg",
-      "size": 1234
+      "size": 1266
     },
     {
       "name": "illustrations/profile-page/snippets.svg",
-      "size": 2081
+      "size": 2150
     },
     {
       "name": "illustrations/profile_private_mode.svg",
-      "size": 4057
+      "size": 4288
     },
     {
       "name": "illustrations/releases.svg",
-      "size": 7863
+      "size": 8021
     },
     {
       "name": "illustrations/security-dashboard-empty-state.svg",
-      "size": 5959
+      "size": 6028
     },
     {
       "name": "illustrations/security-dashboard_empty.svg",
-      "size": 5507
+      "size": 5707
     },
     {
       "name": "illustrations/service-desk-setup.svg",
-      "size": 4682
+      "size": 4812
     },
     {
       "name": "illustrations/service_desk_callout.svg",
-      "size": 1755
+      "size": 1798
     },
     {
       "name": "illustrations/service_desk_empty.svg",
-      "size": 5076
+      "size": 5232
     },
     {
       "name": "illustrations/skipped-job_empty.svg",
-      "size": 5561
+      "size": 5667
     },
     {
       "name": "illustrations/slack_logo.svg",
@@ -403,11 +403,27 @@
     },
     {
       "name": "illustrations/snippets_empty.svg",
-      "size": 7354
+      "size": 7613
     },
     {
       "name": "illustrations/starred_empty.svg",
-      "size": 6953
+      "size": 7002
+    },
+    {
+      "name": "illustrations/subscription-cancelled.svg",
+      "size": 1605
+    },
+    {
+      "name": "illustrations/subscription-downgraded.svg",
+      "size": 1515
+    },
+    {
+      "name": "illustrations/subscription-success.svg",
+      "size": 1414
+    },
+    {
+      "name": "illustrations/subscription-warning.svg",
+      "size": 1567
     },
     {
       "name": "illustrations/todos_all_done.svg",
@@ -419,15 +435,15 @@
     },
     {
       "name": "illustrations/web-ide_promotion.svg",
-      "size": 1334
+      "size": 1390
     },
     {
       "name": "illustrations/welcome/add_new_group.svg",
-      "size": 1598
+      "size": 1599
     },
     {
       "name": "illustrations/welcome/add_new_project.svg",
-      "size": 825
+      "size": 843
     },
     {
       "name": "illustrations/welcome/add_new_user.svg",
@@ -435,27 +451,27 @@
     },
     {
       "name": "illustrations/welcome/configure_server.svg",
-      "size": 1931
+      "size": 1933
     },
     {
       "name": "illustrations/welcome/ee_trial.svg",
-      "size": 3961
+      "size": 3967
     },
     {
       "name": "illustrations/welcome/globe.svg",
-      "size": 1168
+      "size": 1173
     },
     {
       "name": "illustrations/welcome/lightbulb.svg",
-      "size": 1214
+      "size": 1236
     },
     {
       "name": "illustrations/wiki_login_empty.svg",
-      "size": 5951
+      "size": 6000
     },
     {
       "name": "illustrations/wiki_logout_empty.svg",
-      "size": 6035
+      "size": 6162
     }
   ]
 }
