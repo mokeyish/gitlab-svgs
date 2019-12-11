@@ -1,5 +1,5 @@
 {
-  "illustrationCount": 119,
+  "illustrationCount": 120,
   "illustrations": [
     {
       "name": "illustrations/Dependency-list-empty-state.svg",
@@ -16,6 +16,10 @@
     {
       "name": "illustrations/analytics/no-access.svg",
       "size": 1068
+    },
+    {
+      "name": "illustrations/autodevops.svg",
+      "size": 11727
     },
     {
       "name": "illustrations/canceled-job_empty.svg",
