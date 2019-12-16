@@ -1,6 +1,6 @@
 {
-  "iconCount": 286,
-  "spriteSize": 108127,
+  "iconCount": 288,
+  "spriteSize": 108715,
   "icons": [
     "abuse",
     "account",
@@ -158,6 +158,7 @@
     "long-arrow",
     "mail",
     "marquee-selection",
+    "media-broken",
     "media",
     "merge-request-close-m",
     "merge-request-close",
@@ -188,6 +189,7 @@
     "podcast",
     "preferences",
     "profile",
+    "progress",
     "push-rules",
     "question-o",
     "question",
