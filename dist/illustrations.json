@@ -1,5 +1,5 @@
 {
-  "illustrationCount": 120,
+  "illustrationCount": 121,
   "illustrations": [
     {
       "name": "illustrations/Dependency-list-empty-state.svg",
@@ -104,6 +104,10 @@
     {
       "name": "illustrations/elasticsearch-lg.svg",
       "size": 4568
+    },
+    {
+      "name": "illustrations/empty-state/empty-deploy-keys-lg.svg",
+      "size": 4475
     },
     {
       "name": "illustrations/empty-state/security-dashboard-config-permission.svg",
