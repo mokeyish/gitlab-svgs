@@ -1,6 +1,6 @@
 {
-  "iconCount": 288,
-  "spriteSize": 108715,
+  "iconCount": 290,
+  "spriteSize": 109569,
   "icons": [
     "abuse",
     "account",
@@ -83,6 +83,7 @@
     "earth",
     "ellipsis_h",
     "ellipsis_v",
+    "epic-closed",
     "epic",
     "error",
     "expand-down",
@@ -130,6 +131,7 @@
     "issue-block",
     "issue-child",
     "issue-close",
+    "issue-closed",
     "issue-created",
     "issue-duplicate",
     "issue-external",
