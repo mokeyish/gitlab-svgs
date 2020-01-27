@@ -1,6 +1,6 @@
 {
-  "iconCount": 290,
-  "spriteSize": 109569,
+  "iconCount": 296,
+  "spriteSize": 111777,
   "icons": [
     "abuse",
     "account",
@@ -214,6 +214,12 @@
     "scroll-handle",
     "search",
     "settings",
+    "severity-critical",
+    "severity-high",
+    "severity-info",
+    "severity-low",
+    "severity-medium",
+    "severity-unknown",
     "shield",
     "slight-frown",
     "slight-smile",
