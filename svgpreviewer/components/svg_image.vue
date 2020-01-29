@@ -33,7 +33,7 @@
       >
         <svg class="image-sm">
           <use
-            v-bind="{'xlink:href': `dist/icons.svg#duplicate`}"
+            v-bind="{'xlink:href': `dist/icons.svg#copy-to-clipboard`}"
           />
         </svg>
       </a>
