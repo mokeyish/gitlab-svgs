@@ -1,5 +1,5 @@
 {
-  "illustrationCount": 121,
+  "illustrationCount": 122,
   "illustrations": [
     {
       "name": "illustrations/Dependency-list-empty-state.svg",
@@ -148,6 +148,10 @@
     {
       "name": "illustrations/finished-job_empty.svg",
       "size": 5177
+    },
+    {
+      "name": "illustrations/gatsbyjs-logo.svg",
+      "size": 880
     },
     {
       "name": "illustrations/gitlab_logo.svg",
