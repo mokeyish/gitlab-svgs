@@ -1,5 +1,5 @@
 {
-  "illustrationCount": 121,
+  "illustrationCount": 122,
   "illustrations": [
     {
       "name": "illustrations/Dependency-list-empty-state.svg",
@@ -444,6 +444,10 @@
     {
       "name": "illustrations/todos_empty.svg",
       "size": 5787
+    },
+    {
+      "name": "illustrations/user-not-logged-in.svg",
+      "size": 7076
     },
     {
       "name": "illustrations/web-ide_promotion.svg",
