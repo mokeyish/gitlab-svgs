@@ -1,6 +1,6 @@
 {
-  "iconCount": 297,
-  "spriteSize": 112188,
+  "iconCount": 300,
+  "spriteSize": 113308,
   "icons": [
     "abuse",
     "account",
@@ -84,6 +84,7 @@
     "earth",
     "ellipsis_h",
     "ellipsis_v",
+    "environment",
     "epic-closed",
     "epic",
     "error",
@@ -174,6 +175,7 @@
     "monitor-lines",
     "monitor-o",
     "monitor",
+    "namespace",
     "nature",
     "notifications-off",
     "notifications",
@@ -189,6 +191,7 @@
     "plus-square-o",
     "plus-square",
     "plus",
+    "pod",
     "podcast",
     "preferences",
     "profile",
