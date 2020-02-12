@@ -1,5 +1,5 @@
 {
-  "illustrationCount": 123,
+  "illustrationCount": 124,
   "illustrations": [
     {
       "name": "illustrations/Dependency-list-empty-state.svg",
@@ -256,6 +256,10 @@
     {
       "name": "illustrations/logos/spring.svg",
       "size": 858
+    },
+    {
+      "name": "illustrations/logos/swift.svg",
+      "size": 1172
     },
     {
       "name": "illustrations/manual_action.svg",
