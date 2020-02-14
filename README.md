@@ -27,8 +27,11 @@ All output is saved to the `dist` folder, from where it is also taken from our m
   - Place icons in the `sprite_icons` folder, see [instructions below on how to properly export an icon](#exporting-icons-from-sketch).
   - Place illustrations in the `illustration` folder
 
-- Make sure [SVGO Compressor Sketch plugin](https://github.com/bohemiancoding/svgo-compressor) is installed (it will compress the SVG automatically) or use [SVGO](https://github.com/svg/svgo) to optimize the SVG after you export.
-
+- Make sure [SVGO Compressor Sketch plugin](https://github.com/bohemiancoding/svgo-compressor) is installed (it will compress the SVG automatically) or you can  use [SVGO](https://github.com/svg/svgo) to optimize the SVG after you export.
+  ```bash
+  # optimize our `huge_test.svg` file
+  yarn run svgo ./path/to/huge_test.svg
+  ```
 - After adding the new svgs, you need to execute the following commands, so that you can verify your changes locally at http://localhost:3333/
 
   ```bash
