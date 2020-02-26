@@ -1,5 +1,5 @@
 {
-  "illustrationCount": 126,
+  "illustrationCount": 129,
   "illustrations": [
     {
       "name": "illustrations/Dependency-list-empty-state.svg",
@@ -230,6 +230,10 @@
       "size": 1109
     },
     {
+      "name": "illustrations/logos/gitbook.svg",
+      "size": 1118
+    },
+    {
       "name": "illustrations/logos/gitter.svg",
       "size": 150
     },
@@ -238,12 +242,20 @@
       "size": 1685
     },
     {
+      "name": "illustrations/logos/gomicro.svg",
+      "size": 861
+    },
+    {
       "name": "illustrations/logos/google-cloud-platform_logo.svg",
       "size": 2498
     },
     {
       "name": "illustrations/logos/google_gke.svg",
       "size": 1519
+    },
+    {
+      "name": "illustrations/logos/hugo.svg",
+      "size": 523
     },
     {
       "name": "illustrations/logos/mattermost_logo.svg",
