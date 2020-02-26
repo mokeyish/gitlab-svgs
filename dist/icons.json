@@ -1,8 +1,9 @@
 {
-  "iconCount": 302,
-  "spriteSize": 113916,
+  "iconCount": 305,
+  "spriteSize": 115505,
   "icons": [
     "abuse",
+    "accessibility",
     "account",
     "admin",
     "angle-double-left",
@@ -34,6 +35,7 @@
     "chart",
     "check-circle-filled",
     "check-circle",
+    "cherry-pick-commit",
     "chevron-double-lg-left",
     "chevron-double-lg-right",
     "chevron-down",
@@ -270,6 +272,7 @@
     "status_success",
     "status_warning_borderless",
     "status_warning",
+    "status-health",
     "status",
     "stop",
     "substitute",
