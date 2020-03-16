@@ -1,5 +1,5 @@
 {
-  "illustrationCount": 131,
+  "illustrationCount": 133,
   "illustrations": [
     {
       "name": "illustrations/Dependency-list-empty-state.svg",
@@ -156,6 +156,10 @@
     {
       "name": "illustrations/finished-job_empty.svg",
       "size": 5177
+    },
+    {
+      "name": "illustrations/firewall-not-detected-sm.svg",
+      "size": 3201
     },
     {
       "name": "illustrations/gatsbyjs-logo.svg",
@@ -340,6 +344,10 @@
     {
       "name": "illustrations/multi_file_editor_empty.svg",
       "size": 4540
+    },
+    {
+      "name": "illustrations/network-policies-not-detected-sm.svg",
+      "size": 1463
     },
     {
       "name": "illustrations/no-packages.svg",

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="102" height="102" viewBox="0 0 102 102">
+  <g fill="none" fill-rule="evenodd">
+    <g transform="translate(0 4)">
+      <circle cx="49" cy="49" r="49" fill="#EEE"/>
+      <circle cx="49" cy="49" r="45" fill="#FFF"/>
+    </g>
+    <g transform="translate(13 22)">
+      <rect width="12" height="12" x="1" y="28" fill="#EFEDF8" rx="3"/>
+      <rect width="12" height="12" x="15" y="28" fill="#F9E2D5" rx="2"/>
+      <rect width="12" height="12" x="29" y="28" fill="#EFEDF8" rx="2"/>
+      <rect width="12" height="12" x="43" y="28" fill="#EFEDF8" rx="2"/>
+      <rect width="12" height="12" x="57" y="28" fill="#F9E2D5" rx="2"/>
+      <rect width="12" height="12" x="15" y="14" fill="#EFEDF8" rx="2"/>
+      <rect width="12" height="12" x="29" y="14" fill="#F9E2D5" rx="2"/>
+      <rect width="12" height="12" x="43" y="14" fill="#F9E2D5" rx="2"/>
+      <rect width="12" height="12" x="15" fill="#F9E2D5" rx="2"/>
+      <path fill="#C2B7E6" d="M35.5,72 C47.0032543,72 57.4908755,65.0417788 66.9628637,51.1253365 C67.5843705,50.2122076 67.3479629,48.9681398 66.4348335,48.3466339 C66.103005,48.1207805 65.7108948,48 65.3094974,48 L5.69052998,48 C4.58594765,47.9999768 3.69050675,48.8954177 3.69050675,50 C3.69050675,50.401402 3.81128868,50.7935166 4.03714467,51.1253488 C13.5091307,65.0417829 23.9967491,72 35.5,72 Z"/>
+      <rect width="71" height="4" y="42" fill="#6E49CB" rx="2"/>
+    </g>
+    <g transform="translate(54 2)">
+      <circle cx="23" cy="23" r="23" fill="#FCD7C8" stroke="#FFF" stroke-width="4"/>
+      <circle cx="23" cy="23" r="21" fill="#FB722E" fill-rule="nonzero" opacity=".1"/>
+      <circle cx="23" cy="23" r="18" fill="#FFF" fill-rule="nonzero"/>
+      <path fill="#FC6D26" fill-rule="nonzero" d="M20,15.0015008 C20,13.3416708 21.347,12 23,12 C24.657,12 26,13.3426713 26,15.0015008 L26,22.9984992 C26,24.6583292 24.653,26 23,26 C21.343,26 20,24.6573287 20,22.9984992 L20,15.0015008 M23,34 C21.343,34 20,32.657 20,31 C20,29.343 21.343,28 23,28 C24.657,28 26,29.343 26,31 C26,32.657 24.657,34 23,34" transform="matrix(-1 0 0 1 46 0)"/>
+    </g>
+  </g>
+</svg>
