@@ -1,6 +1,6 @@
 {
-  "iconCount": 304,
-  "spriteSize": 114274,
+  "iconCount": 305,
+  "spriteSize": 114753,
   "icons": [
     "abuse",
     "accessibility",
@@ -279,6 +279,7 @@
     "tablet",
     "tachometer",
     "tag",
+    "tanuki-verified",
     "tanuki",
     "task-done",
     "template",
