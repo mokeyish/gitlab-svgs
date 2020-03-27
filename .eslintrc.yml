@@ -1,4 +1,4 @@
-extends: '@gitlab'
+extends: 'plugin:@gitlab/default'
 rules:
   # We need to disable the following rule, because all dependencies in this project are dev dependencies
   # However, the resulting npm package needs none of those dependencies in production
