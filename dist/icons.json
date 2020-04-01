@@ -1,6 +1,6 @@
 {
-  "iconCount": 305,
-  "spriteSize": 114753,
+  "iconCount": 306,
+  "spriteSize": 115054,
   "icons": [
     "abuse",
     "accessibility",
@@ -14,6 +14,7 @@
     "angle-up",
     "appearance",
     "applications",
+    "approval-solid",
     "approval",
     "archive",
     "arrow-down",
