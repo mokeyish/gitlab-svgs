@@ -1,5 +1,5 @@
 {
-  "illustrationCount": 134,
+  "illustrationCount": 135,
   "illustrations": [
     {
       "name": "illustrations/Dependency-list-empty-state.svg",
@@ -120,6 +120,10 @@
     {
       "name": "illustrations/empty-state/geo-empty.svg",
       "size": 9471
+    },
+    {
+      "name": "illustrations/empty-state/geo-replication-empty.svg",
+      "size": 6142
     },
     {
       "name": "illustrations/empty-state/security-dashboard-config-permission.svg",
