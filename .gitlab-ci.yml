@@ -17,6 +17,10 @@ build-and-check:
   artifacts:
     paths:
       - public
+  only:
+    refs:
+     - merge_requests@gitlab-org/gitlab-svgs
+     - master@gitlab-org/gitlab-svgs
 
 publish:
   stage: deploy
@@ -26,7 +30,8 @@ publish:
       '@semantic-release/git@7' '@semantic-release/gitlab@3' '@semantic-release/npm@5'
     - $(yarn global bin)/semantic-release
   only:
-    - master@gitlab-org/gitlab-svgs
+    refs:
+      - master@gitlab-org/gitlab-svgs
 
 review:
   stage: deploy
@@ -46,9 +51,8 @@ review:
     url: http://$CI_COMMIT_REF_SLUG.$APPS_DOMAIN/gitlab-svgs/
     on_stop: review_stop
   only:
-    - branches@gitlab-org/gitlab-svgs
-  except:
-    - master@gitlab-org/gitlab-svgs
+    refs:
+    - merge_requests@gitlab-org/gitlab-svgs
   tags:
     - nginx
     - review-apps
@@ -63,9 +67,8 @@ review_stop:
     name: review/$CI_COMMIT_REF_SLUG
     action: stop
   only:
-    - branches@gitlab-org/gitlab-svgs
-  except:
-    - master@gitlab-org/gitlab-svgs
+    refs:
+    - merge_requests@gitlab-org/gitlab-svgs
   tags:
     - nginx
     - review-apps
@@ -81,4 +84,5 @@ pages:
     paths:
       - public
   only:
-    - master@gitlab-org/gitlab-svgs
+    refs:
+      - master@gitlab-org/gitlab-svgs
