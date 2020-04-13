@@ -1,9 +1,13 @@
 {
-  "illustrationCount": 135,
+  "illustrationCount": 136,
   "illustrations": [
     {
       "name": "illustrations/Dependency-list-empty-state.svg",
       "size": 3964
+    },
+    {
+      "name": "illustrations/alert-management-empty-state.svg",
+      "size": 6200
     },
     {
       "name": "illustrations/analytics/cycle-analytics-empty-chart.svg",
