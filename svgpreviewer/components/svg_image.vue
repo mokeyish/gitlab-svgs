@@ -1,3 +1,62 @@
+
+<script>
+import copyToClipboard from '../helpers/copy_to_clipboard';
+
+export default {
+  props: {
+    image: {
+      type: String,
+      required: true,
+    },
+    imageClass: {
+      type: String,
+      required: false,
+      default: '',
+    },
+    imageSprite: {
+      type: String,
+      required: false,
+      default: '',
+    },
+    imageSize: {
+      type: Number,
+      required: false,
+      default: 0,
+    },
+    sourcePath: {
+      type: String,
+      required: true,
+    },
+  },
+  computed: {
+    imageName() {
+      return this.image.replace(/_/g, '_\u200B');
+    },
+    spritePath() {
+      return `${this.imageSprite}#${this.image}`;
+    },
+    imagePath() {
+      return `dist/${this.image}`;
+    },
+    sourceLink() {
+      const path = `${this.sourcePath}${this.image}`;
+      return path.includes('.svg') ? path : `${path}.svg`;
+    },
+    kbSize() {
+      return Math.round(this.imageSize / 1024);
+    },
+  },
+  methods: {
+    copyImage() {
+      this.$emit('imageCopied', copyToClipboard(this.image) ? 1 : -1);
+    },
+    selectPermalink() {
+      this.$emit('permalinkSelected', this.image);
+    },
+  },
+};
+</script>
+
 <template>
   <div class="image-wrapper">
     <div
@@ -61,64 +120,6 @@
     </div>
   </div>
 </template>
-
-<script>
-import copyToClipboard from '../helpers/copy_to_clipboard';
-
-export default {
-  props: {
-    image: {
-      type: String,
-      required: true,
-    },
-    imageClass: {
-      type: String,
-      required: false,
-      default: '',
-    },
-    imageSprite: {
-      type: String,
-      required: false,
-      default: '',
-    },
-    imageSize: {
-      type: Number,
-      required: false,
-      default: 0,
-    },
-    sourcePath: {
-      type: String,
-      required: true,
-    },
-  },
-  computed: {
-    imageName() {
-      return this.image.replace(/_/g, '_\u200B');
-    },
-    spritePath() {
-      return `${this.imageSprite}#${this.image}`;
-    },
-    imagePath() {
-      return `dist/${this.image}`;
-    },
-    sourceLink() {
-      const path = `${this.sourcePath}${this.image}`;
-      return path.includes('.svg') ? path : `${path}.svg`;
-    },
-    kbSize() {
-      return Math.round(this.imageSize / 1024);
-    },
-  },
-  methods: {
-    copyImage() {
-      this.$emit('imageCopied', copyToClipboard(this.image) ? 1 : -1);
-    },
-    selectPermalink() {
-      this.$emit('permalinkSelected', this.image);
-    },
-  },
-};
-</script>
 
 <style scoped>
 svg {

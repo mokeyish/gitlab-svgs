@@ -1,4 +1,66 @@
-/* eslint-disable no-unused-vars, import/no-unresolved */
+<script>
+import illustrations from '../static/dist/illustrations.json';
+import SvgImage from '../components/svg_image.vue';
+
+export default {
+  components: {
+    SvgImage,
+  },
+  data() {
+    return {
+      illustrationsData: illustrations,
+      searchString: this.$route.query.q || '',
+      copyStatus: 0,
+    };
+  },
+  computed: {
+    filteredIllustrations() {
+      const unfiltered = this.illustrationsData.illustrations;
+
+      if (this.searchString === '') {
+        return unfiltered;
+      }
+
+      return this.illustrationsData.illustrations.filter(({ name }) =>
+        name.includes(this.searchString),
+      );
+    },
+  },
+  watch: {
+    searchString() {
+      this.updateQueryParams();
+    },
+    $route(to) {
+      const query = to.query || {};
+      this.searchString = query.q || '';
+    },
+  },
+  methods: {
+    setSearchString(value) {
+      this.searchString = value;
+    },
+    resetSearch() {
+      this.searchString = '';
+    },
+    setCopyStatus(newStatus) {
+      this.copyStatus = newStatus;
+      setTimeout(() => {
+        this.copyStatus = 0;
+      }, 5000);
+    },
+    updateQueryParams() {
+      const location = {
+        query: {
+          q: this.searchString ? this.searchString : undefined,
+        },
+      };
+
+      this.$router.replace(location);
+    },
+  },
+};
+</script>
+
 <template>
   <div>
     <header class="subheader">
@@ -65,69 +127,6 @@
     </section>
   </div>
 </template>
-
-<script>
-import illustrations from '../static/dist/illustrations.json';
-import SvgImage from '../components/svg_image.vue';
-
-export default {
-  components: {
-    SvgImage,
-  },
-  data() {
-    return {
-      illustrationsData: illustrations,
-      searchString: this.$route.query.q || '',
-      copyStatus: 0,
-    };
-  },
-  computed: {
-    filteredIllustrations() {
-      const unfiltered = this.illustrationsData.illustrations;
-
-      if (this.searchString === '') {
-        return unfiltered;
-      }
-
-      return this.illustrationsData.illustrations.filter(({ name }) =>
-        name.includes(this.searchString),
-      );
-    },
-  },
-  watch: {
-    searchString() {
-      this.updateQueryParams();
-    },
-    $route(to) {
-      const query = to.query || {};
-      this.searchString = query.q || '';
-    },
-  },
-  methods: {
-    setSearchString(value) {
-      this.searchString = value;
-    },
-    resetSearch() {
-      this.searchString = '';
-    },
-    setCopyStatus(newStatus) {
-      this.copyStatus = newStatus;
-      setTimeout(() => {
-        this.copyStatus = 0;
-      }, 5000);
-    },
-    updateQueryParams() {
-      const location = {
-        query: {
-          q: this.searchString ? this.searchString : undefined,
-        },
-      };
-
-      this.$router.replace(location);
-    },
-  },
-};
-</script>
 
 <style>
 .subheader {
