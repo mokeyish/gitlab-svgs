@@ -1,4 +1,98 @@
-/* eslint-disable no-unused-vars, import/no-unresolved */
+
+<script>
+import svg4everybody from 'svg4everybody';
+import icons from '../static/dist/icons.json';
+import SvgImage from '../components/svg_image.vue';
+
+/*
+ In order to make the review/preview apps work properly in IE11,
+ because it doesn't know how to deal with sprites properly
+ */
+if (process.browser) {
+  svg4everybody();
+}
+
+const DEFAULT_ICON_SIZE = 'image-sm';
+const DEFAULT_COLORING = 'default';
+
+export default {
+  components: {
+    SvgImage,
+  },
+  data() {
+    return {
+      iconData: icons,
+      searchString: this.$route.query.q || '',
+      selectedClass: this.$route.query.size || DEFAULT_ICON_SIZE,
+      selectedColor: this.$route.query.color || DEFAULT_COLORING,
+      copyStatus: 0,
+    };
+  },
+  computed: {
+    filteredIcons() {
+      if (this.searchString && this.searchString.startsWith('~')) {
+        return this.iconData.icons.filter(icon => `~${icon}` === this.searchString);
+      }
+      return this.iconData.icons.filter(icon => icon.includes(this.searchString));
+    },
+    kbSize() {
+      return Math.round(this.iconData.spriteSize / 1024);
+    },
+    colors() {
+      return [
+        { value: DEFAULT_COLORING, name: 'Default' },
+        { value: 'inverse', name: 'Inverse' },
+        { value: 'indigo', name: 'Indigo' },
+        { value: 'gray', name: 'Gray' },
+        { value: 'red', name: 'Red' },
+      ];
+    },
+  },
+  watch: {
+    searchString() {
+      this.updateQueryParams();
+    },
+    selectedClass() {
+      this.updateQueryParams();
+    },
+    selectedColor() {
+      this.updateQueryParams();
+    },
+    $route(to) {
+      const query = to.query || {};
+      this.searchString = query.q || '';
+      this.selectedClass = query.size || DEFAULT_ICON_SIZE;
+      this.selectedColor = query.color || DEFAULT_COLORING;
+    },
+  },
+  methods: {
+    setSearchString(value) {
+      this.searchString = `~${value}`;
+    },
+    resetSearch() {
+      this.searchString = '';
+    },
+    setCopyStatus(newStatus) {
+      this.copyStatus = newStatus;
+      setTimeout(() => {
+        this.copyStatus = 0;
+      }, 5000);
+    },
+    updateQueryParams() {
+      const location = {
+        query: {
+          q: this.searchString ? this.searchString : undefined,
+          size: this.selectedClass !== DEFAULT_ICON_SIZE ? this.selectedClass : undefined,
+          color: this.selectedColor !== DEFAULT_COLORING ? this.selectedColor : undefined,
+        },
+      };
+
+      this.$router.replace(location);
+    },
+  },
+};
+</script>
+
 <template>
   <div>
     <header class="subheader">
@@ -104,100 +198,6 @@
     </section>
   </div>
 </template>
-
-<script>
-import svg4everybody from 'svg4everybody';
-import icons from '../static/dist/icons.json';
-import SvgImage from '../components/svg_image.vue';
-
-/*
- In order to make the review/preview apps work properly in IE11,
- because it doesn't know how to deal with sprites properly
- */
-if (process.browser) {
-  svg4everybody();
-}
-
-const DEFAULT_ICON_SIZE = 'image-sm';
-const DEFAULT_COLORING = 'default';
-
-export default {
-  components: {
-    SvgImage,
-  },
-  data() {
-    return {
-      iconData: icons,
-      searchString: this.$route.query.q || '',
-      selectedClass: this.$route.query.size || DEFAULT_ICON_SIZE,
-      selectedColor: this.$route.query.color || DEFAULT_COLORING,
-      copyStatus: 0,
-    };
-  },
-  computed: {
-    filteredIcons() {
-      if (this.searchString && this.searchString.startsWith('~')) {
-        return this.iconData.icons.filter(icon => `~${icon}` === this.searchString);
-      }
-      return this.iconData.icons.filter(icon => icon.includes(this.searchString));
-    },
-    kbSize() {
-      return Math.round(this.iconData.spriteSize / 1024);
-    },
-    colors() {
-      return [
-        { value: DEFAULT_COLORING, name: 'Default' },
-        { value: 'inverse', name: 'Inverse' },
-        { value: 'indigo', name: 'Indigo' },
-        { value: 'gray', name: 'Gray' },
-        { value: 'red', name: 'Red' },
-      ];
-    },
-  },
-  watch: {
-    searchString() {
-      this.updateQueryParams();
-    },
-    selectedClass() {
-      this.updateQueryParams();
-    },
-    selectedColor() {
-      this.updateQueryParams();
-    },
-    $route(to) {
-      const query = to.query || {};
-      this.searchString = query.q || '';
-      this.selectedClass = query.size || DEFAULT_ICON_SIZE;
-      this.selectedColor = query.color || DEFAULT_COLORING;
-    },
-  },
-  methods: {
-    setSearchString(value) {
-      this.searchString = `~${value}`;
-    },
-    resetSearch() {
-      this.searchString = '';
-    },
-    setCopyStatus(newStatus) {
-      this.copyStatus = newStatus;
-      setTimeout(() => {
-        this.copyStatus = 0;
-      }, 5000);
-    },
-    updateQueryParams() {
-      const location = {
-        query: {
-          q: this.searchString ? this.searchString : undefined,
-          size: this.selectedClass !== DEFAULT_ICON_SIZE ? this.selectedClass : undefined,
-          color: this.selectedColor !== DEFAULT_COLORING ? this.selectedColor : undefined,
-        },
-      };
-
-      this.$router.replace(location);
-    },
-  },
-};
-</script>
 
 <style>
 .subheader {
