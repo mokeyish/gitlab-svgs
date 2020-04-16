@@ -1,6 +1,6 @@
 {
-  "iconCount": 306,
-  "spriteSize": 115054,
+  "iconCount": 307,
+  "spriteSize": 115200,
   "icons": [
     "abuse",
     "accessibility",
@@ -67,6 +67,7 @@
     "compress",
     "copy-to-clipboard",
     "credit-card",
+    "dash",
     "dashboard",
     "disk",
     "doc-changes",
