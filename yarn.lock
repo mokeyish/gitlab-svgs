@@ -663,10 +663,10 @@
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
   integrity sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==
 
-"@gitlab/eslint-plugin@2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@gitlab/eslint-plugin/-/eslint-plugin-2.1.0.tgz#6e6492ae723a3c2c8cc8ac32eaa72d223183f47a"
-  integrity sha512-04xBIzG9MvG6JuYmMAI1VC9tUIQWX7PbgN9MPdJr6F1F7RdjxcUC4pwVfbHLsdJ4oEa29uM7gH+ZL7ww/nRXKg==
+"@gitlab/eslint-plugin@2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@gitlab/eslint-plugin/-/eslint-plugin-2.1.1.tgz#6149a0dc1b093c40eb92800b1c49e7136f11dda1"
+  integrity sha512-hPno+eYl9lpe3nGa748TQ2eftAooFu2SS9b+BwY8mZr3tuIS937GgB0FeFXJAjKFdfoFgLgRfQIQXkHm4Ywt0A==
   dependencies:
     babel-eslint "^10.0.3"
     eslint-config-airbnb-base "^14.0.0"
