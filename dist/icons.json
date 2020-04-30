@@ -1,6 +1,6 @@
 {
-  "iconCount": 307,
-  "spriteSize": 115200,
+  "iconCount": 309,
+  "spriteSize": 115867,
   "icons": [
     "abuse",
     "accessibility",
@@ -200,6 +200,7 @@
     "preferences",
     "profile",
     "progress",
+    "project",
     "push-rules",
     "question-o",
     "question",
@@ -276,6 +277,7 @@
     "status-health",
     "status",
     "stop",
+    "subgroup",
     "substitute",
     "table",
     "tablet",
