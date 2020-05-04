@@ -1,6 +1,6 @@
 {
-  "iconCount": 314,
-  "spriteSize": 118070,
+  "iconCount": 315,
+  "spriteSize": 118581,
   "icons": [
     "abuse",
     "accessibility",
@@ -99,6 +99,7 @@
     "expand-right",
     "expand-up",
     "expand",
+    "expire",
     "export",
     "external-link",
     "eye-slash",
