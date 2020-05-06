@@ -1,6 +1,6 @@
 {
-  "iconCount": 315,
-  "spriteSize": 118581,
+  "iconCount": 316,
+  "spriteSize": 119019,
   "icons": [
     "abuse",
     "accessibility",
@@ -65,6 +65,7 @@
     "commit",
     "comparison",
     "compress",
+    "container-image",
     "copy-to-clipboard",
     "credit-card",
     "dash",
