@@ -1,5 +1,5 @@
 {
-  "illustrationCount": 136,
+  "illustrationCount": 137,
   "illustrations": [
     {
       "name": "illustrations/Dependency-list-empty-state.svg",
@@ -276,6 +276,10 @@
     {
       "name": "illustrations/logos/hugo.svg",
       "size": 523
+    },
+    {
+      "name": "illustrations/logos/kubernetes.svg",
+      "size": 5609
     },
     {
       "name": "illustrations/logos/mattermost_logo.svg",
