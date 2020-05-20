@@ -1,5 +1,5 @@
 {
-  "illustrationCount": 137,
+  "illustrationCount": 138,
   "illustrations": [
     {
       "name": "illustrations/Dependency-list-empty-state.svg",
@@ -284,6 +284,10 @@
     {
       "name": "illustrations/logos/mattermost_logo.svg",
       "size": 1036
+    },
+    {
+      "name": "illustrations/logos/neocities.svg",
+      "size": 40370
     },
     {
       "name": "illustrations/logos/netlify.svg",
