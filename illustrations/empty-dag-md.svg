@@ -1,0 +1,41 @@
+<svg width="240" height="124" viewBox="0 0 240 124" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M26 62H108" stroke="#FC6D26" stroke-width="4"/>
+<path d="M26 22H108" stroke="#6E49CB" stroke-width="4"/>
+<path d="M132 14H214" stroke="#BFBFBF" stroke-width="4"/>
+<path d="M132 102H214" stroke="#6E49CB" stroke-width="4"/>
+<path d="M26 70.5H50C58.8366 70.5 66 77.6634 66 86.5V86.5C66 95.3366 73.1634 102.5 82 102.5H107.5" stroke="#FC6D26" stroke-width="4"/>
+<path d="M132 22H156C164.837 22 172 29.1634 172 38V38C172 46.8366 179.163 54 188 54H213.5" stroke="#BFBFBF" stroke-width="4"/>
+<path d="M26 53.5H50.25C58.9485 53.5 66 46.4485 66 37.75V37.75C66 29.0515 73.0515 22 81.75 22H107.5" stroke="#6E49CB" stroke-width="4"/>
+<path d="M132 94.5H156C164.837 94.5 172 87.3366 172 78.5V70C172 61.1634 179.163 54 188 54H213.5" stroke="#BFBFBF" stroke-width="4"/>
+<path d="M132 62.5H155.164C158.888 62.5 162.447 60.9622 165 58.25V58.25C167.553 55.5378 171.112 54 174.836 54H213.5" stroke="#BFBFBF" stroke-width="4"/>
+<rect x="214" y="82" width="24" height="40" rx="12" fill="#6E49CB"/>
+<rect x="214" y="82" width="24" height="40" rx="12" fill="white" fill-opacity="0.9"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M221 105.841C221.646 106.617 222.478 107.217 223.418 107.585C224.358 107.954 225.376 108.08 226.377 107.951C227.379 107.821 228.331 107.442 229.147 106.846C229.962 106.251 230.614 105.46 231.043 104.545C231.471 103.631 231.662 102.623 231.597 101.616C231.532 100.608 231.214 99.633 230.673 98.7809C230.131 97.9288 229.383 97.2272 228.498 96.7411C227.613 96.255 226.62 96.0001 225.61 96V102L221 105.841Z" fill="#6E49CB"/>
+<rect x="214" y="82" width="24" height="40" rx="12" stroke="#6E49CB" stroke-width="4"/>
+<rect x="214" y="34" width="24" height="40" rx="12" fill="#FAFAFA"/>
+<circle cx="226" cy="54" r="5" fill="#BFBFBF"/>
+<rect x="214" y="34" width="24" height="40" rx="12" stroke="#BFBFBF" stroke-width="4"/>
+<rect x="214" y="2" width="24" height="24" rx="12" fill="#FAFAFA"/>
+<circle cx="226" cy="14" r="5" fill="#BFBFBF"/>
+<rect x="214" y="2" width="24" height="24" rx="12" stroke="#BFBFBF" stroke-width="4"/>
+<rect x="108" y="82" width="24" height="40" rx="12" fill="#FC6D26"/>
+<rect x="108" y="82" width="24" height="40" rx="12" fill="white" fill-opacity="0.9"/>
+<path d="M116 102L119 105L124 100" stroke="#FC6D26" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="108" y="82" width="24" height="40" rx="12" stroke="#FC6D26" stroke-width="4"/>
+<rect x="108" y="50" width="24" height="24" rx="12" fill="#FC6D26"/>
+<rect x="108" y="50" width="24" height="24" rx="12" fill="white" fill-opacity="0.9"/>
+<path d="M116 62L119 65L124 60" stroke="#FC6D26" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="108" y="50" width="24" height="24" rx="12" stroke="#FC6D26" stroke-width="4"/>
+<rect x="108" y="2" width="24" height="40" rx="12" fill="#6E49CB"/>
+<rect x="108" y="2" width="24" height="40" rx="12" fill="white" fill-opacity="0.9"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M115 25.841C115.646 26.6167 116.478 27.2167 117.418 27.5855C118.358 27.9543 119.376 28.0799 120.377 27.9507C121.379 27.8215 122.331 27.4416 123.147 26.8464C123.962 26.2511 124.614 25.4596 125.043 24.5453C125.471 23.6309 125.662 22.6232 125.597 21.6156C125.532 20.608 125.214 19.633 124.673 18.7809C124.131 17.9288 123.383 17.2272 122.498 16.7411C121.613 16.255 120.62 16.0001 119.61 16V22L115 25.841Z" fill="#6E49CB"/>
+<rect x="108" y="2" width="24" height="40" rx="12" stroke="#6E49CB" stroke-width="4"/>
+<rect x="2" y="42" width="24" height="40" rx="12" fill="#FC6D26"/>
+<rect x="2" y="42" width="24" height="40" rx="12" fill="white" fill-opacity="0.9"/>
+<path d="M10 62L13 65L18 60" stroke="#FC6D26" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="2" y="42" width="24" height="40" rx="12" stroke="#FC6D26" stroke-width="4"/>
+<rect x="2" y="10" width="24" height="24" rx="12" fill="#FC6D26"/>
+<rect x="2" y="10" width="24" height="24" rx="12" fill="white" fill-opacity="0.9"/>
+<path d="M10 22L13 25L18 20" stroke="#FC6D26" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="2" y="10" width="24" height="24" rx="12" stroke="#FC6D26" stroke-width="4"/>
+</svg>
