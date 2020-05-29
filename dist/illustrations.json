@@ -1,5 +1,5 @@
 {
-  "illustrationCount": 140,
+  "illustrationCount": 141,
   "illustrations": [
     {
       "name": "illustrations/Dependency-list-empty-state.svg",
@@ -276,6 +276,10 @@
     {
       "name": "illustrations/logos/google_gke.svg",
       "size": 1519
+    },
+    {
+      "name": "illustrations/logos/hexo.svg",
+      "size": 296
     },
     {
       "name": "illustrations/logos/hugo.svg",
