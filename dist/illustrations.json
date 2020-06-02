@@ -1,5 +1,5 @@
 {
-  "illustrationCount": 141,
+  "illustrationCount": 142,
   "illustrations": [
     {
       "name": "illustrations/Dependency-list-empty-state.svg",
@@ -244,6 +244,10 @@
     {
       "name": "illustrations/logos/android.svg",
       "size": 2709
+    },
+    {
+      "name": "illustrations/logos/aws.svg",
+      "size": 3806
     },
     {
       "name": "illustrations/logos/dotnet.svg",
