@@ -1,6 +1,6 @@
 {
-  "iconCount": 316,
-  "spriteSize": 119019,
+  "iconCount": 317,
+  "spriteSize": 119367,
   "icons": [
     "abuse",
     "accessibility",
@@ -148,6 +148,7 @@
     "issue-open",
     "issues",
     "italic",
+    "iteration",
     "key",
     "label",
     "labels",
