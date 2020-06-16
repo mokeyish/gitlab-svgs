@@ -1,6 +1,6 @@
 {
-  "iconCount": 317,
-  "spriteSize": 119367,
+  "iconCount": 318,
+  "spriteSize": 120646,
   "icons": [
     "abuse",
     "accessibility",
@@ -12,6 +12,7 @@
     "angle-left",
     "angle-right",
     "angle-up",
+    "api",
     "appearance",
     "applications",
     "approval-solid",
