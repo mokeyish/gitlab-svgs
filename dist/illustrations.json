@@ -1,5 +1,5 @@
 {
-  "illustrationCount": 146,
+  "illustrationCount": 147,
   "illustrations": [
     {
       "name": "illustrations/Dependency-list-empty-state.svg",
@@ -136,6 +136,10 @@
     {
       "name": "illustrations/empty-state/empty-serverless-lg.svg",
       "size": 4562
+    },
+    {
+      "name": "illustrations/empty-state/empty-terraform-register-lg.svg",
+      "size": 3003
     },
     {
       "name": "illustrations/empty-state/geo-empty.svg",
