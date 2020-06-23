@@ -1,5 +1,5 @@
 {
-  "illustrationCount": 145,
+  "illustrationCount": 146,
   "illustrations": [
     {
       "name": "illustrations/Dependency-list-empty-state.svg",
@@ -132,6 +132,10 @@
     {
       "name": "illustrations/empty-state/empty-requirements-lg.svg",
       "size": 3176
+    },
+    {
+      "name": "illustrations/empty-state/empty-serverless-lg.svg",
+      "size": 4562
     },
     {
       "name": "illustrations/empty-state/geo-empty.svg",
