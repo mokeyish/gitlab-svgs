@@ -1,5 +1,5 @@
 {
-  "illustrationCount": 144,
+  "illustrationCount": 145,
   "illustrations": [
     {
       "name": "illustrations/Dependency-list-empty-state.svg",
@@ -124,6 +124,10 @@
     {
       "name": "illustrations/empty-state/empty-gitlab-pages.svg",
       "size": 3349
+    },
+    {
+      "name": "illustrations/empty-state/empty-removed-projects-lg.svg",
+      "size": 3173
     },
     {
       "name": "illustrations/empty-state/empty-requirements-lg.svg",
