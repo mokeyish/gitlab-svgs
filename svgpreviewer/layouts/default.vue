@@ -29,16 +29,16 @@ html {
 }
 
 html {
-  --default-fg: #000000;
+  --default-fg: #1f1f1f;
   --default-bg: #ffffff;
   --inverse-fg: #ffffff;
-  --inverse-bg: #000000;
-  --indigo-fg: #d1d1f0;
-  --indigo-bg: #292961;
-  --gray-fg: #707070;
-  --gray-bg: #f2f2f2;
-  --red-fg: #b03927;
-  --red-bg: #fae2de;
+  --inverse-bg: #1f1f1f;
+  --indigo-fg: #C7C7f2;
+  --indigo-bg: #222261;
+  --gray-fg: #666;
+  --gray-bg: #fafafa;
+  --red-fg: #dd2b0e;
+  --red-bg: #fdd4cd;
 }
 
 *,

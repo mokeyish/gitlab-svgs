@@ -2,6 +2,8 @@
 import illustrations from '../static/dist/illustrations.json';
 import SvgImage from '../components/svg_image.vue';
 
+const DEFAULT_COLORING = 'default';
+
 export default {
   components: {
     SvgImage,
@@ -10,6 +12,7 @@ export default {
     return {
       illustrationsData: illustrations,
       searchString: this.$route.query.q || '',
+      selectedColor: this.$route.query.color || DEFAULT_COLORING,
       copyStatus: 0,
     };
   },
@@ -25,14 +28,27 @@ export default {
         name.includes(this.searchString),
       );
     },
+    colors() {
+      return [
+        { value: DEFAULT_COLORING, name: 'Default' },
+        { value: 'gray', name: 'Gray' },
+        { value: 'inverse', name: 'Inverse' },
+        { value: 'indigo', name: 'Indigo' },
+        { value: 'red', name: 'Red' },
+      ];
+    },
   },
   watch: {
     searchString() {
       this.updateQueryParams();
     },
+    selectedColor() {
+      this.updateQueryParams();
+    },
     $route(to) {
       const query = to.query || {};
       this.searchString = query.q || '';
+      this.selectedColor = query.color || DEFAULT_COLORING;
     },
   },
   methods: {
@@ -52,6 +68,7 @@ export default {
       const location = {
         query: {
           q: this.searchString ? this.searchString : undefined,
+          color: this.selectedColor !== DEFAULT_COLORING ? this.selectedColor : undefined,
         },
       };
 
@@ -115,10 +132,27 @@ export default {
     </header>
     <section class="container">
       <div class="illustrations-list">
+        <aside>
+          <h3>Illustration configuration</h3>
+          <label>
+            <strong> Select a background color:</strong>
+          </label>
+          <select
+            v-model="selectedColor"
+            class="form-control select-control chevron-down"
+          >
+            <template v-for="color in colors">
+              <option :key="color.value" :value="color.value" >
+                {{color.name}}
+              </option>
+            </template>
+          </select>
+        </aside>
         <svg-image
           v-for="(illustration, index) in filteredIllustrations"
           :key="index"
           :image="illustration.name"
+          :class="selectedColor"
           source-path="https://gitlab.com/gitlab-org/gitlab-svgs/blob/master/"
           @imageCopied="setCopyStatus"
           @permalinkSelected="setSearchString"
@@ -156,6 +190,14 @@ export default {
   padding: 0;
 }
 
+.illustrations-list aside {
+  display: block;
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
 .illustrations-list .image-wrapper {
   margin-bottom: 1rem;
 }
@@ -177,5 +219,30 @@ export default {
 
 .icon-reset:hover {
   fill: black;
+}
+
+.image-wrapper.default .image-base {
+  color: var(--default-fg);
+  background-color: var(--default-bg);
+}
+
+.image-wrapper.inverse .image-base {
+  color: var(--inverse-fg);
+  background-color: var(--inverse-bg);
+}
+
+.image-wrapper.indigo .image-base {
+  color: var(--indigo-fg);
+  background-color: var(--indigo-bg);
+}
+
+.image-wrapper.gray .image-base {
+  color: var(--gray-fg);
+  background-color: var(--gray-bg);
+}
+
+.image-wrapper.red .image-base {
+  color: var(--red-fg);
+  background-color: var(--red-bg);
 }
 </style>
