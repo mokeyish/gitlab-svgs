@@ -1,5 +1,5 @@
 {
-  "illustrationCount": 147,
+  "illustrationCount": 148,
   "illustrations": [
     {
       "name": "illustrations/Dependency-list-empty-state.svg",
@@ -312,6 +312,10 @@
     {
       "name": "illustrations/logos/jekyll.svg",
       "size": 2475
+    },
+    {
+      "name": "illustrations/logos/jira.svg",
+      "size": 1059
     },
     {
       "name": "illustrations/logos/kubernetes.svg",
