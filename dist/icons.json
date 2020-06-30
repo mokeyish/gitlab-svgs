@@ -1,6 +1,6 @@
 {
-  "iconCount": 320,
-  "spriteSize": 121342,
+  "iconCount": 321,
+  "spriteSize": 121736,
   "icons": [
     "abuse",
     "accessibility",
@@ -193,6 +193,7 @@
     "object",
     "overview",
     "package",
+    "paper-airplane",
     "pause",
     "pencil-square",
     "pencil",
