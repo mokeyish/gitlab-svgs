@@ -1,6 +1,6 @@
 {
-  "iconCount": 318,
-  "spriteSize": 120646,
+  "iconCount": 320,
+  "spriteSize": 121356,
   "icons": [
     "abuse",
     "accessibility",
@@ -229,6 +229,8 @@
     "scroll_down",
     "scroll_up",
     "scroll-handle",
+    "search-minus",
+    "search-plus",
     "search",
     "settings",
     "severity-critical",
