@@ -1,6 +1,6 @@
 {
-  "iconCount": 321,
-  "spriteSize": 121736,
+  "iconCount": 323,
+  "spriteSize": 122316,
   "icons": [
     "abuse",
     "accessibility",
@@ -77,6 +77,7 @@
     "doc-expand",
     "doc-image",
     "doc-new",
+    "doc-symlink",
     "doc-text",
     "doc-versions",
     "document",
@@ -290,6 +291,7 @@
     "strikethrough",
     "subgroup",
     "substitute",
+    "symlink",
     "table",
     "tablet",
     "tachometer",
