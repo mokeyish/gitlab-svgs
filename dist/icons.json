@@ -1,6 +1,6 @@
 {
-  "iconCount": 323,
-  "spriteSize": 122316,
+  "iconCount": 324,
+  "spriteSize": 122705,
   "icons": [
     "abuse",
     "accessibility",
@@ -241,6 +241,7 @@
     "severity-low",
     "severity-medium",
     "severity-unknown",
+    "share",
     "shield",
     "slight-frown",
     "slight-smile",
