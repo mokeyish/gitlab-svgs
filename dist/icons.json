@@ -1,6 +1,6 @@
 {
-  "iconCount": 324,
-  "spriteSize": 122705,
+  "iconCount": 325,
+  "spriteSize": 122940,
   "icons": [
     "abuse",
     "accessibility",
@@ -39,6 +39,7 @@
     "chart",
     "check-circle-filled",
     "check-circle",
+    "check",
     "cherry-pick-commit",
     "chevron-double-lg-left",
     "chevron-double-lg-right",
