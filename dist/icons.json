@@ -1,6 +1,6 @@
 {
-  "iconCount": 326,
-  "spriteSize": 123255,
+  "iconCount": 329,
+  "spriteSize": 124592,
   "icons": [
     "abuse",
     "accessibility",
@@ -30,6 +30,7 @@
     "branch-deleted",
     "branch",
     "brand-zoom",
+    "bug",
     "bulb",
     "bullhorn",
     "calendar",
@@ -196,6 +197,7 @@
     "overview",
     "package",
     "paper-airplane",
+    "paperclip",
     "pause",
     "pencil-square",
     "pencil",
@@ -207,6 +209,7 @@
     "plus",
     "pod",
     "podcast",
+    "power",
     "preferences",
     "profile",
     "progress",
