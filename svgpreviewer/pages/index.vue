@@ -184,7 +184,7 @@ export default {
           :class="selectedColor"
           :image-class="selectedClass"
           image-sprite="dist/icons.svg"
-          source-path="https://gitlab.com/gitlab-org/gitlab-svgs/blob/master/sprite_icons/"
+          source-path="https://gitlab.com/gitlab-org/gitlab-svgs/blob/main/sprite_icons/"
           @imageCopied="setCopyStatus"
           @permalinkSelected="setSearchString"
         />

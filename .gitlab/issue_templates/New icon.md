@@ -18,7 +18,7 @@ Complete all items in both checklists before closing the issue. All items are th
 
 1. [ ] Duplicate the [Icon template](https://www.figma.com/file/MboeR2wMu28t4S0DOniunX/Icon-template) and move the copy to your Drafts folder in Figma. Update the file name and cover thumbnail with relevant issue information.
 1. [ ] Share your draft file with a [FE/UX Foundation designer](https://about.gitlab.com/company/team/?department=fe-ux-foundations-team)
- to review, and make sure they have view permissions in Figma. If they have the capacity, they should assign themselves to this issue. If not, try pinging another Foundations designer.
+       to review, and make sure they have view permissions in Figma. If they have the capacity, they should assign themselves to this issue. If not, try pinging another Foundations designer.
 1. [ ] **Reviewer**: Review the icon in the author’s draft file. Add design-specific comments in Figma to maintain context. Add general comments to this issue, including your approval status. Once approved, assign to a [Figma maintainer](https://about.gitlab.com/handbook/engineering/projects/#design.gitlab.com) for final review.
 1. [ ] **Maintainer:** Add the icon to the **Pajamas UI Kit** file, convert it to a component, and view it in the Assets panel to ensure it aligns with what’s outlined in the
        [document and asset library structure](https://gitlab.com/gitlab-org/gitlab-design/-/blob/master/CONTRIBUTING-Figma.md#document-and-asset-library-structure) documentation.
@@ -40,7 +40,7 @@ Complete all items in both checklists before closing the issue. All items are th
        call](https://docs.google.com/document/d/189WZO7uTlZCznzae2gqLqFn55koNl3-pHvU-eVnvG9c/edit?usp=sharing)
        to inform everyone of the new icon, linking to this issue.
 
-If you run into any problems, ensure that all other steps in the project [README](https://gitlab.com/gitlab-org/gitlab-svgs/-/blob/master/README.md) have been followed.
+If you run into any problems, ensure that all other steps in the project [README](https://gitlab.com/gitlab-org/gitlab-svgs/-/blob/main/README.md) have been followed.
 
 ---
 

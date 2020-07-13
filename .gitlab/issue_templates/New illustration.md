@@ -33,7 +33,7 @@ Complete all items in both checklists before closing the issue. All items are th
 1. [ ] In a terminal window, run `yarn run dev` to preview the SVG library locally. Find the new illustration and ensure it is rendered accurately.
 1. [ ] After you’ve committed the changes and the pipeline passes, assign the MR to a review by a [maintainer](https://about.gitlab.com/handbook/engineering/projects/#gitlab-svgs), and proceed with any changes.
 
-If you run into any problems, ensure that all other steps in the project [README](https://gitlab.com/gitlab-org/gitlab-svgs/-/blob/master/README.md) have been followed.
+If you run into any problems, ensure that all other steps in the project [README](https://gitlab.com/gitlab-org/gitlab-svgs/-/blob/main/README.md) have been followed.
 
 ---
 

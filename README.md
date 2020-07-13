@@ -9,7 +9,7 @@ Visit the [GitLab SVG Previewer](http://gitlab-org.gitlab.io/gitlab-svgs/) websi
 ## Requirements
 
 - You’ll need [**yarn**](https://yarnpkg.com/en/) and [**node**](https://nodejs.org/en/download/) installed. On a Mac, you can install yarn with `brew install yarn`.
-- For the first time, or after updating from master, use `yarn install` to install the latest dependencies.
+- For the first time, or after updating from the `main` branch, use `yarn install` to install the latest dependencies.
 
 ## Commands
 
@@ -19,7 +19,7 @@ All output is saved to the `dist` folder where it’s referenced from our main a
 
 ## Adding icons or illustrations
 
-- Make sure you have the latest from master in your local copy of the **gitlab-svgs** repository, then create a new local branch.
+- Make sure you have the latest from the `main` branch in your local copy of the **gitlab-svgs** repository, then create a new local branch.
   ```bash
   # Retrieve the latest updates
   git pull
@@ -45,7 +45,7 @@ All output is saved to the `dist` folder where it’s referenced from our main a
 - Test icons by changing the settings in the **Icon configuration** panel of the local preview site and ensuring that the icon changes color and size (there are a few icons that intentionally don’t change color).
 
   ![Icon configuration panel](./docs/icon-configuration-panel.png)
-  
+
 - If you are happy with the new/modified SVG, commit and push all changes (including the ones to the `dist` folder) and create a merge request.
   ```bash
   # After committing your changes, use this to create a remote branch. A link will then be available to create the merge request.
@@ -84,7 +84,7 @@ With `yarn run generate` you can generate the static output to the `public` fold
 
 ## Publishing a new version
 
-Every time a file is added, deleted, modified or renamed within the `sprite_icons` or `illustrations` folders and the change is merged into master a new minor version of the package is published.
+Every time a file is added, deleted, modified or renamed within the `sprite_icons` or `illustrations` folders and the change is merged into the `main` branch, a new minor version of the package is published.
 
 ## Contributing
 

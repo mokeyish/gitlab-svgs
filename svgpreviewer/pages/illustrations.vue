@@ -153,7 +153,7 @@ export default {
           :key="index"
           :image="illustration.name"
           :class="selectedColor"
-          source-path="https://gitlab.com/gitlab-org/gitlab-svgs/blob/master/"
+          source-path="https://gitlab.com/gitlab-org/gitlab-svgs/blob/main/"
           @imageCopied="setCopyStatus"
           @permalinkSelected="setSearchString"
         />
