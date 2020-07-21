@@ -1,6 +1,6 @@
 {
-  "iconCount": 329,
-  "spriteSize": 124592,
+  "iconCount": 330,
+  "spriteSize": 125030,
   "icons": [
     "abuse",
     "accessibility",
@@ -143,6 +143,7 @@
     "import",
     "information-o",
     "information",
+    "infrastructure-registry",
     "issue-block",
     "issue-close",
     "issue-closed",
