@@ -1,6 +1,6 @@
 {
-  "iconCount": 330,
-  "spriteSize": 125030,
+  "iconCount": 331,
+  "spriteSize": 126189,
   "icons": [
     "abuse",
     "accessibility",
@@ -121,6 +121,7 @@
     "file-tree",
     "filter",
     "fire",
+    "first-contribution",
     "flag",
     "folder-new",
     "folder-o",
