@@ -1,5 +1,5 @@
 {
-  "illustrationCount": 148,
+  "illustrationCount": 149,
   "illustrations": [
     {
       "name": "illustrations/Dependency-list-empty-state.svg",
@@ -232,6 +232,10 @@
     {
       "name": "illustrations/image_comment_light_cursor@2x.svg",
       "size": 559
+    },
+    {
+      "name": "illustrations/incident-empty-state.svg",
+      "size": 5166
     },
     {
       "name": "illustrations/issue-dashboard_results-without-filter.svg",
