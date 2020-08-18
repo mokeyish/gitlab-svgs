@@ -1,3 +1,4 @@
+/* eslint-disable-next-line import/no-default-export */
 export default text => {
   const textArea = document.createElement('textarea');
   textArea.value = text;
