@@ -1,6 +1,6 @@
 {
-  "iconCount": 332,
-  "spriteSize": 126351,
+  "iconCount": 329,
+  "spriteSize": 125452,
   "icons": [
     "abuse",
     "accessibility",
@@ -67,7 +67,6 @@
     "comments",
     "commit",
     "comparison",
-    "compress",
     "container-image",
     "copy-to-clipboard",
     "credit-card",
@@ -233,8 +232,6 @@
     "rocket",
     "rss",
     "scale",
-    "screen-full",
-    "screen-normal",
     "scroll_down",
     "scroll_up",
     "scroll-handle",
