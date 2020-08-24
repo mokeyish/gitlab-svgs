@@ -1,6 +1,6 @@
 {
-  "iconCount": 331,
-  "spriteSize": 125775,
+  "iconCount": 332,
+  "spriteSize": 126351,
   "icons": [
     "abuse",
     "accessibility",
@@ -142,6 +142,7 @@
     "image-comment-dark",
     "image-comment-light",
     "import",
+    "incognito",
     "information-o",
     "information",
     "infrastructure-registry",
