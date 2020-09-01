@@ -1,6 +1,6 @@
 {
-  "iconCount": 329,
-  "spriteSize": 125452,
+  "iconCount": 328,
+  "spriteSize": 125033,
   "icons": [
     "abuse",
     "accessibility",
@@ -148,7 +148,6 @@
     "issue-block",
     "issue-close",
     "issue-closed",
-    "issue-created",
     "issue-new",
     "issue-open-m",
     "issue-open",
