@@ -1,6 +1,6 @@
 {
-  "iconCount": 329,
-  "spriteSize": 125452,
+  "iconCount": 330,
+  "spriteSize": 125738,
   "icons": [
     "abuse",
     "accessibility",
@@ -23,6 +23,7 @@
     "arrow-right",
     "arrow-up",
     "assignee",
+    "at",
     "autoplay",
     "bold",
     "book",
