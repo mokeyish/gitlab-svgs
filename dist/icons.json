@@ -1,6 +1,6 @@
 {
-  "iconCount": 329,
-  "spriteSize": 125319,
+  "iconCount": 331,
+  "spriteSize": 126100,
   "icons": [
     "abuse",
     "accessibility",
@@ -75,7 +75,9 @@
     "dashboard",
     "disk",
     "doc-changes",
+    "doc-chart",
     "doc-code",
+    "doc-compressed",
     "doc-expand",
     "doc-image",
     "doc-new",
