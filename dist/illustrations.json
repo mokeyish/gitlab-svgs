@@ -1,5 +1,5 @@
 {
-  "illustrationCount": 150,
+  "illustrationCount": 151,
   "illustrations": [
     {
       "name": "illustrations/Dependency-list-empty-state.svg",
@@ -288,6 +288,10 @@
     {
       "name": "illustrations/logos/gitbook.svg",
       "size": 1118
+    },
+    {
+      "name": "illustrations/logos/gitpod.svg",
+      "size": 713
     },
     {
       "name": "illustrations/logos/gitter.svg",
