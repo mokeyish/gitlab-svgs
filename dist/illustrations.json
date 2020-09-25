@@ -1,5 +1,5 @@
 {
-  "illustrationCount": 151,
+  "illustrationCount": 152,
   "illustrations": [
     {
       "name": "illustrations/Dependency-list-empty-state.svg",
@@ -444,6 +444,10 @@
     {
       "name": "illustrations/pending_job_empty.svg",
       "size": 4794
+    },
+    {
+      "name": "illustrations/pipeline_schedule_callout.svg",
+      "size": 4833
     },
     {
       "name": "illustrations/pipelines_empty.svg",
