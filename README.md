@@ -29,7 +29,7 @@ All output is saved to the `dist` folder where it’s referenced from our main a
 - Make sure that your dependencies are up to date by running `yarn install`.
 - Export the icons or illustrations as a `.svg` file where:
   - Icons are placed in the `sprite_icons` folder. [Read instructions below on exporting icons](#exporting-icons-from-figma).
-  - Illustrations are placed in the `illustration` folder. There are subfolders for illustration categories, like empty states or logos.
+  - Illustrations are placed in the `illustrations/` folder. There are subfolders for illustration categories, like empty states or logos.
 - If you are not compressing an SVG during export, you can use [SVGO](https://github.com/svg/svgo) to optimize it after you export.
   ```bash
   # Optimize our `huge_test.svg` file
