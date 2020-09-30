@@ -1,5 +1,5 @@
 {
-  "illustrationCount": 148,
+  "illustrationCount": 150,
   "illustrations": [
     {
       "name": "illustrations/Dependency-list-empty-state.svg",
@@ -176,6 +176,10 @@
     {
       "name": "illustrations/error-404.svg",
       "size": 8974
+    },
+    {
+      "name": "illustrations/escalation-empty-state.svg",
+      "size": 2031
     },
     {
       "name": "illustrations/export-import.svg",
@@ -416,6 +420,10 @@
     {
       "name": "illustrations/no_commits.svg",
       "size": 2501
+    },
+    {
+      "name": "illustrations/on-call-empty-state.svg",
+      "size": 2049
     },
     {
       "name": "illustrations/operations-dashboard_empty.svg",
