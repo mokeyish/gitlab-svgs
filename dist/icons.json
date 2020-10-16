@@ -1,6 +1,6 @@
 {
-  "iconCount": 336,
-  "spriteSize": 129307,
+  "iconCount": 337,
+  "spriteSize": 129523,
   "icons": [
     "abuse",
     "accessibility",
@@ -176,6 +176,7 @@
     "location-dot",
     "location",
     "lock-open",
+    "lock-solid",
     "lock",
     "log",
     "long-arrow",
