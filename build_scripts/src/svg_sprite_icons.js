@@ -42,7 +42,7 @@ module.exports = {
       },
       mode: {
         inline: true, // Prepare for inline embedding
-        stack: {
+        symbol: {
           example: false,
           dest: '',
           sprite: 'icons.svg',
