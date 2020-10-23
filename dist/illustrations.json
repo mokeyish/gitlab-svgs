@@ -1,5 +1,5 @@
 {
-  "illustrationCount": 155,
+  "illustrationCount": 156,
   "illustrations": [
     {
       "name": "illustrations/Dependency-list-empty-state.svg",
@@ -372,6 +372,10 @@
     {
       "name": "illustrations/logos/swift.svg",
       "size": 1172
+    },
+    {
+      "name": "illustrations/long-right-arrow.svg",
+      "size": 255
     },
     {
       "name": "illustrations/manual_action.svg",

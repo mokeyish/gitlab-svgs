@@ -150,6 +150,7 @@ svg {
 
 .image-base img {
   height: 200px;
+  max-width: 100%;
 }
 
 .image-name {
