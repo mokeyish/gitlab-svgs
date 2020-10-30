@@ -156,7 +156,7 @@ export default {
             v-model="selectedClass"
             class="form-control select-control chevron-down"
           >
-            <option value="image-xs">Extra Small (8px)</option>
+            <option value="image-xs">Extra Small (12px)</option>
             <option value="image-sm" selected>Small (Default 16px)</option>
             <option value="image-md">Medium (32px)</option>
             <option value="image-lg">Large (48px)</option>
