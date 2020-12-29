@@ -55,7 +55,7 @@ module.exports = {
 
     const icons = [];
 
-    spriteFiles.forEach(file => {
+    spriteFiles.forEach((file) => {
       const filePath = path.resolve(file);
       spriter.add(
         filePath,
@@ -74,8 +74,8 @@ module.exports = {
       }
 
       try {
-        Object.values(result).forEach(mode => {
-          Object.values(mode).forEach(resource => {
+        Object.values(result).forEach((mode) => {
+          Object.values(mode).forEach((resource) => {
             mkdirp.sync(path.dirname(resource.path));
             fs.writeFileSync(resource.path, resource.contents);
 

@@ -20,7 +20,7 @@ const utils = {
 
   writeFilePromise: (file, data, options) =>
     new Promise((resolve, reject) => {
-      fs.writeFile(file, data, options, err => {
+      fs.writeFile(file, data, options, (err) => {
         if (err) {
           reject(err);
         } else {
@@ -53,7 +53,7 @@ const utils = {
     // Copy
     if (fs.lstatSync(source).isDirectory()) {
       files = fs.readdirSync(source);
-      files.forEach(file => {
+      files.forEach((file) => {
         const curSource = path.join(source, file);
         if (fs.lstatSync(curSource).isDirectory()) {
           utils.copyFolderRecursiveSync(curSource, targetFolder);

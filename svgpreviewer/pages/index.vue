@@ -1,4 +1,3 @@
-
 <script>
 import svg4everybody from 'svg4everybody';
 import icons from '../static/dist/icons.json';
@@ -31,9 +30,9 @@ export default {
   computed: {
     filteredIcons() {
       if (this.searchString && this.searchString.startsWith('~')) {
-        return this.iconData.icons.filter(icon => `~${icon}` === this.searchString);
+        return this.iconData.icons.filter((icon) => `~${icon}` === this.searchString);
       }
-      return this.iconData.icons.filter(icon => icon.includes(this.searchString));
+      return this.iconData.icons.filter((icon) => icon.includes(this.searchString));
     },
     kbSize() {
       return Math.round(this.iconData.spriteSize / 1024);
@@ -99,27 +98,12 @@ export default {
       <div class="container">
         <div class="row">
           <div class="col-sm-4">
-            <h5 class="subtitle">
-              {{ iconData.iconCount }} Icons ({{ kbSize }}Kb)
-            </h5>
+            <h5 class="subtitle">{{ iconData.iconCount }} Icons ({{ kbSize }}Kb)</h5>
           </div>
           <div class="col-sm-3">
-            <div
-              v-if="copyStatus===1"
-              class="label label-success"
-            >
-              Copied to your clipboard!
-            </div>
-            <div
-              v-if="copyStatus===-1"
-              class="label label-danger"
-            >
-              Copying didn't work :-(
-            </div>
-            <div
-              v-else-if="copyStatus===0"
-              class="label muted"
-            >
+            <div v-if="copyStatus === 1" class="label label-success">Copied to your clipboard!</div>
+            <div v-if="copyStatus === -1" class="label label-danger">Copying didn't work :-(</div>
+            <div v-else-if="copyStatus === 0" class="label muted">
               Click Icons to copy their name
             </div>
           </div>
@@ -133,13 +117,8 @@ export default {
               type="text"
               placeholder="Icon Search"
             />
-            <svg
-              class="icon-reset"
-              @click="resetSearch"
-            >
-              <use
-                v-bind="{'xlink:href': `dist/icons.svg#close`}"
-              />
+            <svg class="icon-reset" @click="resetSearch">
+              <use v-bind="{ 'xlink:href': `dist/icons.svg#close` }" />
             </svg>
           </div>
         </div>
@@ -152,10 +131,7 @@ export default {
           <label>
             <strong> Select a icon size:</strong>
           </label>
-          <select
-            v-model="selectedClass"
-            class="form-control select-control chevron-down"
-          >
+          <select v-model="selectedClass" class="form-control select-control chevron-down">
             <option value="image-xs">Extra Small (12px)</option>
             <option value="image-sm" selected>Small (Default 16px)</option>
             <option value="image-md">Medium (32px)</option>
@@ -165,14 +141,18 @@ export default {
             <option value="image-nav">Sidemenu</option>
           </select>
           <br />
-          <strong>
-            Select a color combination
-          </strong>
+          <strong> Select a color combination </strong>
           <template v-for="color in colors">
-            <br :key="color.value + 'br'"/>
-            <input :id="color.value" :key="color.value + 'input'" v-model="selectedColor" type="radio" :value="color.value">
+            <br :key="color.value + 'br'" />
+            <input
+              :id="color.value"
+              :key="color.value + 'input'"
+              v-model="selectedColor"
+              type="radio"
+              :value="color.value"
+            />
             <label :key="color.value + 'label'" :for="color.value">
-              {{color.name}}
+              {{ color.name }}
             </label>
           </template>
         </aside>
@@ -188,10 +168,7 @@ export default {
           @imageCopied="setCopyStatus"
           @permalinkSelected="setSearchString"
         />
-        <a
-          v-show="filteredIcons.length === 0"
-          @click="resetSearch"
-        >
+        <a v-show="filteredIcons.length === 0" @click="resetSearch">
           No icons found. Click here to reset your search!
         </a>
       </div>
