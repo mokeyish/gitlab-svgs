@@ -1,4 +1,3 @@
-
 <script>
 import copyToClipboard from '../helpers/copy_to_clipboard';
 
@@ -59,62 +58,30 @@ export default {
 
 <template>
   <div class="image-wrapper">
-    <div
-      class="image-base"
-      @click="copyImage"
-    >
-      <svg
-        v-if="imageSprite"
-        :class="[imageClass]"
-      >
-        <use
-          v-bind="{'xlink:href': spritePath}"
-        />
+    <div class="image-base" @click="copyImage">
+      <svg v-if="imageSprite" :class="[imageClass]">
+        <use v-bind="{ 'xlink:href': spritePath }" />
       </svg>
-      <img
-        v-else
-        :class="[imageClass]"
-        :src="imagePath"
-      />
+      <img v-else :class="[imageClass]" :src="imagePath" />
       <div class="image-name">
         {{ imageName }}
-        <span
-          v-if="imageSize"
-        >
-          ({{ kbSize }}Kb)
-        </span>
+        <span v-if="imageSize"> ({{ kbSize }}Kb) </span>
       </div>
     </div>
     <div class="image-actions">
-      <a
-        title="Copy to clipboard"
-        @click="copyImage"
-      >
+      <a title="Copy to clipboard" @click="copyImage">
         <svg class="image-sm">
-          <use
-            v-bind="{'xlink:href': `dist/icons.svg#copy-to-clipboard`}"
-          />
+          <use v-bind="{ 'xlink:href': `dist/icons.svg#copy-to-clipboard` }" />
         </svg>
       </a>
-      <a
-        title="Permalink"
-        @click="selectPermalink"
-      >
+      <a title="Permalink" @click="selectPermalink">
         <svg class="image-sm">
-          <use
-            v-bind="{'xlink:href': `dist/icons.svg#link`}"
-          />
+          <use v-bind="{ 'xlink:href': `dist/icons.svg#link` }" />
         </svg>
       </a>
-      <a
-        title="Open source"
-        target="_blank"
-        :href="sourceLink"
-      >
+      <a title="Open source" target="_blank" :href="sourceLink">
         <svg class="image-sm">
-          <use
-            v-bind="{'xlink:href': `dist/icons.svg#external-link`}"
-          />
+          <use v-bind="{ 'xlink:href': `dist/icons.svg#external-link` }" />
         </svg>
       </a>
     </div>

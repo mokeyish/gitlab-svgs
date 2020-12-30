@@ -14,21 +14,21 @@ rimraf(`${DIST_PATH}/**/*`, () => {
 
   async.parallel(
     [
-      callback => {
-        svgSpriteIcons.createIconSprite(BASE_PATH, err => {
+      (callback) => {
+        svgSpriteIcons.createIconSprite(BASE_PATH, (err) => {
           console.log('Created Icon Sprite');
           callback(err, true);
         });
       },
-      callback => {
+      (callback) => {
         console.log('Starting illustrations ...');
-        illustrations.optimizeIllustrations(BASE_PATH, err => {
+        illustrations.optimizeIllustrations(BASE_PATH, (err) => {
           console.log('Created Illustrations');
           callback(err, true);
         });
       },
     ],
-    err => {
+    (err) => {
       if (err) {
         console.error('Something went wrong');
         console.error(err);

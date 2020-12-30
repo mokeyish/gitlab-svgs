@@ -84,27 +84,16 @@ export default {
       <div class="container">
         <div class="row">
           <div class="col-sm-4">
-            <h5 class="subtitle">
-              {{ illustrationsData.illustrationCount }} Illustrations
-            </h5>
+            <h5 class="subtitle">{{ illustrationsData.illustrationCount }} Illustrations</h5>
           </div>
           <div class="col-sm-3">
-            <span
-              v-if="copyStatus===1"
-              class="label label-success"
-            >
+            <span v-if="copyStatus === 1" class="label label-success">
               Copied to your clipboard!
             </span>
-            <span
-              v-if="copyStatus===-1"
-              class="label label-danger"
-            >
+            <span v-if="copyStatus === -1" class="label label-danger">
               Copying didn't work :-(
             </span>
-            <span
-              v-else-if="copyStatus===0"
-              class="label muted"
-            >
+            <span v-else-if="copyStatus === 0" class="label muted">
               Click Illustration to copy their path
             </span>
           </div>
@@ -118,13 +107,8 @@ export default {
               type="text"
               placeholder="Illustration Search"
             />
-            <svg
-              class="icon-reset"
-              @click="resetSearch"
-            >
-              <use
-                v-bind="{'xlink:href': `dist/icons.svg#close`}"
-              />
+            <svg class="icon-reset" @click="resetSearch">
+              <use v-bind="{ 'xlink:href': `dist/icons.svg#close` }" />
             </svg>
           </div>
         </div>
@@ -137,13 +121,10 @@ export default {
           <label>
             <strong> Select a background color:</strong>
           </label>
-          <select
-            v-model="selectedColor"
-            class="form-control select-control chevron-down"
-          >
+          <select v-model="selectedColor" class="form-control select-control chevron-down">
             <template v-for="color in colors">
-              <option :key="color.value" :value="color.value" >
-                {{color.name}}
+              <option :key="color.value" :value="color.value">
+                {{ color.name }}
               </option>
             </template>
           </select>

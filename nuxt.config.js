@@ -5,8 +5,8 @@ const baseDir = process.env.CI ? '/gitlab-svgs/' : '/';
 module.exports = {
   srcDir: 'svgpreviewer/',
   /*
-  ** Headers of the page
-  */
+   ** Headers of the page
+   */
   head: {
     title: 'GitLab SVG Previewer',
     meta: [
@@ -36,8 +36,8 @@ module.exports = {
   css: ['bootstrap/dist/css/bootstrap.css', '@/assets/gitlab-application.css'],
 
   /*
-  ** Customize the progress bar color
-  */
+   ** Customize the progress bar color
+   */
   loading: { color: '#3B8070' },
   generate: {
     dir: 'public',
@@ -48,12 +48,12 @@ module.exports = {
   },
 
   /*
-  ** Build configuration
-  */
+   ** Build configuration
+   */
   build: {
     /*
-    ** Run ESLint on save
-    */
+     ** Run ESLint on save
+     */
     extend(config, ctx) {
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({

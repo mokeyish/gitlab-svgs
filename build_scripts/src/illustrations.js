@@ -20,7 +20,7 @@ module.exports = {
 
     console.log(`Optimize ${illustrationFiles.length} Illustrations`);
 
-    const optimizeIllustration = async file => {
+    const optimizeIllustration = async (file) => {
       const relName = path.relative(BASE_PATH, file);
       const fpath = path.join(dest, relName);
 

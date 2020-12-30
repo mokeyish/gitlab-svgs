@@ -33,7 +33,7 @@ html {
   --default-bg: #ffffff;
   --inverse-fg: #ffffff;
   --inverse-bg: #1f1f1f;
-  --indigo-fg: #C7C7f2;
+  --indigo-fg: #c7c7f2;
   --indigo-bg: #222261;
   --gray-fg: #666;
   --gray-bg: #fafafa;
