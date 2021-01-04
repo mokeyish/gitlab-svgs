@@ -1,6 +1,6 @@
 {
-  "iconCount": 344,
-  "spriteSize": 131338,
+  "iconCount": 345,
+  "spriteSize": 131621,
   "icons": [
     "abuse",
     "accessibility",
@@ -321,6 +321,7 @@
     "task-done",
     "template",
     "terminal",
+    "terraform",
     "text-description",
     "thumb-down",
     "thumb-up",
