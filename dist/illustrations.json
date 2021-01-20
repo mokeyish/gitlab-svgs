@@ -1,5 +1,5 @@
 {
-  "illustrationCount": 157,
+  "illustrationCount": 161,
   "illustrations": [
     {
       "name": "illustrations/Dependency-list-empty-state.svg",
@@ -516,6 +516,22 @@
     {
       "name": "illustrations/profile_private_mode.svg",
       "size": 4057
+    },
+    {
+      "name": "illustrations/project-create-from-template-sm.svg",
+      "size": 1531
+    },
+    {
+      "name": "illustrations/project-create-new-sm.svg",
+      "size": 752
+    },
+    {
+      "name": "illustrations/project-import-sm.svg",
+      "size": 3461
+    },
+    {
+      "name": "illustrations/project-run-CICD-pipelines-sm.svg",
+      "size": 3589
     },
     {
       "name": "illustrations/releases.svg",
