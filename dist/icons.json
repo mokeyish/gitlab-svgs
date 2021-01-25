@@ -1,6 +1,6 @@
 {
-  "iconCount": 345,
-  "spriteSize": 131621,
+  "iconCount": 348,
+  "spriteSize": 132215,
   "icons": [
     "abuse",
     "accessibility",
@@ -331,6 +331,9 @@
     "todo-add",
     "todo-done",
     "token",
+    "trend-down",
+    "trend-static",
+    "trend-up",
     "trigger-source",
     "twitter",
     "unapproval",
