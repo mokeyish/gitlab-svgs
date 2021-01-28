@@ -1,6 +1,6 @@
 {
-  "iconCount": 348,
-  "spriteSize": 132215,
+  "iconCount": 349,
+  "spriteSize": 135794,
   "icons": [
     "abuse",
     "accessibility",
@@ -160,6 +160,7 @@
     "italic",
     "iteration",
     "key",
+    "kubernetes",
     "label",
     "labels",
     "leave",
