@@ -47,6 +47,11 @@ module.exports = {
           dest: '',
           sprite: 'icons.svg',
         },
+        stack: {
+          example: false,
+          dest: '',
+          sprite: 'icons-stacked.svg',
+        },
       },
       svg: {
         namespaceClassnames: false,
