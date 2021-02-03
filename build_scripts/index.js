@@ -1,5 +1,5 @@
-const async = require('async');
 const path = require('path');
+const async = require('async');
 const rimraf = require('rimraf');
 
 const svgSpriteIcons = require('./src/svg_sprite_icons');

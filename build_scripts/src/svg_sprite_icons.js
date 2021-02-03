@@ -1,7 +1,7 @@
-const SVGSpriter = require('svg-sprite');
 const path = require('path');
-const mkdirp = require('mkdirp');
 const fs = require('fs');
+const SVGSpriter = require('svg-sprite');
+const mkdirp = require('mkdirp');
 const glob = require('glob');
 
 const utils = require('./utils');

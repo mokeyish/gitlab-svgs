@@ -1,5 +1,5 @@
-const SVGO = require('svgo');
 const path = require('path');
+const SVGO = require('svgo');
 const mkdirp = require('mkdirp');
 const glob = require('glob');
 
