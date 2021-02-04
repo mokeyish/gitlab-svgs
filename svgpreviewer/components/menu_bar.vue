@@ -56,6 +56,9 @@
               <nuxt-link to="/illustrations">Illustrations</nuxt-link>
             </li>
             <li>
+              <nuxt-link to="/render_tests">Render tests</nuxt-link>
+            </li>
+            <li>
               <a href="https://gitlab.com/gitlab-org/gitlab-svgs">To the repo ></a>
             </li>
           </ul>
