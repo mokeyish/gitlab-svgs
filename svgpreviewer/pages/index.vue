@@ -1,7 +1,7 @@
 <script>
 import svg4everybody from 'svg4everybody';
-import icons from '../static/dist/icons.json';
 import SvgImage from '../components/svg_image.vue';
+import icons from '../static/dist/icons.json';
 
 /*
  In order to make the review/preview apps work properly in IE11,
