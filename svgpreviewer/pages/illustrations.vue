@@ -1,6 +1,6 @@
 <script>
-import illustrations from '../static/dist/illustrations.json';
 import SvgImage from '../components/svg_image.vue';
+import illustrations from '../static/dist/illustrations.json';
 
 const DEFAULT_COLORING = 'default';
 

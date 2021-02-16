@@ -2,8 +2,8 @@ const path = require('path');
 const async = require('async');
 const rimraf = require('rimraf');
 
-const svgSpriteIcons = require('./src/svg_sprite_icons');
 const illustrations = require('./src/illustrations');
+const svgSpriteIcons = require('./src/svg_sprite_icons');
 const utils = require('./src/utils');
 
 const BASE_PATH = path.join(__dirname, '..');

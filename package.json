@@ -17,7 +17,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@gitlab/eslint-plugin": "8.0.0",
+    "@gitlab/eslint-plugin": "8.1.0",
     "bootstrap": "^4.3.1",
     "eslint": "7.20.0",
     "eslint-loader": "4.0.2",

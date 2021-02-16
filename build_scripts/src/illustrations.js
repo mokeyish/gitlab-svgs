@@ -1,7 +1,7 @@
 const path = require('path');
-const SVGO = require('svgo');
-const mkdirp = require('mkdirp');
 const glob = require('glob');
+const mkdirp = require('mkdirp');
+const SVGO = require('svgo');
 
 const { getFilesizeInBytes, readFilePromise, writeFilePromise } = require('./utils');
 
