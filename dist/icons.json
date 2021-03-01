@@ -1,6 +1,6 @@
 {
-  "iconCount": 350,
-  "spriteSize": 136060,
+  "iconCount": 351,
+  "spriteSize": 136685,
   "icons": [
     "abuse",
     "accessibility",
@@ -160,6 +160,7 @@
     "italic",
     "iteration",
     "key",
+    "kubernetes-agent",
     "kubernetes",
     "label",
     "labels",
