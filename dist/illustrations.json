@@ -1,5 +1,5 @@
 {
-  "illustrationCount": 161,
+  "illustrationCount": 189,
   "illustrations": [
     {
       "name": "illustrations/Dependency-list-empty-state.svg",
@@ -294,12 +294,56 @@
       "size": 3806
     },
     {
+      "name": "illustrations/logos/bash.svg",
+      "size": 1911
+    },
+    {
+      "name": "illustrations/logos/c_plus_plus.svg",
+      "size": 1071
+    },
+    {
+      "name": "illustrations/logos/clojure.svg",
+      "size": 1639
+    },
+    {
+      "name": "illustrations/logos/composer.svg",
+      "size": 133765
+    },
+    {
+      "name": "illustrations/logos/crystal.svg",
+      "size": 2410
+    },
+    {
+      "name": "illustrations/logos/dart.svg",
+      "size": 3185
+    },
+    {
+      "name": "illustrations/logos/django.svg",
+      "size": 1990
+    },
+    {
+      "name": "illustrations/logos/docker.svg",
+      "size": 10546
+    },
+    {
       "name": "illustrations/logos/dotnet.svg",
       "size": 728
     },
     {
+      "name": "illustrations/logos/elixir.svg",
+      "size": 18494
+    },
+    {
       "name": "illustrations/logos/express.svg",
       "size": 1109
+    },
+    {
+      "name": "illustrations/logos/fastlane.svg",
+      "size": 1480
+    },
+    {
+      "name": "illustrations/logos/flutter.svg",
+      "size": 27780
     },
     {
       "name": "illustrations/logos/gitbook.svg",
@@ -330,6 +374,14 @@
       "size": 1519
     },
     {
+      "name": "illustrations/logos/gradle.svg",
+      "size": 7579
+    },
+    {
+      "name": "illustrations/logos/grails.svg",
+      "size": 4707
+    },
+    {
       "name": "illustrations/logos/hexo.svg",
       "size": 296
     },
@@ -346,16 +398,36 @@
       "size": 1059
     },
     {
+      "name": "illustrations/logos/julia.svg",
+      "size": 2837
+    },
+    {
       "name": "illustrations/logos/kubernetes.svg",
       "size": 5609
+    },
+    {
+      "name": "illustrations/logos/laravel.svg",
+      "size": 2050
+    },
+    {
+      "name": "illustrations/logos/latex.svg",
+      "size": 2196
     },
     {
       "name": "illustrations/logos/mattermost_logo.svg",
       "size": 1036
     },
     {
+      "name": "illustrations/logos/maven.svg",
+      "size": 24153
+    },
+    {
       "name": "illustrations/logos/middleman.svg",
       "size": 833
+    },
+    {
+      "name": "illustrations/logos/mono.svg",
+      "size": 3424
     },
     {
       "name": "illustrations/logos/neocities.svg",
@@ -366,8 +438,44 @@
       "size": 3974
     },
     {
+      "name": "illustrations/logos/node_js.svg",
+      "size": 14486
+    },
+    {
+      "name": "illustrations/logos/npm.svg",
+      "size": 660
+    },
+    {
+      "name": "illustrations/logos/openshift.svg",
+      "size": 2723
+    },
+    {
+      "name": "illustrations/logos/packer.svg",
+      "size": 1718
+    },
+    {
+      "name": "illustrations/logos/php.svg",
+      "size": 1217
+    },
+    {
+      "name": "illustrations/logos/python.svg",
+      "size": 1121
+    },
+    {
       "name": "illustrations/logos/rails.svg",
       "size": 1261
+    },
+    {
+      "name": "illustrations/logos/ruby.svg",
+      "size": 7034
+    },
+    {
+      "name": "illustrations/logos/rust.svg",
+      "size": 3752
+    },
+    {
+      "name": "illustrations/logos/scala.svg",
+      "size": 3417
     },
     {
       "name": "illustrations/logos/serverless_framework.svg",
@@ -380,6 +488,10 @@
     {
       "name": "illustrations/logos/swift.svg",
       "size": 1172
+    },
+    {
+      "name": "illustrations/logos/terraform.svg",
+      "size": 321
     },
     {
       "name": "illustrations/manual_action.svg",
