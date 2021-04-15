@@ -21,7 +21,7 @@ Complete all items in both checklists before closing the issue. All items are th
        to review, and make sure they have view permissions in Figma. If they have the capacity, they should assign themselves to this issue. If not, try pinging another Foundations designer.
 1. [ ] **Reviewer**: Review the icon in the author’s draft file. Add design-specific comments in Figma to maintain context. Add general comments to this issue, including your approval status. Once approved, assign to a [Figma maintainer](https://about.gitlab.com/handbook/engineering/projects/#design.gitlab.com) for final review.
 1. [ ] **Maintainer:** Add the icon to the **component library** file, convert it to a component, and view it in the Assets panel to ensure it aligns with what’s outlined in the
-       [document and asset library structure](https://gitlab.com/gitlab-org/gitlab-services/design.gitlab.com/-/blob/master/doc/pajamas-ui-kit.md#structure) documentation.
+       [document and asset library structure](https://gitlab.com/gitlab-org/gitlab-services/design.gitlab.com/-/blob/main/doc/pajamas-ui-kit.md#structure) documentation.
 1. [ ] **Maintainer:** Publish the library changes along with a clear message about the update.
 1. [ ] **Author:** Move your draft file to the **Component archive** Figma project.
 
