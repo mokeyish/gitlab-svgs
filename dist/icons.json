@@ -1,6 +1,6 @@
 {
-  "iconCount": 353,
-  "spriteSize": 137513,
+  "iconCount": 354,
+  "spriteSize": 138128,
   "icons": [
     "abuse",
     "accessibility",
@@ -87,6 +87,7 @@
     "doc-versions",
     "document",
     "documents",
+    "dot-grid",
     "dotted-circle",
     "double-headed-arrow",
     "download",
