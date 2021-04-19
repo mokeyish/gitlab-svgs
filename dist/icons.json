@@ -1,6 +1,6 @@
 {
-  "iconCount": 355,
-  "spriteSize": 137966,
+  "iconCount": 353,
+  "spriteSize": 137513,
   "icons": [
     "abuse",
     "accessibility",
@@ -272,7 +272,6 @@
     "spam",
     "spinner",
     "stage-all",
-    "staged",
     "star-o",
     "star",
     "status_canceled_borderless",
@@ -348,7 +347,6 @@
     "underline",
     "unlink",
     "unstage-all",
-    "unstaged",
     "upload",
     "user",
     "users",
