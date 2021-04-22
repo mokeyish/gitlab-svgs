@@ -37,6 +37,9 @@
       "pre-commit": "pretty-quick --branch 'main' && npm run lint"
     }
   },
+  "resolutions": {
+    "chokidar": "^3.4.0"
+  },
   "release": {
     "branches": [
       "main"
