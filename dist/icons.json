@@ -1,6 +1,6 @@
 {
-  "iconCount": 354,
-  "spriteSize": 138128,
+  "iconCount": 355,
+  "spriteSize": 139258,
   "icons": [
     "abuse",
     "accessibility",
@@ -137,6 +137,7 @@
     "github",
     "go-back",
     "google",
+    "graduation-hat",
     "group",
     "hamburger",
     "heading",
