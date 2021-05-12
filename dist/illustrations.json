@@ -1,5 +1,5 @@
 {
-  "illustrationCount": 192,
+  "illustrationCount": 194,
   "illustrations": [
     {
       "name": "illustrations/Dependency-list-empty-state.svg",
@@ -240,6 +240,14 @@
     {
       "name": "illustrations/golden_tanuki.svg",
       "size": 1259
+    },
+    {
+      "name": "illustrations/group-import.svg",
+      "size": 2428
+    },
+    {
+      "name": "illustrations/group-new.svg",
+      "size": 925
     },
     {
       "name": "illustrations/illustration-congratulation-purchase.svg",
