@@ -1,6 +1,6 @@
 {
-  "iconCount": 360,
-  "spriteSize": 141047,
+  "iconCount": 361,
+  "spriteSize": 141381,
   "icons": [
     "abuse",
     "accessibility",
@@ -166,6 +166,7 @@
     "issue-type-maintenance",
     "issue-type-requirements",
     "issue-type-test-case",
+    "issue-update",
     "issues",
     "italic",
     "iteration",
