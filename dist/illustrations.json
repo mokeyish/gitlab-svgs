@@ -1,5 +1,5 @@
 {
-  "illustrationCount": 195,
+  "illustrationCount": 227,
   "illustrations": [
     {
       "name": "illustrations/Dependency-list-empty-state.svg",
@@ -728,6 +728,134 @@
     {
       "name": "illustrations/subscription-warning.svg",
       "size": 1537
+    },
+    {
+      "name": "illustrations/third-party-logos/ci_cd-template-logos/android.svg",
+      "size": 1969
+    },
+    {
+      "name": "illustrations/third-party-logos/ci_cd-template-logos/bash.svg",
+      "size": 1940
+    },
+    {
+      "name": "illustrations/third-party-logos/ci_cd-template-logos/c_plus_plus.svg",
+      "size": 1098
+    },
+    {
+      "name": "illustrations/third-party-logos/ci_cd-template-logos/clojure.svg",
+      "size": 1666
+    },
+    {
+      "name": "illustrations/third-party-logos/ci_cd-template-logos/composer.svg",
+      "size": 133809
+    },
+    {
+      "name": "illustrations/third-party-logos/ci_cd-template-logos/crystal.svg",
+      "size": 2430
+    },
+    {
+      "name": "illustrations/third-party-logos/ci_cd-template-logos/dart.svg",
+      "size": 3253
+    },
+    {
+      "name": "illustrations/third-party-logos/ci_cd-template-logos/django.svg",
+      "size": 2017
+    },
+    {
+      "name": "illustrations/third-party-logos/ci_cd-template-logos/docker.svg",
+      "size": 10574
+    },
+    {
+      "name": "illustrations/third-party-logos/ci_cd-template-logos/dotnet.svg",
+      "size": 927
+    },
+    {
+      "name": "illustrations/third-party-logos/ci_cd-template-logos/elixir.svg",
+      "size": 18538
+    },
+    {
+      "name": "illustrations/third-party-logos/ci_cd-template-logos/fastlane.svg",
+      "size": 1503
+    },
+    {
+      "name": "illustrations/third-party-logos/ci_cd-template-logos/flutter.svg",
+      "size": 27824
+    },
+    {
+      "name": "illustrations/third-party-logos/ci_cd-template-logos/go_logo.svg",
+      "size": 2003
+    },
+    {
+      "name": "illustrations/third-party-logos/ci_cd-template-logos/gradle.svg",
+      "size": 7681
+    },
+    {
+      "name": "illustrations/third-party-logos/ci_cd-template-logos/grails.svg",
+      "size": 4768
+    },
+    {
+      "name": "illustrations/third-party-logos/ci_cd-template-logos/julia.svg",
+      "size": 2886
+    },
+    {
+      "name": "illustrations/third-party-logos/ci_cd-template-logos/laravel.svg",
+      "size": 2076
+    },
+    {
+      "name": "illustrations/third-party-logos/ci_cd-template-logos/latex.svg",
+      "size": 2216
+    },
+    {
+      "name": "illustrations/third-party-logos/ci_cd-template-logos/maven.svg",
+      "size": 25044
+    },
+    {
+      "name": "illustrations/third-party-logos/ci_cd-template-logos/mono.svg",
+      "size": 3444
+    },
+    {
+      "name": "illustrations/third-party-logos/ci_cd-template-logos/node_js.svg",
+      "size": 14530
+    },
+    {
+      "name": "illustrations/third-party-logos/ci_cd-template-logos/npm.svg",
+      "size": 683
+    },
+    {
+      "name": "illustrations/third-party-logos/ci_cd-template-logos/openshift.svg",
+      "size": 2751
+    },
+    {
+      "name": "illustrations/third-party-logos/ci_cd-template-logos/packer.svg",
+      "size": 1738
+    },
+    {
+      "name": "illustrations/third-party-logos/ci_cd-template-logos/php.svg",
+      "size": 1239
+    },
+    {
+      "name": "illustrations/third-party-logos/ci_cd-template-logos/python.svg",
+      "size": 1271
+    },
+    {
+      "name": "illustrations/third-party-logos/ci_cd-template-logos/ruby.svg",
+      "size": 7450
+    },
+    {
+      "name": "illustrations/third-party-logos/ci_cd-template-logos/rust.svg",
+      "size": 3776
+    },
+    {
+      "name": "illustrations/third-party-logos/ci_cd-template-logos/scala.svg",
+      "size": 3452
+    },
+    {
+      "name": "illustrations/third-party-logos/ci_cd-template-logos/swift.svg",
+      "size": 1462
+    },
+    {
+      "name": "illustrations/third-party-logos/ci_cd-template-logos/terraform.svg",
+      "size": 341
     },
     {
       "name": "illustrations/todos_all_done.svg",
