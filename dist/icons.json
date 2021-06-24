@@ -1,6 +1,6 @@
 {
-  "iconCount": 361,
-  "spriteSize": 141381,
+  "iconCount": 362,
+  "spriteSize": 141712,
   "icons": [
     "abuse",
     "accessibility",
@@ -314,6 +314,7 @@
     "status-cancelled",
     "status-failed",
     "status-health",
+    "status-neutral",
     "status-paused",
     "status-running",
     "status-scheduled",
