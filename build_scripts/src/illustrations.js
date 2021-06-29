@@ -6,7 +6,7 @@ const SVGO = require('svgo');
 const { getFilesizeInBytes, readFilePromise, writeFilePromise } = require('./utils');
 
 module.exports = {
-  optimizeIllustrations: async (BASE_PATH, finishedCallback) => {
+  optimizeIllustrations: async (BASE_PATH) => {
     const illustrationFilesPath = path.join(BASE_PATH, 'illustrations');
     const dest = path.normalize(path.join(BASE_PATH, 'dist'));
     const illustrationFiles = glob.sync(`${illustrationFilesPath}/**/*.svg`, {});
@@ -38,29 +38,23 @@ module.exports = {
       };
     };
 
-    try {
-      const illustrations = await Promise.all(illustrationFiles.map(optimizeIllustration));
+    const illustrations = await Promise.all(illustrationFiles.map(optimizeIllustration));
 
-      // Save the Illustrations Info to a JSON
-      const illustrationsInfo = {
-        illustrationCount: illustrations.length,
-        illustrations: illustrations.sort((a, b) => {
-          if (a.name === b.name) {
-            return 0;
-          }
-          return a.name < b.name ? -1 : 1;
-        }),
-      };
+    // Save the Illustrations Info to a JSON
+    const illustrationsInfo = {
+      illustrationCount: illustrations.length,
+      illustrations: illustrations.sort((a, b) => {
+        if (a.name === b.name) {
+          return 0;
+        }
+        return a.name < b.name ? -1 : 1;
+      }),
+    };
 
-      await writeFilePromise(
-        path.join(dest, 'illustrations.json'),
-        JSON.stringify(illustrationsInfo, null, 2),
-        'utf8',
-      );
-
-      finishedCallback();
-    } catch (e) {
-      finishedCallback(e);
-    }
+    await writeFilePromise(
+      path.join(dest, 'illustrations.json'),
+      JSON.stringify(illustrationsInfo, null, 2),
+      'utf8',
+    );
   },
 };
