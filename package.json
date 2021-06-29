@@ -9,7 +9,7 @@
   "license": "MIT",
   "scripts": {
     "svg": "node build_scripts/index.js",
-    "dev": "PORT=3333 nuxt",
+    "dev": "yarn run svg && nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",

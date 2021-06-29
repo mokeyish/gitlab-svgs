@@ -3,6 +3,9 @@
 const baseDir = process.env.CI ? '/gitlab-svgs/' : '/';
 
 module.exports = {
+  server: {
+    port: 3333,
+  },
   srcDir: 'svgpreviewer/',
   /*
    ** Headers of the page
