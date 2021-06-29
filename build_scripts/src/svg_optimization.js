@@ -6,10 +6,8 @@ const SVGO = require('svgo');
 const { getFilesizeInBytes, readFilePromise, writeFilePromise } = require('./utils');
 
 module.exports = {
-  optimizeIllustrations: async (BASE_PATH) => {
-    const illustrationFilesPath = path.join(BASE_PATH, 'illustrations');
-    const dest = path.normalize(path.join(BASE_PATH, 'dist'));
-    const illustrationFiles = glob.sync(`${illustrationFilesPath}/**/*.svg`, {});
+  optimizeSVGs: async (basePath, destPath, globPattern, statsFile) => {
+    const files = glob.sync(globPattern, {});
     const svgo = new SVGO({
       plugins: [
         {
@@ -18,11 +16,11 @@ module.exports = {
       ],
     });
 
-    console.log(`Optimize ${illustrationFiles.length} Illustrations`);
+    console.log(`Optimizing ${files.length} files`);
 
-    const optimizeIllustration = async (file) => {
-      const relName = path.relative(BASE_PATH, file);
-      const fpath = path.join(dest, relName);
+    const optimizeSVG = async (file) => {
+      const relName = path.relative(basePath, file);
+      const fpath = path.join(destPath, relName);
 
       const illustration = await readFilePromise(path.resolve(file), 'utf8');
 
@@ -38,7 +36,7 @@ module.exports = {
       };
     };
 
-    const illustrations = await Promise.all(illustrationFiles.map(optimizeIllustration));
+    const illustrations = await Promise.all(files.map(optimizeSVG));
 
     // Save the Illustrations Info to a JSON
     const illustrationsInfo = {
@@ -51,10 +49,6 @@ module.exports = {
       }),
     };
 
-    await writeFilePromise(
-      path.join(dest, 'illustrations.json'),
-      JSON.stringify(illustrationsInfo, null, 2),
-      'utf8',
-    );
+    await writeFilePromise(statsFile, JSON.stringify(illustrationsInfo, null, 2), 'utf8');
   },
 };

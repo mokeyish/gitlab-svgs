@@ -1,7 +1,7 @@
 const path = require('path');
 const rimraf = require('rimraf');
 
-const illustrations = require('./src/illustrations');
+const { optimizeSVGs } = require('./src/svg_optimization');
 const svgSpriteIcons = require('./src/svg_sprite_icons');
 const utils = require('./src/utils');
 
@@ -15,8 +15,22 @@ async function buildFiles() {
   console.log('Created Icon Sprite');
 
   console.log('Optimizing illustrations...');
-  await illustrations.optimizeIllustrations(BASE_PATH);
+  await optimizeSVGs(
+    BASE_PATH,
+    DIST_PATH,
+    path.join(BASE_PATH, 'illustrations', '**', '*.svg'),
+    path.join(DIST_PATH, 'illustrations.json'),
+  );
   console.log('Optimized illustrations');
+
+  console.log('Optimizing icons...');
+  await optimizeSVGs(
+    BASE_PATH,
+    DIST_PATH,
+    path.join(BASE_PATH, 'sprite_icons', '**', '*.svg'),
+    path.join(DIST_PATH, 'icons_individual.json'),
+  );
+  console.log('Optimized icons');
 
   console.log('Copying files to dist ...');
   utils.copyFolderRecursiveSync(DIST_PATH, STATIC_PATH);
