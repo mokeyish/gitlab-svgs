@@ -2,9 +2,8 @@ include:
   - project: gitlab-org/frontend/untamper-my-lockfile
     file: .gitlab-ci-template.yml
 
-image: node:12.19.0
-
 default:
+  image: node:14-buster
   tags:
     - gitlab-org
 
@@ -87,7 +86,13 @@ pages:
   dependencies:
     - build-and-check
   script:
-    - echo "Deploying to Pages"
+    - apt-get update
+    - apt-get install -y brotli gzip
+    # See: https://docs.gitlab.com/ee/user/project/pages/introduction.html#serving-compressed-assets
+    - echo "Compressing assets..."
+    - find public -type f -regex '.*\.\(htm\|html\|txt\|text\|js\|json\|css\|svg\|xml\)$' -exec gzip --force --keep '{}' \;
+    - find public -type f -regex '.*\.\(htm\|html\|txt\|text\|js\|json\|css\|svg\|xml\)$' -exec brotli --force --keep '{}' \;
+    - ls -alth public/
   artifacts:
     paths:
       - public
