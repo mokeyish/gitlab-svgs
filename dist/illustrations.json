@@ -1,5 +1,5 @@
 {
-  "illustrationCount": 227,
+  "illustrationCount": 228,
   "illustrations": [
     {
       "name": "illustrations/Dependency-list-empty-state.svg",
@@ -672,6 +672,10 @@
     {
       "name": "illustrations/releases.svg",
       "size": 7863
+    },
+    {
+      "name": "illustrations/search-timeout-md.svg",
+      "size": 2782
     },
     {
       "name": "illustrations/security-dashboard-empty-state.svg",
