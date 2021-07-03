@@ -37,10 +37,8 @@ All output is saved to the `dist` folder where it’s referenced from our main a
   ```
 - After adding the new SVGs, execute the following commands to verify your changes locally at http://localhost:3333/
   ```bash
-  # This will optimize all illustrations and combine the icons into one file
-  yarn run svg
-  # Starts a local server to preview your changes
-  yarn run dev
+   # Starts a local server to preview your changes
+   yarn run dev
   ```
 - Test icons by changing the settings in the **Icon configuration** panel of the local preview site and ensuring that the icon changes color and size (there are a few icons that intentionally don’t change color).
 
@@ -66,8 +64,6 @@ Icons should only be exported after they have been added to the Pajamas UI Kit i
    1. Open the resulting SVG file in your text editor and remove `fill="none"` from the main `<svg>` element.
 1. After adding the new SVGs, execute the following commands to verify your changes locally at http://localhost:3333/
    ```bash
-   # This will optimize all illustrations and combine the icons into one file
-   yarn run svg
    # Starts a local server to preview your changes
    yarn run dev
    ```

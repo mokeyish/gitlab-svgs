@@ -18,18 +18,20 @@ build-and-check:
     - yarn run svg
     - echo "Starting Checks"
     - bash ./build_scripts/svg-lint.sh
-    - bash ./build_scripts/dist-check.sh
     - yarn run lint
     - yarn run generate
   artifacts:
     paths:
       - public
+      - dist
   only:
     refs:
       - merge_requests@gitlab-org/gitlab-svgs
       - main@gitlab-org/gitlab-svgs
 
 publish:
+  needs:
+    - build-and-check
   stage: deploy
   script:
     - |
@@ -42,7 +44,7 @@ publish:
 
 review:
   stage: deploy
-  dependencies:
+  needs:
     - build-and-check
   script:
     # We need to move the contents of the public folder from ./ to ./gitlab-svgs/, so it matches
@@ -83,7 +85,7 @@ review_stop:
 
 pages:
   stage: deploy
-  dependencies:
+  needs:
     - build-and-check
   script:
     - apt-get update

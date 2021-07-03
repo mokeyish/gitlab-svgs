@@ -4,6 +4,9 @@ npm-debug.log
 package-lock.json
 yarn-error.log
 
+# Built SVGs
+dist/
+
 # Nuxt build & generate
 .nuxt/
 public/

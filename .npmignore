@@ -25,3 +25,4 @@ build_scripts/
 .gitlab-ci.yml
 .prettierrc
 .prettierignore
+lefthook.yml
