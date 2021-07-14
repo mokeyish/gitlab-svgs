@@ -7,7 +7,7 @@ const SVGSpriter = require('svg-sprite');
 const utils = require('./utils');
 
 module.exports = {
-  createIconSprite: (BASE_PATH, finishedCallback) => {
+  createIconSprite: (BASE_PATH) => {
     const spriteFilesPath = path.join(BASE_PATH, 'sprite_icons');
 
     const dest = path.normalize(path.join(BASE_PATH, 'dist'));
@@ -73,34 +73,40 @@ module.exports = {
     });
 
     // Compile the sprite
-    spriter.compile((error, result) => {
-      if (error) {
-        return finishedCallback(error);
-      }
+    return new Promise((resolve, reject) => {
+      spriter.compile((error, result) => {
+        if (error) {
+          return reject(error);
+        }
 
-      try {
-        Object.values(result).forEach((mode) => {
-          Object.values(mode).forEach((resource) => {
-            mkdirp.sync(path.dirname(resource.path));
-            fs.writeFileSync(resource.path, resource.contents);
+        try {
+          Object.values(result).forEach((mode) => {
+            Object.values(mode).forEach((resource) => {
+              mkdirp.sync(path.dirname(resource.path));
+              fs.writeFileSync(resource.path, resource.contents);
 
-            console.log(`Compiled - Saving to ${resource.path}`);
+              console.log(`Compiled - Saving to ${resource.path}`);
+            });
           });
-        });
 
-        // Save the Icons in here to a json so we can then display a nice help sprite sheet in GitLab
-        const iconsInfo = {
-          iconCount: icons.length,
-          spriteSize: utils.getFilesizeInBytes(path.join(dest, 'icons.svg')),
-          icons,
-        };
+          // Save the Icons in here to a json so we can then display a nice help sprite sheet in GitLab
+          const iconsInfo = {
+            iconCount: icons.length,
+            spriteSize: utils.getFilesizeInBytes(path.join(dest, 'icons.svg')),
+            icons,
+          };
 
-        fs.writeFileSync(path.join(dest, 'icons.json'), JSON.stringify(iconsInfo, null, 2), 'utf8');
-      } catch (e) {
-        return finishedCallback(e);
-      }
+          fs.writeFileSync(
+            path.join(dest, 'icons.json'),
+            JSON.stringify(iconsInfo, null, 2),
+            'utf8',
+          );
+        } catch (e) {
+          return reject(e);
+        }
 
-      return finishedCallback();
+        return resolve();
+      });
     });
   },
 };
