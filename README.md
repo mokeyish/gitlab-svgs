@@ -19,6 +19,7 @@ All output is saved to the `dist` folder where it’s referenced from our main a
 
 ## Adding icons or illustrations
 
+- If you're adding a third-party logo or trademark, refer to [this section](#adding-third-party-logos-or-trademarks).
 - Make sure you have the latest from the `main` branch in your local copy of the **gitlab-svgs** repository, then create a new local branch.
   ```bash
   # Retrieve the latest updates
@@ -51,6 +52,11 @@ All output is saved to the `dist` folder where it’s referenced from our main a
   ```
 - Assign the merge request to a maintainer of the **GitLab SVGs** project.
   You can find the maintainers on the [GitLab project overview page](https://about.gitlab.com/handbook/engineering/projects#gitlab-svgs).
+
+### Adding third-party logos or trademarks
+
+1. See the [process for adding third-party trademarks to GitLab](https://about.gitlab.com/handbook/legal/policies/third-party-trademark-usage-guidelines/#process-for-adding-third-party-trademarks-to-gitlab) in the handbook.
+1. Place approved assets in the `/illustrations/third-party-logos` directory.
 
 ### Exporting icons from Figma
 
