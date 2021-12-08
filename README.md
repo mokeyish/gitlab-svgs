@@ -20,6 +20,10 @@ All output is saved to the `dist` folder where it’s referenced from our main a
 ## Adding icons or illustrations
 
 - If you're adding a third-party logo or trademark, refer to [this section](#adding-third-party-logos-or-trademarks).
+- Review the following documentation:
+  - [Iconography design guidelines](https://design.gitlab.com/product-foundations/iconography)
+  - [Illustration design guidelines](https://design.gitlab.com/product-foundations/illustration)
+  - [Illustration contribution guidelines](https://gitlab.com/gitlab-org/gitlab-svgs/-/blob/main/doc/illustration-contribution.md)
 - Make sure you have the latest from the `main` branch in your local copy of the **gitlab-svgs** repository, then create a new local branch.
   ```bash
   # Retrieve the latest updates
@@ -43,7 +47,7 @@ All output is saved to the `dist` folder where it’s referenced from our main a
   ```
 - Test icons by changing the settings in the **Icon configuration** panel of the local preview site and ensuring that the icon changes color and size (there are a few icons that intentionally don’t change color).
 
-  ![Icon configuration panel](./docs/icon-configuration-panel.png)
+  ![Icon configuration panel](./doc/icon-configuration-panel.png)
 
 - If you are happy with the new/modified SVG, commit and push all changes (including the ones to the `dist` folder) and create a merge request.
   ```bash
