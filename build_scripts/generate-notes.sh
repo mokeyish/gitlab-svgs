@@ -18,6 +18,17 @@ function svg_name() {
 
 echo "# [$NEW_TAG]"
 
+if git log "$LAST_TAG..HEAD" --grep "BREAKING CHANGE" | grep "BREAKING CHANGE" > /dev/null; then 
+  echo ""
+  echo "## Breaking changes"
+  echo ""
+  while read commit; do
+    echo "  - $commit"
+  done < <(git log --oneline --grep "BREAKING CHANGE")
+fi
+
+echo "## Changes"
+
 while read STATUS SOURCE TARGET; do
    TYPE=$(svg_type "$SOURCE");
    NAME=$(svg_name "$SOURCE")
