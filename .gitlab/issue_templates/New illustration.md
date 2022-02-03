@@ -18,7 +18,7 @@ Complete all items in both checklists before closing the issue. All items are th
 1. [ ] Choose one of the following based on your contribution:
    - If you are a member of the GitLab team in Figma, start with a [branch](https://www.figma.com/best-practices/branching-in-figma/) of the [illustration][illustration-file] file in Figma. Prefix the branch name with the issue number, and add your GitLab username as the suffix. For example, **#120-feature-illustration-jelder**.
    - For a community contribution, duplicate the [illustration][illustration-file] file to your drafts in Figma.
-1. [ ] Ensure that the illustration follows the [Illustration guidelines](https://design.gitlab.com/product-foundations/illustration).
+1. [ ] Ensure that the illustration follows the [Illustration guidelines](https://design.gitlab.com/product-foundations/illustration). For third-party trademarks, please review the [third-party trademark usage guidelines](https://about.gitlab.com/handbook/legal/policies/third-party-trademark-usage-guidelines/).
 1. [ ] Choose/copy a grid frame from the **Grid** page. Work on your illustration in the appropriate component or library page. A small illustration that can be used as a standalone "spot" illustration, or as a reusable element in a larger illustration can be added in the **Components** page, while all others can be added to the library page that makes the most sense.
 1. [ ] Share your branch or draft file with a [FE/UX Foundation designer](https://about.gitlab.com/company/team/?department=fe-ux-foundations-team) to review, and make sure they have view permissions in Figma. If they have the capacity, they should assign themselves to this issue. If not, try pinging another designer.
 1. [ ] **Reviewer**: Review the illustration. Add design-specific comments in Figma to maintain context. Add general comments to this issue, including your approval status. Once approved, assign to a [Figma maintainer](https://about.gitlab.com/handbook/engineering/projects/#design.gitlab.com) for final review.
@@ -45,4 +45,4 @@ If you run into any problems, ensure that all other steps in the project [README
 
 /label ~"UX" ~"Illustration"
 
-[illustration-file]: https://www.figma.com/file/1ui9w228X0S5WxaD0SRdIA/WIP%3A-Illustration-library?node-id=441%3A2008
+[illustration-file]: https://www.figma.com/file/1ui9w228X0S5WxaD0SRdIA/Illustration-library
