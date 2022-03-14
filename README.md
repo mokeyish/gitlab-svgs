@@ -1,5 +1,7 @@
 # Gitlab SVGs
 
+test
+
 This repository manages all SVG Assets for GitLab by creating SVG sprites out of icons, and optimizing SVG illustrations.
 
 ## Previewing the SVG library
