@@ -59,7 +59,7 @@ All output is saved to the `dist` folder where it’s referenced from our main a
 
 ### Adding third-party logos or trademarks
 
-1. See the [process for adding third-party trademarks to GitLab](https://about.gitlab.com/handbook/legal/policies/third-party-trademark-usage-guidelines/#process-for-adding-third-party-trademarks-to-gitlab) in the handbook.
+1. See the [process for adding third-party trademarks to GitLab](https://about.gitlab.com/handbook/legal/policies/product-third-party-trademarks-guidelines/#process-for-adding-third-party-trademarks-to-gitlab) in the handbook.
 1. Place approved assets in the `/illustrations/third-party-logos` directory.
 
 ### Exporting icons from Figma
