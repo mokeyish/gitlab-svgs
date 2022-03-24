@@ -50,14 +50,14 @@ build-and-check:
   needs:
     - build-and-check
   stage: deploy
-  before_script: 
+  before_script:
     - apk add --update-cache --no-cache bash
 
 publish-to-npm:
   extends: .publish
 
 publish-to-npm-dry-run:
-  extends: 
+  extends:
     - .publish
   rules:
     # Semantic release checks the target repository for the current branch,
@@ -68,7 +68,11 @@ publish-to-npm-dry-run:
     - semantic-release --branches "$CI_MERGE_REQUEST_SOURCE_BRANCH_NAME" --dry-run --no-ci
 
 .review-app:
-  extends: .rules:only-mrs
+  rules:
+    # Semantic release checks the target repository for the current branch,
+    # which only exists on the source repository, causing a failure.
+    - !reference ['.rules:exclude-forks', rules]
+    - !reference ['.rules:only-mrs', rules]
   stage: deploy
   tags:
     - nginx
