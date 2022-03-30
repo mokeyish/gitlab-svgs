@@ -1,4 +1,4 @@
-/* eslint-disable import/no-commonjs, filenames/match-regex */
+/* eslint-disable import/no-commonjs */
 
 const baseDir = process.env.CI ? '/gitlab-svgs/' : '/';
 
