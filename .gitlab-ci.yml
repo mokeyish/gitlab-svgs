@@ -23,7 +23,7 @@ workflow:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 
 default:
-  image: node:14-buster
+  image: node:16-buster
   tags:
     - gitlab-org
 
@@ -50,14 +50,14 @@ build-and-check:
   needs:
     - build-and-check
   stage: deploy
-  before_script: 
+  before_script:
     - apk add --update-cache --no-cache bash
 
 publish-to-npm:
   extends: .publish
 
 publish-to-npm-dry-run:
-  extends: 
+  extends:
     - .publish
   rules:
     # Semantic release checks the target repository for the current branch,
