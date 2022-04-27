@@ -124,12 +124,6 @@ body.ui_indigo header.navbar-gitlab-new .navbar-nav > li.active > a {
   background-color: #fff;
 }
 
-/* line 34, /mnt/c/tzwsl/gitlab-development-kit/gitlab/app/assets/stylesheets/framework/gitlab-theme.scss */
-body.ui_indigo header.navbar-gitlab-new .navbar-sub-nav > li.active > a svg,
-body.ui_indigo header.navbar-gitlab-new .navbar-nav > li.active > a svg {
-  fill: currentColor;
-}
-
 /* line 39, /mnt/c/tzwsl/gitlab-development-kit/gitlab/app/assets/stylesheets/framework/gitlab-theme.scss */
 body.ui_indigo header.navbar-gitlab-new .navbar-sub-nav > li.line-separator,
 body.ui_indigo header.navbar-gitlab-new .navbar-nav > li.line-separator {
@@ -219,15 +213,6 @@ header .header-content .group-title.is-hidden .hidable:not(:last-of-type) {
   display: none;
 }
 
-/* line 236, /mnt/c/tzwsl/gitlab-development-kit/gitlab/app/assets/stylesheets/framework/header.scss */
-header .header-content .title-container {
-  display: flex;
-  align-items: flex-start;
-  flex: 1 1 auto;
-  padding-top: 14px;
-  overflow: hidden;
-}
-
 /* line 244, /mnt/c/tzwsl/gitlab-development-kit/gitlab/app/assets/stylesheets/framework/header.scss */
 header .header-content .title {
   position: relative;
@@ -250,17 +235,6 @@ header .header-content .title.wrap {
 /* line 260, /mnt/c/tzwsl/gitlab-development-kit/gitlab/app/assets/stylesheets/framework/header.scss */
 header .header-content .title.initializing {
   opacity: 0;
-}
-
-/* line 264, /mnt/c/tzwsl/gitlab-development-kit/gitlab/app/assets/stylesheets/framework/header.scss */
-header .header-content .title a {
-  color: currentColor;
-}
-
-/* line 267, /mnt/c/tzwsl/gitlab-development-kit/gitlab/app/assets/stylesheets/framework/header.scss */
-header .header-content .title a:hover {
-  text-decoration: underline;
-  color: #434343;
 }
 
 /* line 292, /mnt/c/tzwsl/gitlab-development-kit/gitlab/app/assets/stylesheets/framework/header.scss */
@@ -317,19 +291,6 @@ header.navbar-gitlab-new {
   min-height: 40px;
 }
 
-/* line 15, /mnt/c/tzwsl/gitlab-development-kit/gitlab/app/assets/stylesheets/new_nav.scss */
-header.navbar-gitlab-new .logo-text {
-  line-height: initial;
-}
-
-/* line 18, /mnt/c/tzwsl/gitlab-development-kit/gitlab/app/assets/stylesheets/new_nav.scss */
-header.navbar-gitlab-new .logo-text svg {
-  width: 55px;
-  height: 14px;
-  margin: 0;
-  fill: #fff;
-}
-
 /* line 26, /mnt/c/tzwsl/gitlab-development-kit/gitlab/app/assets/stylesheets/new_nav.scss */
 header.navbar-gitlab-new .header-content {
   display: flex;
@@ -353,26 +314,51 @@ header.navbar-gitlab-new .header-content .title {
   color: currentColor;
 }
 
-/* line 49, /mnt/c/tzwsl/gitlab-development-kit/gitlab/app/assets/stylesheets/new_nav.scss */
-header.navbar-gitlab-new .header-content .title img {
-  height: 28px;
-  margin-right: 8px;
-}
-
 /* line 54, /mnt/c/tzwsl/gitlab-development-kit/gitlab/app/assets/stylesheets/new_nav.scss */
 header.navbar-gitlab-new .header-content .title a {
+  color: white;
   display: flex;
   align-items: center;
   padding: 2px 8px;
-  margin: 5px 2px 5px -8px;
+  margin: 5px 8px 5px -8px;
   border-radius: 4px;
 }
 
+/* responsive SVG logo */
+.logo {
+  height: 24px;
+  margin-right: 8px;
+  width: 25px;
+}
+
+.logotype {
+  display: none;
+}
+
 @media (min-width: 768px) {
-  /* line 62, /mnt/c/tzwsl/gitlab-development-kit/gitlab/app/assets/stylesheets/new_nav.scss */
-  header.navbar-gitlab-new .header-content .title a svg {
-    margin-right: 8px;
+  .logo {
+    width: 111px;
   }
+
+  .logotype {
+    display: block;
+  }
+}
+
+header .header-content .title a {
+  color: white;
+}
+
+header .header-content .title a:hover {
+  text-decoration: none;
+}
+
+header.navbar-gitlab-new .descriptor {
+  border-left: 1px solid rgba(255, 255, 255, 0.32);
+  font-size: 0.875em;
+  font-weight: 500;
+  line-height: initial;
+  padding-left: 8px;
 }
 
 /* line 101, /mnt/c/tzwsl/gitlab-development-kit/gitlab/app/assets/stylesheets/new_nav.scss */
