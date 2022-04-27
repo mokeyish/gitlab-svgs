@@ -15,6 +15,7 @@ const DEFAULT_ICON_SIZE = 'image-sm';
 const DEFAULT_COLORING = 'default';
 
 export default {
+  name: 'HomePage',
   components: {
     SvgImage,
   },

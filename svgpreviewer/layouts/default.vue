@@ -2,6 +2,7 @@
 import MenuBar from '../components/menu_bar.vue';
 
 export default {
+  name: 'DefaultLayout',
   components: {
     MenuBar,
   },
