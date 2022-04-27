@@ -5,6 +5,7 @@ import illustrations from '../static/dist/illustrations.json';
 const DEFAULT_COLORING = 'default';
 
 export default {
+  name: 'IllustrationPage',
   components: {
     SvgImage,
   },
