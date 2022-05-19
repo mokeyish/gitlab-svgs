@@ -11,7 +11,7 @@ module.exports = {
     const spriteFilesPath = path.join(BASE_PATH, 'sprite_icons');
 
     const dest = path.normalize(path.join(BASE_PATH, 'dist'));
-    const spriteFiles = glob.sync(`${spriteFilesPath}**/*.svg`, {
+    const spriteFiles = glob.sync(`${spriteFilesPath}/**/*.svg`, {
       spriteFilesPath,
     });
 
