@@ -17,5 +17,12 @@ if grep -Rolq "\<defs\>" sprite_icons; then
     exit 1
 fi
 
+if grep -zvolq "\<svg.*viewBox.*\>" **/*.svg; then
+    echo "SVG files must have a 'viewBox' attribute defined in the <svg> element"
+    echo "Please check the following files:"
+    grep -zvol "\<svg.*viewBox.*\>" **/*.svg
+    exit 1
+fi
+
 echo "Checking the icon sprites succeeded"
 exit 0
