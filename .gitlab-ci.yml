@@ -3,6 +3,8 @@ include:
     file: .gitlab-ci-template.yml
   - project: gitlab-org/frontend/frontend-build-images
     file: /semantic-release/.gitlab-ci-template.rules.yml
+  - project: 'gitlab-org/quality/pipeline-common'
+    file: '/ci/danger-review.yml'
 
 .rules:only-mrs:
   rules:
