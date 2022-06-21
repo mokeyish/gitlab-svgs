@@ -1,6 +1,6 @@
 include:
   - project: gitlab-org/frontend/untamper-my-lockfile
-    file: .gitlab-ci-template.yml
+    file: templates/merge_request_pipelines.yml
   - project: gitlab-org/frontend/frontend-build-images
     file: /semantic-release/.gitlab-ci-template.rules.yml
   - project: 'gitlab-org/quality/pipeline-common'
