@@ -70,6 +70,9 @@
               <nuxt-link to="/">Icons</nuxt-link>
             </li>
             <li>
+              <nuxt-link to="/file_icons">File icons</nuxt-link>
+            </li>
+            <li>
               <nuxt-link to="/illustrations">Illustrations</nuxt-link>
             </li>
             <li>

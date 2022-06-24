@@ -24,7 +24,8 @@ export default {
     },
     sourcePath: {
       type: String,
-      required: true,
+      required: false,
+      default: '',
     },
   },
   computed: {
@@ -79,7 +80,7 @@ export default {
           <use v-bind="{ 'xlink:href': `dist/icons.svg#link` }" />
         </svg>
       </a>
-      <a title="Open source" target="_blank" :href="sourceLink">
+      <a v-if="sourcePath" title="Open source" target="_blank" :href="sourceLink">
         <svg class="image-sm">
           <use v-bind="{ 'xlink:href': `dist/icons.svg#external-link` }" />
         </svg>

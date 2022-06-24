@@ -4,6 +4,12 @@ npm-debug.log
 package-lock.json
 yarn-error.log
 
+# file icons
+file_icons/*.svg
+vscode-material-*
+file_icons_unused/
+file_icons.zip
+
 # Built SVGs
 dist/
 

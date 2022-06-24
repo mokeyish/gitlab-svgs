@@ -18,7 +18,7 @@ function svg_name() {
 
 echo "# [$NEW_TAG]"
 
-if git log "$LAST_TAG..HEAD" --grep "BREAKING CHANGE" | grep "BREAKING CHANGE" > /dev/null; then 
+if git log "$LAST_TAG..HEAD" --grep "BREAKING CHANGE" | grep "BREAKING CHANGE" > /dev/null; then
   echo ""
   echo "## Breaking changes"
   echo ""
@@ -29,9 +29,12 @@ fi
 
 echo "## Changes"
 
-while read STATUS SOURCE TARGET; do
-   TYPE=$(svg_type "$SOURCE");
-   NAME=$(svg_name "$SOURCE")
+function svg_update() {
+    STATUS=$1
+    SOURCE=$2
+    TARGET=$3
+    TYPE=$(svg_type "$SOURCE");
+    NAME=$(svg_name "$SOURCE")
     case "$STATUS" in
         "R"*)
             TARGET_NAME=$(svg_name "$TARGET")
@@ -45,6 +48,21 @@ while read STATUS SOURCE TARGET; do
         *)
             echo "  - INVALID OPERATION $STATUS for $NAME";;
     esac
-done  < <(git diff "$LAST_TAG..HEAD" --name-status --diff-filter=ADMR -- sprite_icons illustrations | sort)
+}
+
+while read STATUS SOURCE TARGET; do
+  if [ "$SOURCE" == "build_scripts/file_icons_version" ]; then
+    case "$STATUS" in
+        A)
+            echo "  - Added file icons";;
+        M)
+            echo "  - Updated file icons";;
+        *)
+            echo "  - INVALID OPERATION $STATUS for file icons";;
+    esac
+  else
+    svg_update "$STATUS" "$SOURCE" "$TARGET"
+  fi
+done  < <(git diff "$LAST_TAG..HEAD" --name-status --diff-filter=ADMR -- sprite_icons illustrations build_scripts/file_icons_version | sort)
 
 exit 0

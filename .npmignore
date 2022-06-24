@@ -2,6 +2,8 @@
 /doc/
 /illustrations/
 /sprite_icons/
+/file_icons/
+/file_icons_unused/
 
 # npm / yarn
 npm-debug.log

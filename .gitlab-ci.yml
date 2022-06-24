@@ -36,8 +36,7 @@ build-and-check:
       - node_modules/
   script:
     - yarn install --frozen-lockfile
-    - echo "Starting SVG Build"
-    - yarn run svg
+    - bash ./build_scripts/build-svgs.sh
     - echo "Starting Checks"
     - bash ./build_scripts/svg-lint.sh
     - yarn run lint
