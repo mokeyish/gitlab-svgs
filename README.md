@@ -88,6 +88,17 @@ You can run it locally through `yarn run dev` then it will available under `http
 
 With `yarn run generate` you can generate the static output to the `public` folder.
 
+## File icons
+
+This package also bundles file icons based off [PKief/vscode-material-icon-theme](https://github.com/PKief/vscode-material-icon-theme).
+
+During the CI build, the following steps are done:
+
+1. vscode-material-icon-theme is downloaded based on the version in [build_scripts/file_icons_version](.build_scripts/file_icons_version).
+2. Then all file types used in [src/file_icon_map](./src/file_icon_map) are copied to the `file_icons` folder.
+3. From there they are bundled in icons sprites
+4. Unused file icons are copied into `file_icons_unused`
+
 ## Publishing a new version
 
 Every time a file is added, deleted, modified or renamed within the `sprite_icons` or `illustrations` folders and the change is merged into the `main` branch, a new minor version of the package is published.
