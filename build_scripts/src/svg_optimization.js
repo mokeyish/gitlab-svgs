@@ -1,7 +1,6 @@
 const path = require('path');
-const { writeFile, readFile } = require('fs/promises');
+const { writeFile, readFile, mkdir } = require('fs/promises');
 const glob = require('glob');
-const mkdirp = require('mkdirp');
 const SVGO = require('svgo');
 
 const { getIllustrationStats, getFilesizeInBytes } = require('./utils');
@@ -26,7 +25,7 @@ const optimizeSVGs = async (basePath, destPath, globPattern, statsFilePath = nul
 
     const optimizedIllustration = await svgo.optimize(illustration, { path: path.resolve(file) });
 
-    mkdirp.sync(path.dirname(fpath));
+    await mkdir(path.dirname(fpath), { recursive: true });
 
     await writeFile(fpath, optimizedIllustration.data);
 

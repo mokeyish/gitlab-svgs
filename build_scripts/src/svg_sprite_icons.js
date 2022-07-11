@@ -1,11 +1,17 @@
-const fs = require('fs');
+const { readFile, mkdir, writeFile } = require('fs/promises');
 const path = require('path');
 const glob = require('glob');
-const mkdirp = require('mkdirp');
 const SVGSpriter = require('svg-sprite');
 const { getFilesizeInBytes } = require('./utils');
 
-const createIconSprite = (BASE_PATH, destPath, globPattern, targetFile) => {
+const writeSpriteFile = async (resource) => {
+  await mkdir(path.dirname(resource.path), { recursive: true });
+
+  console.log(`Compiled - Saving to ${resource.path}`);
+  return writeFile(resource.path, resource.contents, 'utf-8');
+};
+
+const createIconSprite = async (BASE_PATH, destPath, globPattern, targetFile) => {
   const spriteFiles = glob.sync(globPattern);
 
   const spriter = new SVGSpriter({
@@ -51,56 +57,44 @@ const createIconSprite = (BASE_PATH, destPath, globPattern, targetFile) => {
     },
   });
 
-  const icons = [];
+  const icons = await Promise.all(
+    spriteFiles.map(async (file) => {
+      const filePath = path.resolve(file);
 
-  spriteFiles.forEach((file) => {
-    const filePath = path.resolve(file);
-    spriter.add(
-      filePath,
-      null,
-      fs.readFileSync(filePath, {
+      const contents = await readFile(filePath, {
         encoding: 'utf-8',
-      }),
-    );
-    icons.push(path.basename(file, '.svg'));
+      });
+
+      spriter.add(filePath, null, contents);
+
+      return path.basename(file, '.svg');
+    }),
+  );
+
+  // Compile the sprites
+  const result = await new Promise((resolve, reject) => {
+    spriter.compile((error, response) => (error ? reject(error) : resolve(response)));
   });
 
-  // Compile the sprite
-  return new Promise((resolve, reject) => {
-    spriter.compile((error, result) => {
-      if (error) {
-        return reject(error);
-      }
+  // Write compiled sprites to disk
+  await Promise.all(
+    Object.values(result)
+      .flatMap((mode) => Object.values(mode))
+      .map(writeSpriteFile),
+  );
 
-      try {
-        Object.values(result).forEach((mode) => {
-          Object.values(mode).forEach((resource) => {
-            mkdirp.sync(path.dirname(resource.path));
-            fs.writeFileSync(resource.path, resource.contents);
+  // Save the Icons in here to a json so we can then display a nice help sprite sheet in GitLab
+  const iconsInfo = {
+    iconCount: icons.length,
+    spriteSize: getFilesizeInBytes(path.join(destPath, `${targetFile}.svg`)),
+    icons,
+  };
 
-            console.log(`Compiled - Saving to ${resource.path}`);
-          });
-        });
-
-        // Save the Icons in here to a json so we can then display a nice help sprite sheet in GitLab
-        const iconsInfo = {
-          iconCount: icons.length,
-          spriteSize: getFilesizeInBytes(path.join(destPath, `${targetFile}.svg`)),
-          icons,
-        };
-
-        fs.writeFileSync(
-          path.join(destPath, `${targetFile}.json`),
-          JSON.stringify(iconsInfo, null, 2),
-          'utf8',
-        );
-      } catch (e) {
-        return reject(e);
-      }
-
-      return resolve();
-    });
-  });
+  await writeFile(
+    path.join(destPath, `${targetFile}.json`),
+    JSON.stringify(iconsInfo, null, 2),
+    'utf8',
+  );
 };
 
 module.exports = { createIconSprite };
