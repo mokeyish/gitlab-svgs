@@ -1,8 +1,9 @@
 const path = require('path');
 const { writeFile } = require('fs/promises');
 const glob = require('glob');
+
 const { optimizeSVGs } = require('./svg_optimization');
-const { getIllustrationStats, copyFileSync, getFilesizeInBytes } = require('./utils');
+const { getIllustrationStats, copyFile, getFilesizeInBytes } = require('./utils');
 
 const collectIllustrations = async (basePath, distPath) => {
   const statsFile = path.join(distPath, 'illustrations.json');
@@ -21,7 +22,9 @@ const collectIllustrations = async (basePath, distPath) => {
       .sync(path.join(basePath, 'illustrations/third-party-logos', '**', '*.png'))
       .map(async (sourcePath) => {
         const relPath = path.relative(basePath, sourcePath);
-        copyFileSync(sourcePath, path.join(distPath, relPath));
+
+        await copyFile(sourcePath, path.join(distPath, relPath));
+
         return { name: relPath, size: getFilesizeInBytes(sourcePath) };
       }),
   );
