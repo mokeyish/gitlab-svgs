@@ -1,12 +1,8 @@
 const path = require('path');
+const { writeFile } = require('fs/promises');
 const glob = require('glob');
 const { optimizeSVGs } = require('./svg_optimization');
-const {
-  getIllustrationStats,
-  writeFilePromise,
-  copyFileSync,
-  getFilesizeInBytes,
-} = require('./utils');
+const { getIllustrationStats, copyFileSync, getFilesizeInBytes } = require('./utils');
 
 const collectIllustrations = async (basePath, distPath) => {
   const statsFile = path.join(distPath, 'illustrations.json');
@@ -33,7 +29,7 @@ const collectIllustrations = async (basePath, distPath) => {
 
   const stats = getIllustrationStats([...SVGs, ...PNGs]);
 
-  await writeFilePromise(statsFile, JSON.stringify(stats, null, 2), 'utf-8');
+  await writeFile(statsFile, JSON.stringify(stats, null, 2), 'utf-8');
 };
 
 module.exports = {

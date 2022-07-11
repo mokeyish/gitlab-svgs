@@ -19,28 +19,6 @@ const utils = {
     return stats.size;
   },
 
-  readFilePromise: (file, options) =>
-    new Promise((resolve, reject) => {
-      fs.readFile(file, options, (err, data) => {
-        if (err) {
-          reject(err);
-        } else {
-          resolve(data);
-        }
-      });
-    }),
-
-  writeFilePromise: (file, data, options) =>
-    new Promise((resolve, reject) => {
-      fs.writeFile(file, data, options, (err) => {
-        if (err) {
-          reject(err);
-        } else {
-          resolve();
-        }
-      });
-    }),
-
   copyFileSync: (source, target) => {
     let targetFile = target;
     // If target is a directory a new file with the same name will be created
