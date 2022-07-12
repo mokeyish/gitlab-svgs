@@ -1,31 +1,63 @@
-## Purpose
+## Description
 
 <!-- Briefly describe the purpose and use case for the new icon. -->
 
-## Concept
+### Concept
 
 <!-- Explain how the concept(s) align with the purpose and use. If metaphors are used, explain how they relate. Note if there’s an existing icon in the library that may conflict with this new one. If the icon require any variants, for example, a solid version or different states for open and closed, you can include them all in one issue. If possible, provide screenshots of the icon in context. You can also embed the SVG here for visual reference. -->
+
+### Figma file
+
+<!-- Before pasting the link to your Figma file/frame, in the file sharing settings, make sure that “anyone with the link” can view or that a specific user has been invited to the file. -->
+
+[❖ View working file in Figma →](ADD LINK TO FIGMA FILE/FRAME)
 
 ---
 
 ## Checklists
 
-Complete all items in both checklists before closing the issue. All items are the responsibility of the author, unless otherwise noted.
+Make sure the following are completed before closing the issue:
 
-### Design
+### Assignee tasks:
 
-<!-- This checklist ensures that icons are created and reviewed according to the guidelines and a predictable workflow. -->
+<details><summary>See tasks:</summary>
 
-1. [ ] Duplicate the [Icon template](https://www.figma.com/file/MboeR2wMu28t4S0DOniunX/Icon-template) and move the copy to your Drafts folder in Figma. Update the file name and cover thumbnail with relevant issue information.
-1. [ ] Share your draft file with a [FE/UX Foundation designer](https://about.gitlab.com/company/team/?department=fe-ux-foundations-team)
-       to review, and make sure they have view permissions in Figma. If they have the capacity, they should assign themselves to this issue. If not, try pinging another Foundations designer.
-1. [ ] **Reviewer**: Review the icon in the author’s draft file. Add design-specific comments in Figma to maintain context. Add general comments to this issue, including your approval status. Once approved, assign to a [Figma maintainer](https://about.gitlab.com/handbook/engineering/projects/#design.gitlab.com) for final review.
-1. [ ] **Maintainer:** Add the icon to the **component library** file, convert it to a component, and view it in the Assets panel to ensure it aligns with what’s outlined in the
+1. [ ] Create a [branch](https://www.figma.com/best-practices/branching-in-figma/) of the [GitLab Product Icons](https://www.figma.com/file/h4YjjttHL5YI0mXZfQ4uuU/GitLab-Product-Icons) when updating or creating an icon.
+    - Prefix the branch name with the issue, MR, or epic number, and add your GitLab username as the suffix. For example, `#860-new-icon-lvanc`. 
+1. [ ] Update the link to the working file under the **Figma link** section above.
+1. [ ] If work was not done in a branch (a merged branch will automatically be archived), move your working file to the shared Figma project:
+     1. For all other changes, move your file to the [**Misc archive**][misc-archive] project.
+     1. If you’re a community contributor, please consider [transferring ownership of your draft file](https://help.figma.com/hc/en-us/articles/360040530853) to the maintainer so they can move it to our archive, along with its version history and comments.
+1. [ ] When applicable, follow our [iconography][iconography] guidelines.
+1. [ ] Ask a [Foundations designer][foundations-team] to review your design.
+    - Ensure the designer that will be reviewing your file has edit permissions in Figma.
+
+</details>
+
+### Reviewer tasks:
+
+<details><summary>See tasks:</summary>
+
+1. [ ] Review the icon in the author’s branch. Add design-specific comments in Figma to maintain context. Add general comments to this issue, including your approval status.    
+1. [ ] Once review is approved, assign to a [Figma maintainer](https://about.gitlab.com/handbook/engineering/projects/#design.gitlab.com) for final review.  
+
+</details>
+
+### Maintainer tasks:
+
+<details><summary>See tasks:</summary>
+
+1. [ ] Merge the branch to the **GitLab Product Icons** file, convert the icon to a component, add keywords and usage notes (optional) in the description, and view it in the Assets panel to ensure it aligns with what’s outlined in the
        [document and asset library structure](https://gitlab.com/gitlab-org/gitlab-services/design.gitlab.com/-/blob/main/doc/pajamas-ui-kit.md#structure) documentation.
-1. [ ] **Maintainer:** Publish the library changes along with a clear message about the update.
-1. [ ] **Author:** Move your draft file to the **Component archive** Figma project.
+1. [ ] Publish the library changes along with a clear message about the update.
 
-### Library addition
+</details>
+
+### Library addition tasks:
+
+Once the Reviewer or Maintainer has approved your icon design, consider the following tasks to add the icon the `gitlab-svgs` library.
+
+<details><summary>See tasks:</summary>
 
 <!-- This checklist helps streamline the process of getting an icon from Figma to the library. -->
 
@@ -42,10 +74,18 @@ Complete all items in both checklists before closing the issue. All items are th
 
 If you run into any problems, ensure that all other steps in the project [README](https://gitlab.com/gitlab-org/gitlab-svgs/-/blob/main/README.md) have been followed.
 
+</details>
+
 ---
+
+1. [ ]  🎉 Congrats, you made it! You can now close this issue.
 
 ## Links / references
 
 <!-- Add external links and references if necessary -->
 
 /label ~"UX" ~"Pajamas UI Kit" ~"icon"
+
+[foundations-team]: https://about.gitlab.com/company/team/?department=ecosystem-foundations-team
+[iconography]: https://design.gitlab.com/product-foundations/iconography
+[misc-archive]: https://www.figma.com/files/project/10620392/Misc-archive
