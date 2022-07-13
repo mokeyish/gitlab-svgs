@@ -2,9 +2,14 @@ const path = require('path');
 const glob = require('glob');
 const mkdirp = require('mkdirp');
 const SVGO = require('svgo');
-const { getFilesizeInBytes, readFilePromise, writeFilePromise } = require('./utils');
+const {
+  getIllustrationStats,
+  getFilesizeInBytes,
+  readFilePromise,
+  writeFilePromise,
+} = require('./utils');
 
-const optimizeSVGs = async (basePath, destPath, globPattern, statsFile) => {
+const optimizeSVGs = async (basePath, destPath, globPattern, statsFilePath = null) => {
   const files = glob.sync(globPattern, {});
   const svgo = new SVGO({
     plugins: [
@@ -36,18 +41,15 @@ const optimizeSVGs = async (basePath, destPath, globPattern, statsFile) => {
 
   const illustrations = await Promise.all(files.map(optimizeSVG));
 
-  // Save the Illustrations Info to a JSON
-  const illustrationsInfo = {
-    illustrationCount: illustrations.length,
-    illustrations: illustrations.sort((a, b) => {
-      if (a.name === b.name) {
-        return 0;
-      }
-      return a.name < b.name ? -1 : 1;
-    }),
-  };
+  if (statsFilePath) {
+    await writeFilePromise(
+      statsFilePath,
+      JSON.stringify(getIllustrationStats(illustrations), null, 2),
+      'utf8',
+    );
+  }
 
-  await writeFilePromise(statsFile, JSON.stringify(illustrationsInfo, null, 2), 'utf8');
+  return illustrations;
 };
 
 module.exports = { optimizeSVGs };

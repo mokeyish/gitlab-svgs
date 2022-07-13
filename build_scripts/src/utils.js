@@ -2,6 +2,18 @@ const fs = require('fs');
 const path = require('path');
 
 const utils = {
+  getIllustrationStats(illustrations) {
+    return {
+      illustrationCount: illustrations.length,
+      illustrations: illustrations.sort((a, b) => {
+        if (a.name === b.name) {
+          return 0;
+        }
+        return a.name < b.name ? -1 : 1;
+      }),
+    };
+  },
+
   getFilesizeInBytes(filename) {
     const stats = fs.statSync(filename);
     return stats.size;
