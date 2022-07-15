@@ -1,13 +1,10 @@
 const path = require('path');
+const { writeFile, readFile } = require('fs/promises');
 const glob = require('glob');
 const mkdirp = require('mkdirp');
 const SVGO = require('svgo');
-const {
-  getIllustrationStats,
-  getFilesizeInBytes,
-  readFilePromise,
-  writeFilePromise,
-} = require('./utils');
+
+const { getIllustrationStats, getFilesizeInBytes } = require('./utils');
 
 const optimizeSVGs = async (basePath, destPath, globPattern, statsFilePath = null) => {
   const files = glob.sync(globPattern, {});
@@ -25,13 +22,13 @@ const optimizeSVGs = async (basePath, destPath, globPattern, statsFilePath = nul
     const relName = path.relative(basePath, file);
     const fpath = path.join(destPath, relName);
 
-    const illustration = await readFilePromise(path.resolve(file), 'utf8');
+    const illustration = await readFile(path.resolve(file), 'utf8');
 
     const optimizedIllustration = await svgo.optimize(illustration, { path: path.resolve(file) });
 
     mkdirp.sync(path.dirname(fpath));
 
-    await writeFilePromise(fpath, optimizedIllustration.data);
+    await writeFile(fpath, optimizedIllustration.data);
 
     return {
       name: relName,
@@ -42,7 +39,7 @@ const optimizeSVGs = async (basePath, destPath, globPattern, statsFilePath = nul
   const illustrations = await Promise.all(files.map(optimizeSVG));
 
   if (statsFilePath) {
-    await writeFilePromise(
+    await writeFile(
       statsFilePath,
       JSON.stringify(getIllustrationStats(illustrations), null, 2),
       'utf8',

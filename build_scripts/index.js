@@ -3,7 +3,7 @@ const rimraf = require('rimraf');
 
 const { optimizeSVGs } = require('./src/svg_optimization');
 const { createIconSprite } = require('./src/svg_sprite_icons');
-const { copyFolderRecursiveSync, copyFileSync } = require('./src/utils');
+const { copyFolderRecursive, copyFile } = require('./src/utils');
 const { collectIllustrations } = require('./src/illustrations');
 
 const BASE_PATH = path.join(__dirname, '..');
@@ -52,10 +52,10 @@ async function buildFiles() {
   await collectIllustrations(BASE_PATH, DIST_PATH);
 
   console.log('Copying files to dist ...');
-  copyFolderRecursiveSync(DIST_PATH, STATIC_PATH);
+  await copyFolderRecursive(DIST_PATH, STATIC_PATH);
 
   console.log('Copying file_icons notice');
-  copyFileSync(path.join(BASE_PATH, 'file_icons', 'LICENSE.md'), FILE_ICONS_DIST_PATH);
+  await copyFile(path.join(BASE_PATH, 'file_icons', 'LICENSE.md'), FILE_ICONS_DIST_PATH);
 }
 
 rimraf(`${DIST_PATH}/**/*`, async () => {
