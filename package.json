@@ -28,7 +28,6 @@
     "pretty-quick": "^3.1.0",
     "rimraf": "^2.6.2",
     "svg-sprite": "^1.5.0",
-    "svg4everybody": "^2.1.9",
     "svgo": "^2.8.0"
   },
   "resolutions": {
