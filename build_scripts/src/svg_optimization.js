@@ -2,19 +2,13 @@ const path = require('path');
 const { writeFile, readFile } = require('fs/promises');
 const glob = require('glob');
 const mkdirp = require('mkdirp');
-const SVGO = require('svgo');
+const { loadConfig, optimize } = require('svgo');
 
 const { getIllustrationStats, getFilesizeInBytes } = require('./utils');
 
 const optimizeSVGs = async (basePath, destPath, globPattern, statsFilePath = null) => {
   const files = glob.sync(globPattern, {});
-  const svgo = new SVGO({
-    plugins: [
-      {
-        removeViewBox: false,
-      },
-    ],
-  });
+  const config = await loadConfig();
 
   console.log(`Optimizing ${files.length} files`);
 
@@ -24,7 +18,10 @@ const optimizeSVGs = async (basePath, destPath, globPattern, statsFilePath = nul
 
     const illustration = await readFile(path.resolve(file), 'utf8');
 
-    const optimizedIllustration = await svgo.optimize(illustration, { path: path.resolve(file) });
+    const optimizedIllustration = optimize(illustration, {
+      path: path.resolve(file),
+      ...config,
+    });
 
     mkdirp.sync(path.dirname(fpath));
 
