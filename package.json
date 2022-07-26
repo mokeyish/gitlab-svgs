@@ -7,6 +7,10 @@
   "author": "GitLab",
   "private": false,
   "license": "MIT",
+  "engines": {
+    "node": "^16",
+    "yarn": "^1.22.0"
+  },
   "scripts": {
     "svg": "build_scripts/build-svgs.sh",
     "dev": "yarn run svg && nuxt",
