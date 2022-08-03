@@ -72,30 +72,25 @@ publish-to-npm-dry-run:
 .review-app:
   extends: .rules:only-mrs
   image: alpine:latest
+  stage: deploy
   variables:
     GIT_STRATEGY: none
-  stage: deploy
+  needs:
+    - job: build-and-check
+      artifacts: false
 
 review:
   extends: .review-app
-  needs:
-    - build-and-check
   script:
-    - echo "Hey"
-    - ls
-    - echo "https://design.gitlab.com/svg_preview/?job=$CI_JOB_ID&path="
+    - echo "Successfully deployed"
   environment:
     name: review/$CI_COMMIT_REF_SLUG
-    url: https://4456656-review-leipert-sv-zlo2if.design-staging.gitlab.com/svg_preview/?job=$CI_JOB_ID&path=
+    # TODO: Switch to https://design.gitlab.com
+    url: https://4456656-review-leipert-sv-zlo2if.design-staging.gitlab.com/svg_preview/?mrIID=$CI_MERGE_REQUEST_IID&path=
     on_stop: review_stop
-  artifacts:
-    paths:
-      - dist
-      - review
 
 review_stop:
   extends: .review-app
-  stage: deploy
   script:
     - echo "The end"
   when: manual
