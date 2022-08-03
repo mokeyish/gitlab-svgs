@@ -70,6 +70,9 @@ publish-to-npm-dry-run:
 
 .review-app:
   extends: .rules:only-mrs
+  image: alpine:latest
+  variables:
+    GIT_STRATEGY: none
   stage: deploy
 
 review:
