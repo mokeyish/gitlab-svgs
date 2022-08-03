@@ -45,6 +45,7 @@ build-and-check:
     paths:
       - public
       - dist
+      - review
 
 .publish:
   extends: .semantic-release

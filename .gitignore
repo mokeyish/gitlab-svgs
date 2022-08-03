@@ -12,6 +12,7 @@ file_icons.zip
 
 # Built SVGs
 dist/
+review/
 
 # Nuxt build & generate
 .nuxt/
