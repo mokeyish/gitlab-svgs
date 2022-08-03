@@ -1,6 +1,7 @@
 const { writeFile, mkdir } = require('fs/promises');
 const path = require('path');
 const rimraf = require('rimraf');
+const axios = require('axios');
 
 const packageJSON = require('../package.json');
 const { optimizeSVGs } = require('./src/svg_optimization');
@@ -18,32 +19,51 @@ const STATIC_PATH = path.normalize(path.join(BASE_PATH, 'svgpreviewer', 'static'
 async function writeReviewMetadata() {
   await mkdir(REVIEW_PATH, { recursive: true });
 
-  let data = {
+  let metadata = {
     version: packageJSON.version,
   };
 
   if (process.env.CI) {
     const {
+      CI_API_V4_URL,
       CI_JOB_ID,
+      CI_PROJECT_ID,
       CI_PIPELINE_URL,
-      CI_MERGE_REQUEST_PROJECT_URL,
-      CI_MERGE_REQUEST_IID,
-      CI_MERGE_REQUEST_TITLE,
+      CI_MERGE_REQUEST_PROJECT_ID,
     } = process.env;
 
-    data = {
-      ...data,
+    const apiBase = `${CI_API_V4_URL}/projects/${CI_MERGE_REQUEST_PROJECT_ID || CI_PROJECT_ID}`;
+
+    const artifactBaseURL = `${apiBase}/jobs/${CI_JOB_ID}/artifacts`;
+
+    metadata = {
+      ...metadata,
       jobId: CI_JOB_ID,
       pipelineURL: CI_PIPELINE_URL,
+      artifactBaseURL,
+      iconMetadata: `${artifactBaseURL}/dist/icons.json`,
+      illustrationMetadata: `${artifactBaseURL}/dist/illustrations.json`,
+      iconURL: `${artifactBaseURL}/dist/icons.svg`,
+      illustrationBaseURL: `${artifactBaseURL}/dist/illustrations`,
     };
 
-    if (CI_MERGE_REQUEST_PROJECT_URL && CI_MERGE_REQUEST_IID) {
-      data.mrURL = `${CI_MERGE_REQUEST_PROJECT_URL}/-/merge_requests/${CI_MERGE_REQUEST_IID}`;
-      data.mrTitle = CI_MERGE_REQUEST_TITLE;
+    if (CI_MERGE_REQUEST_PROJECT_ID) {
+      const {
+        CI_MERGE_REQUEST_PROJECT_URL,
+        CI_MERGE_REQUEST_IID,
+        CI_MERGE_REQUEST_TITLE,
+      } = process.env;
+
+      metadata.mrURL = `${CI_MERGE_REQUEST_PROJECT_URL}/-/merge_requests/${CI_MERGE_REQUEST_IID}`;
+      metadata.mrTitle = CI_MERGE_REQUEST_TITLE;
+
+      const { data } = await axios.get(`${apiBase}/merge_requests/${CI_MERGE_REQUEST_IID}/changes`);
+
+      metadata.diff = data.changes;
     }
   }
 
-  await writeFile(path.join(REVIEW_PATH, 'metadata.json'), JSON.stringify(data));
+  await writeFile(path.join(REVIEW_PATH, 'metadata.json'), JSON.stringify(metadata));
 }
 
 async function buildFiles() {
