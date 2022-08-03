@@ -1,0 +1,4 @@
+- source: 'sprite_icons/'
+  public: 'icons'
+- source: 'illustrations/'
+  public: 'illustrations'

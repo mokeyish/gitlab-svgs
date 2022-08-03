@@ -71,10 +71,6 @@ publish-to-npm-dry-run:
 .review-app:
   extends: .rules:only-mrs
   stage: deploy
-  tags:
-    - nginx
-    - review-apps
-    - deploy
 
 review:
   extends: .review-app
@@ -86,19 +82,18 @@ review:
     # See this comment: https://gitlab.com/gitlab-org/gitlab-svgs/merge_requests/158/diffs#note_111939228
     # Hopefully this can be resolved once https://gitlab.com/gitlab-org/gitlab-svgs/issues/30 is fixed
     # and we include the CSS properly
-    - mv public gitlab-svgs
-    - mkdir -p /srv/nginx/pages/$CI_COMMIT_REF_SLUG/public
-    - rsync -av --delete gitlab-svgs /srv/nginx/pages/$CI_COMMIT_REF_SLUG/public
+    - echo "Hey"
+    - echo "https://design.gitlab.com/svg_preview/?job=$CI_JOB_ID&path="
   environment:
     name: review/$CI_COMMIT_REF_SLUG
-    url: http://$CI_COMMIT_REF_SLUG.$APPS_DOMAIN/gitlab-svgs/
+    url: https://4456656-review-leipert-sv-zlo2if.design-staging.gitlab.com/svg_preview/?job=$CI_JOB_ID&path=
     on_stop: review_stop
 
 review_stop:
   extends: .review-app
   stage: deploy
   script:
-    - rm -rf public /srv/nginx/pages/$CI_COMMIT_REF_SLUG
+    - echo "The end"
   when: manual
   environment:
     name: review/$CI_COMMIT_REF_SLUG
