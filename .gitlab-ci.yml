@@ -81,17 +81,17 @@ review:
   needs:
     - build-and-check
   script:
-    # We need to move the contents of the public folder from ./ to ./gitlab-svgs/, so it matches
-    # gitlab-pages. Nuxt is not that smart when it comes to static links.
-    # See this comment: https://gitlab.com/gitlab-org/gitlab-svgs/merge_requests/158/diffs#note_111939228
-    # Hopefully this can be resolved once https://gitlab.com/gitlab-org/gitlab-svgs/issues/30 is fixed
-    # and we include the CSS properly
     - echo "Hey"
+    - ls
     - echo "https://design.gitlab.com/svg_preview/?job=$CI_JOB_ID&path="
   environment:
     name: review/$CI_COMMIT_REF_SLUG
     url: https://4456656-review-leipert-sv-zlo2if.design-staging.gitlab.com/svg_preview/?job=$CI_JOB_ID&path=
     on_stop: review_stop
+  artifacts:
+    paths:
+      - dist
+      - review
 
 review_stop:
   extends: .review-app
